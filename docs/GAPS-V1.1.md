@@ -79,3 +79,6 @@ Backlog sugerido (27 únicos, prioridade onde gap é 3):
 2. Mac: criar xcodeproj + Archive Validate (checa Info.plist + AppIcon 1024 sem alfa).
 3. Modelar backlog §2 (ilum/plantas/sub primeiro), export `.glb`, thumb Blender, atualizar `catalog.json` (manter espelho em `Resources/catalog.json`).
 4. Recalcular este doc: meta é zerar tabela de déficit (todas as 18 células >=4).
+
+## R2b (thumbs reais)
+Tentativa 14:29 com ortho+sun gerou thumbs escuras (materiais cinza, falta 3-point + HDRI) — revertido para placeholders PIL. Refazer com: world HDRI cozy, key/fill/rim, material base #C9A87A e fundo #F1E3D3 opaco 256px.
