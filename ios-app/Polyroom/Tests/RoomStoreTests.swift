@@ -72,6 +72,28 @@ final class RoomStoreTests: XCTestCase {
         XCTAssertEqual(store.selectedId, copy.id)
     }
 
+    func testWallItemGoesToNorthWall() {
+        var catalog = Catalog(items: [])
+        let store = RoomStore(currentRoom: .sala, save: RoomSave(), catalog: catalog, autosaveEnabled: false)
+        // sem catálogo, detecção por nome ainda vale para quadro
+        let item = store.place(catalogId: "arte_quadro_grande", x: 1.0, z: 1.0)
+        XCTAssertEqual(item.mount, "wallN")
+        XCTAssertEqual(item.z, RoomStore.wallZ, accuracy: 0.001)
+        XCTAssertEqual(item.y, RoomStore.wallY, accuracy: 0.001)
+        store.move(id: item.id, x: 2.0, z: 2.0)
+        let moved = store.item(id: item.id)!
+        XCTAssertEqual(moved.x, 2.0, accuracy: 0.001)
+        XCTAssertEqual(moved.z, RoomStore.wallZ, accuracy: 0.001)
+        _ = catalog
+    }
+
+    func testFloorItemStaysOnFloor() {
+        let store = makeStore()
+        let item = store.place(catalogId: "kit_moveis_cadeira", x: 0.5, z: 0.5)
+        XCTAssertEqual(item.mount, "floor")
+        XCTAssertEqual(item.y, 0, accuracy: 0.001)
+    }
+
     func testSaveRoundtrip() throws {
         let store = makeStore()
         let item = store.place(catalogId: "kit_moveis_cadeira", x: 0.5, z: -0.5)
