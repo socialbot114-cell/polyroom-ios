@@ -2433,6 +2433,493 @@
       "tags": [
         "pet"
       ]
+    },
+    {
+      "id": "arte_quadro_duplo",
+      "nome": "Quadro Duplo",
+      "categoria": "arte",
+      "rooms": [
+        "sala",
+        "quarto"
+      ],
+      "usdz": "art-ios/arte_quadro_duplo.usdz",
+      "thumb": "thumbnails/arte_quadro_duplo.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 350,
+      "tags": [
+        "parede"
+      ]
+    },
+    {
+      "id": "arte_mapa",
+      "nome": "Mapa Mundi",
+      "categoria": "arte",
+      "rooms": [
+        "quarto",
+        "sala"
+      ],
+      "usdz": "art-ios/arte_mapa.usdz",
+      "thumb": "thumbnails/arte_mapa.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 300,
+      "tags": [
+        "parede"
+      ]
+    },
+    {
+      "id": "arte_espelho_redondo",
+      "nome": "Espelho Redondo",
+      "categoria": "arte",
+      "rooms": [
+        "quarto"
+      ],
+      "usdz": "art-ios/arte_espelho_redondo.usdz",
+      "thumb": "thumbnails/arte_espelho_redondo.png",
+      "footprint": "S",
+      "tintable": false,
+      "tris": 300,
+      "tags": [
+        "parede"
+      ]
+    },
+    {
+      "id": "arte_prateleira_quadros",
+      "nome": "Prateleira Quadros",
+      "categoria": "arte",
+      "rooms": [
+        "sala"
+      ],
+      "usdz": "art-ios/arte_prateleira_quadros.usdz",
+      "thumb": "thumbnails/arte_prateleira_quadros.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 400,
+      "tags": [
+        "parede"
+      ]
+    },
+    {
+      "id": "arte_tapeçaria",
+      "nome": "Tapecaria",
+      "categoria": "arte",
+      "rooms": [
+        "quarto"
+      ],
+      "usdz": "art-ios/arte_tapeçaria.usdz",
+      "thumb": "thumbnails/arte_tapeçaria.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 350,
+      "tags": [
+        "parede"
+      ]
+    },
+    {
+      "id": "arte_planta_quadro",
+      "nome": "Quadro Botanico",
+      "categoria": "arte",
+      "rooms": [
+        "sala"
+      ],
+      "usdz": "art-ios/arte_planta_quadro.usdz",
+      "thumb": "thumbnails/arte_planta_quadro.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 300,
+      "tags": [
+        "parede"
+      ]
+    },
+    {
+      "id": "arte_foto_familia",
+      "nome": "Porta Retrato",
+      "categoria": "arte",
+      "rooms": [
+        "sala",
+        "quarto"
+      ],
+      "usdz": "art-ios/arte_foto_familia.usdz",
+      "thumb": "thumbnails/arte_foto_familia.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 250,
+      "tags": [
+        "parede"
+      ]
+    },
+    {
+      "id": "arte_letreiro",
+      "nome": "Letreiro Neon",
+      "categoria": "arte",
+      "rooms": [
+        "sala"
+      ],
+      "usdz": "art-ios/arte_letreiro.usdz",
+      "thumb": "thumbnails/arte_letreiro.png",
+      "footprint": "S",
+      "tintable": false,
+      "tris": 400,
+      "tags": [
+        "parede"
+      ]
+    },
+    {
+      "id": "elet_smart_tv",
+      "nome": "Smart TV 55",
+      "categoria": "eletronicos",
+      "rooms": [
+        "sala"
+      ],
+      "usdz": "art-ios/elet_smart_tv.usdz",
+      "thumb": "thumbnails/elet_smart_tv.png",
+      "footprint": "M",
+      "tintable": false,
+      "tris": 800,
+      "tags": [
+        "tech"
+      ]
+    },
+    {
+      "id": "elet_soundbar",
+      "nome": "Soundbar",
+      "categoria": "eletronicos",
+      "rooms": [
+        "sala"
+      ],
+      "usdz": "art-ios/elet_soundbar.usdz",
+      "thumb": "thumbnails/elet_soundbar.png",
+      "footprint": "S",
+      "tintable": false,
+      "tris": 400,
+      "tags": [
+        "tech"
+      ]
+    },
+    {
+      "id": "elet_tablet",
+      "nome": "Tablet",
+      "categoria": "eletronicos",
+      "rooms": [
+        "quarto",
+        "sala"
+      ],
+      "usdz": "art-ios/elet_tablet.usdz",
+      "thumb": "thumbnails/elet_tablet.png",
+      "footprint": "S",
+      "tintable": false,
+      "tris": 250,
+      "tags": [
+        "tech"
+      ]
+    },
+    {
+      "id": "elet_fone",
+      "nome": "Fone Ouvido",
+      "categoria": "eletronicos",
+      "rooms": [
+        "quarto"
+      ],
+      "usdz": "art-ios/elet_fone.usdz",
+      "thumb": "thumbnails/elet_fone.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 200,
+      "tags": [
+        "tech"
+      ]
+    },
+    {
+      "id": "elet_carregador",
+      "nome": "Estacao Carga",
+      "categoria": "eletronicos",
+      "rooms": [
+        "quarto"
+      ],
+      "usdz": "art-ios/elet_carregador.usdz",
+      "thumb": "thumbnails/elet_carregador.png",
+      "footprint": "S",
+      "tintable": false,
+      "tris": 300,
+      "tags": [
+        "tech"
+      ]
+    },
+    {
+      "id": "elet_luminaria_led",
+      "nome": "Luminaria LED",
+      "categoria": "eletronicos",
+      "rooms": [
+        "quarto"
+      ],
+      "usdz": "art-ios/elet_luminaria_led.usdz",
+      "thumb": "thumbnails/elet_luminaria_led.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 450,
+      "tags": [
+        "luz"
+      ]
+    },
+    {
+      "id": "elet_projetor",
+      "nome": "Projetor",
+      "categoria": "eletronicos",
+      "rooms": [
+        "sala"
+      ],
+      "usdz": "art-ios/elet_projetor.usdz",
+      "thumb": "thumbnails/elet_projetor.png",
+      "footprint": "S",
+      "tintable": false,
+      "tris": 500,
+      "tags": [
+        "tech"
+      ]
+    },
+    {
+      "id": "elet_radio",
+      "nome": "Radio Retro",
+      "categoria": "eletronicos",
+      "rooms": [
+        "cozinha",
+        "sala"
+      ],
+      "usdz": "art-ios/elet_radio.usdz",
+      "thumb": "thumbnails/elet_radio.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 450,
+      "tags": [
+        "tech"
+      ]
+    },
+    {
+      "id": "kids_tapete_sala",
+      "nome": "Tapete Playground",
+      "categoria": "kids",
+      "rooms": [
+        "sala"
+      ],
+      "usdz": "art-ios/kids_tapete_sala.usdz",
+      "thumb": "thumbnails/kids_tapete_sala.png",
+      "footprint": "M",
+      "tintable": true,
+      "tris": 300,
+      "tags": [
+        "toy"
+      ]
+    },
+    {
+      "id": "kids_puff",
+      "nome": "Puff Kids",
+      "categoria": "kids",
+      "rooms": [
+        "sala",
+        "quarto"
+      ],
+      "usdz": "art-ios/kids_puff.usdz",
+      "thumb": "thumbnails/kids_puff.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 450,
+      "tags": [
+        "toy"
+      ]
+    },
+    {
+      "id": "kids_mesa",
+      "nome": "Mesinha Kids",
+      "categoria": "kids",
+      "rooms": [
+        "quarto"
+      ],
+      "usdz": "art-ios/kids_mesa.usdz",
+      "thumb": "thumbnails/kids_mesa.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 550,
+      "tags": [
+        "toy"
+      ]
+    },
+    {
+      "id": "kids_banquinho",
+      "nome": "Banquinho",
+      "categoria": "kids",
+      "rooms": [
+        "cozinha",
+        "quarto"
+      ],
+      "usdz": "art-ios/kids_banquinho.usdz",
+      "thumb": "thumbnails/kids_banquinho.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 350,
+      "tags": [
+        "toy"
+      ]
+    },
+    {
+      "id": "kids_prateleira",
+      "nome": "Prateleira Toys",
+      "categoria": "kids",
+      "rooms": [
+        "quarto"
+      ],
+      "usdz": "art-ios/kids_prateleira.usdz",
+      "thumb": "thumbnails/kids_prateleira.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 450,
+      "tags": [
+        "toy"
+      ]
+    },
+    {
+      "id": "kids_cabana",
+      "nome": "Cabana Tecido",
+      "categoria": "kids",
+      "rooms": [
+        "sala"
+      ],
+      "usdz": "art-ios/kids_cabana.usdz",
+      "thumb": "thumbnails/kids_cabana.png",
+      "footprint": "M",
+      "tintable": true,
+      "tris": 800,
+      "tags": [
+        "toy"
+      ]
+    },
+    {
+      "id": "pets_bebedouro",
+      "nome": "Bebedouro",
+      "categoria": "pets",
+      "rooms": [
+        "cozinha"
+      ],
+      "usdz": "art-ios/pets_bebedouro.usdz",
+      "thumb": "thumbnails/pets_bebedouro.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 250,
+      "tags": [
+        "pet"
+      ]
+    },
+    {
+      "id": "pets_escova",
+      "nome": "Kit Escova",
+      "categoria": "pets",
+      "rooms": [
+        "quarto"
+      ],
+      "usdz": "art-ios/pets_escova.usdz",
+      "thumb": "thumbnails/pets_escova.png",
+      "footprint": "S",
+      "tintable": false,
+      "tris": 200,
+      "tags": [
+        "pet"
+      ]
+    },
+    {
+      "id": "pets_porta_racao",
+      "nome": "Porta Racao",
+      "categoria": "pets",
+      "rooms": [
+        "cozinha"
+      ],
+      "usdz": "art-ios/pets_porta_racao.usdz",
+      "thumb": "thumbnails/pets_porta_racao.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 350,
+      "tags": [
+        "pet"
+      ]
+    },
+    {
+      "id": "pets_almofada",
+      "nome": "Almofada Pet",
+      "categoria": "pets",
+      "rooms": [
+        "sala"
+      ],
+      "usdz": "art-ios/pets_almofada.usdz",
+      "thumb": "thumbnails/pets_almofada.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 300,
+      "tags": [
+        "pet"
+      ]
+    },
+    {
+      "id": "parede_quadro_cozinha",
+      "nome": "Quadro Cozinha",
+      "categoria": "parede",
+      "rooms": [
+        "cozinha"
+      ],
+      "usdz": "art-ios/parede_quadro_cozinha.usdz",
+      "thumb": "thumbnails/parede_quadro_cozinha.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 300,
+      "tags": [
+        "parede"
+      ]
+    },
+    {
+      "id": "parede_relogio_cozinha",
+      "nome": "Relogio Cozinha",
+      "categoria": "parede",
+      "rooms": [
+        "cozinha"
+      ],
+      "usdz": "art-ios/parede_relogio_cozinha.usdz",
+      "thumb": "thumbnails/parede_relogio_cozinha.png",
+      "footprint": "S",
+      "tintable": false,
+      "tris": 350,
+      "tags": [
+        "parede"
+      ]
+    },
+    {
+      "id": "parede_espelho_sala",
+      "nome": "Espelho Sala",
+      "categoria": "parede",
+      "rooms": [
+        "sala"
+      ],
+      "usdz": "art-ios/parede_espelho_sala.usdz",
+      "thumb": "thumbnails/parede_espelho_sala.png",
+      "footprint": "S",
+      "tintable": false,
+      "tris": 350,
+      "tags": [
+        "parede"
+      ]
+    },
+    {
+      "id": "parede_nicho_duplo",
+      "nome": "Nicho Duplo",
+      "categoria": "parede",
+      "rooms": [
+        "quarto"
+      ],
+      "usdz": "art-ios/parede_nicho_duplo.usdz",
+      "thumb": "thumbnails/parede_nicho_duplo.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 450,
+      "tags": [
+        "parede"
+      ]
     }
   ],
   "version": 1
