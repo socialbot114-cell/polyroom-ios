@@ -730,6 +730,448 @@
       "tags": [
         "ceramica"
       ]
+    },
+    {
+      "id": "bed_ilum_pendente2",
+      "nome": "Pendente Quarto",
+      "categoria": "iluminacao",
+      "rooms": [
+        "quarto"
+      ],
+      "usdz": "art-ios/bed_ilum_pendente2.usdz",
+      "thumb": "thumbnails/bed_ilum_pendente2.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 650,
+      "tags": [
+        "luz"
+      ]
+    },
+    {
+      "id": "bed_ilum_parede",
+      "nome": "Luminaria Parede",
+      "categoria": "iluminacao",
+      "rooms": [
+        "quarto"
+      ],
+      "usdz": "art-ios/bed_ilum_parede.usdz",
+      "thumb": "thumbnails/bed_ilum_parede.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 500,
+      "tags": [
+        "luz"
+      ]
+    },
+    {
+      "id": "kit_ilum_fita",
+      "nome": "Fita LED",
+      "categoria": "iluminacao",
+      "rooms": [
+        "cozinha"
+      ],
+      "usdz": "art-ios/kit_ilum_fita.usdz",
+      "thumb": "thumbnails/kit_ilum_fita.png",
+      "footprint": "S",
+      "tintable": false,
+      "tris": 200,
+      "tags": [
+        "luz"
+      ]
+    },
+    {
+      "id": "kit_ilum_pendente2",
+      "nome": "Pendente Duplo",
+      "categoria": "iluminacao",
+      "rooms": [
+        "cozinha"
+      ],
+      "usdz": "art-ios/kit_ilum_pendente2.usdz",
+      "thumb": "thumbnails/kit_ilum_pendente2.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 700,
+      "tags": [
+        "luz"
+      ]
+    },
+    {
+      "id": "kit_ilum_spot",
+      "nome": "Spot Teto",
+      "categoria": "iluminacao",
+      "rooms": [
+        "cozinha"
+      ],
+      "usdz": "art-ios/kit_ilum_spot.usdz",
+      "thumb": "thumbnails/kit_ilum_spot.png",
+      "footprint": "S",
+      "tintable": false,
+      "tris": 300,
+      "tags": [
+        "luz"
+      ]
+    },
+    {
+      "id": "liv_ilum_pendente",
+      "nome": "Pendente Sala",
+      "categoria": "iluminacao",
+      "rooms": [
+        "sala"
+      ],
+      "usdz": "art-ios/liv_ilum_pendente.usdz",
+      "thumb": "thumbnails/liv_ilum_pendente.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 650,
+      "tags": [
+        "luz"
+      ]
+    },
+    {
+      "id": "liv_ilum_abajur2",
+      "nome": "Abajur Mesa",
+      "categoria": "iluminacao",
+      "rooms": [
+        "sala"
+      ],
+      "usdz": "art-ios/liv_ilum_abajur2.usdz",
+      "thumb": "thumbnails/liv_ilum_abajur2.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 600,
+      "tags": [
+        "luz"
+      ]
+    },
+    {
+      "id": "liv_ilum_spot",
+      "nome": "Spot Sala",
+      "categoria": "iluminacao",
+      "rooms": [
+        "sala"
+      ],
+      "usdz": "art-ios/liv_ilum_spot.usdz",
+      "thumb": "thumbnails/liv_ilum_spot.png",
+      "footprint": "S",
+      "tintable": false,
+      "tris": 300,
+      "tags": [
+        "luz"
+      ]
+    },
+    {
+      "id": "shell_ilum_lustre",
+      "nome": "Lustre",
+      "categoria": "iluminacao",
+      "rooms": [
+        "quarto",
+        "cozinha",
+        "sala"
+      ],
+      "usdz": "art-ios/shell_ilum_lustre.usdz",
+      "thumb": "thumbnails/shell_ilum_lustre.png",
+      "footprint": "M",
+      "tintable": true,
+      "tris": 900,
+      "tags": [
+        "luz"
+      ]
+    },
+    {
+      "id": "bed_planta_suculenta",
+      "nome": "Suculenta",
+      "categoria": "plantas",
+      "rooms": [
+        "quarto"
+      ],
+      "usdz": "art-ios/bed_planta_suculenta.usdz",
+      "thumb": "thumbnails/bed_planta_suculenta.png",
+      "footprint": "S",
+      "tintable": false,
+      "tris": 400,
+      "tags": [
+        "verde"
+      ]
+    },
+    {
+      "id": "bed_planta_pendente",
+      "nome": "Planta Pendente",
+      "categoria": "plantas",
+      "rooms": [
+        "quarto"
+      ],
+      "usdz": "art-ios/bed_planta_pendente.usdz",
+      "thumb": "thumbnails/bed_planta_pendente.png",
+      "footprint": "S",
+      "tintable": false,
+      "tris": 500,
+      "tags": [
+        "verde"
+      ]
+    },
+    {
+      "id": "kit_planta_horta",
+      "nome": "Horta",
+      "categoria": "plantas",
+      "rooms": [
+        "cozinha"
+      ],
+      "usdz": "art-ios/kit_planta_horta.usdz",
+      "thumb": "thumbnails/kit_planta_horta.png",
+      "footprint": "S",
+      "tintable": false,
+      "tris": 550,
+      "tags": [
+        "verde"
+      ]
+    },
+    {
+      "id": "kit_planta_grande",
+      "nome": "Vaso Grande Cozinha",
+      "categoria": "plantas",
+      "rooms": [
+        "cozinha"
+      ],
+      "usdz": "art-ios/kit_planta_grande.usdz",
+      "thumb": "thumbnails/kit_planta_grande.png",
+      "footprint": "M",
+      "tintable": false,
+      "tris": 800,
+      "tags": [
+        "verde"
+      ]
+    },
+    {
+      "id": "liv_planta_samambaia",
+      "nome": "Samambaia",
+      "categoria": "plantas",
+      "rooms": [
+        "sala"
+      ],
+      "usdz": "art-ios/liv_planta_samambaia.usdz",
+      "thumb": "thumbnails/liv_planta_samambaia.png",
+      "footprint": "M",
+      "tintable": false,
+      "tris": 900,
+      "tags": [
+        "verde"
+      ]
+    },
+    {
+      "id": "liv_planta_cacto",
+      "nome": "Cacto",
+      "categoria": "plantas",
+      "rooms": [
+        "sala"
+      ],
+      "usdz": "art-ios/liv_planta_cacto.usdz",
+      "thumb": "thumbnails/liv_planta_cacto.png",
+      "footprint": "S",
+      "tintable": false,
+      "tris": 450,
+      "tags": [
+        "verde"
+      ]
+    },
+    {
+      "id": "liv_planta_oliveira",
+      "nome": "Oliveira",
+      "categoria": "plantas",
+      "rooms": [
+        "sala"
+      ],
+      "usdz": "art-ios/liv_planta_oliveira.usdz",
+      "thumb": "thumbnails/liv_planta_oliveira.png",
+      "footprint": "M",
+      "tintable": false,
+      "tris": 1100,
+      "tags": [
+        "verde"
+      ]
+    },
+    {
+      "id": "arte_quadro_grande",
+      "nome": "Quadro Grande",
+      "categoria": "arte",
+      "rooms": [
+        "quarto",
+        "sala"
+      ],
+      "usdz": "art-ios/arte_quadro_grande.usdz",
+      "thumb": "thumbnails/arte_quadro_grande.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 350,
+      "tags": [
+        "parede"
+      ]
+    },
+    {
+      "id": "arte_espelho",
+      "nome": "Espelho",
+      "categoria": "arte",
+      "rooms": [
+        "quarto",
+        "sala"
+      ],
+      "usdz": "art-ios/arte_espelho.usdz",
+      "thumb": "thumbnails/arte_espelho.png",
+      "footprint": "S",
+      "tintable": false,
+      "tris": 300,
+      "tags": [
+        "parede"
+      ]
+    },
+    {
+      "id": "arte_poster",
+      "nome": "Poster",
+      "categoria": "arte",
+      "rooms": [
+        "quarto",
+        "sala"
+      ],
+      "usdz": "art-ios/arte_poster.usdz",
+      "thumb": "thumbnails/arte_poster.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 250,
+      "tags": [
+        "parede"
+      ]
+    },
+    {
+      "id": "arte_relogio_sala",
+      "nome": "Relogio Sala",
+      "categoria": "arte",
+      "rooms": [
+        "sala"
+      ],
+      "usdz": "art-ios/arte_relogio_sala.usdz",
+      "thumb": "thumbnails/arte_relogio_sala.png",
+      "footprint": "S",
+      "tintable": false,
+      "tris": 350,
+      "tags": [
+        "parede"
+      ]
+    },
+    {
+      "id": "elet_videogame",
+      "nome": "Videogame",
+      "categoria": "eletronicos",
+      "rooms": [
+        "sala",
+        "quarto"
+      ],
+      "usdz": "art-ios/elet_videogame.usdz",
+      "thumb": "thumbnails/elet_videogame.png",
+      "footprint": "S",
+      "tintable": false,
+      "tris": 700,
+      "tags": [
+        "tech"
+      ]
+    },
+    {
+      "id": "elet_caixa_som",
+      "nome": "Caixa Som",
+      "categoria": "eletronicos",
+      "rooms": [
+        "sala",
+        "quarto"
+      ],
+      "usdz": "art-ios/elet_caixa_som.usdz",
+      "thumb": "thumbnails/elet_caixa_som.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 600,
+      "tags": [
+        "tech"
+      ]
+    },
+    {
+      "id": "elet_notebook",
+      "nome": "Notebook",
+      "categoria": "eletronicos",
+      "rooms": [
+        "quarto",
+        "sala"
+      ],
+      "usdz": "art-ios/elet_notebook.usdz",
+      "thumb": "thumbnails/elet_notebook.png",
+      "footprint": "S",
+      "tintable": false,
+      "tris": 500,
+      "tags": [
+        "tech"
+      ]
+    },
+    {
+      "id": "elet_ventilador",
+      "nome": "Ventilador",
+      "categoria": "eletronicos",
+      "rooms": [
+        "quarto",
+        "sala"
+      ],
+      "usdz": "art-ios/elet_ventilador.usdz",
+      "thumb": "thumbnails/elet_ventilador.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 800,
+      "tags": [
+        "tech"
+      ]
+    },
+    {
+      "id": "kids_pelucia",
+      "nome": "Pelucia",
+      "categoria": "kids",
+      "rooms": [
+        "quarto"
+      ],
+      "usdz": "art-ios/kids_pelucia.usdz",
+      "thumb": "thumbnails/kids_pelucia.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 400,
+      "tags": [
+        "toy"
+      ]
+    },
+    {
+      "id": "kids_caixa_brinquedos",
+      "nome": "Caixa Brinquedos",
+      "categoria": "kids",
+      "rooms": [
+        "quarto",
+        "sala"
+      ],
+      "usdz": "art-ios/kids_caixa_brinquedos.usdz",
+      "thumb": "thumbnails/kids_caixa_brinquedos.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 600,
+      "tags": [
+        "toy"
+      ]
+    },
+    {
+      "id": "kids_tapete",
+      "nome": "Tapete Kids",
+      "categoria": "kids",
+      "rooms": [
+        "quarto"
+      ],
+      "usdz": "art-ios/kids_tapete.usdz",
+      "thumb": "thumbnails/kids_tapete.png",
+      "footprint": "M",
+      "tintable": true,
+      "tris": 250,
+      "tags": [
+        "toy"
+      ]
     }
   ],
   "version": 1
