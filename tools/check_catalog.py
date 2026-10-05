@@ -3,7 +3,7 @@ import json, os, sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CAT = os.path.join(ROOT, "catalog.json")
-VALID_CAT = {"moveis", "acessorios", "sub_itens", "iluminacao", "texteis", "plantas", "eletronicos", "arte", "kids"}
+VALID_CAT = {"moveis", "acessorios", "sub_itens", "iluminacao", "texteis", "plantas", "eletronicos", "arte", "kids", "piso", "cama_mesa", "pets", "office", "eletrodomesticos", "parede"}
 VALID_ROOMS = {"quarto", "cozinha", "sala"}
 
 with open(CAT, encoding="utf-8") as f:
