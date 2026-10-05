@@ -1,0 +1,21 @@
+name: assets-validate
+on:
+  push:
+    paths: ["art-source/**", "art-ios/**", "thumbnails/**", "catalog.json", "tools/**"]
+  pull_request:
+jobs:
+  blender-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Blender 4.2 (headless)
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq libx11-6 libxi6 libxrender1 libgl1 > /dev/null
+          curl -sL https://download.blender.org/release/Blender4.2/blender-4.2.1-linux-x64.tar.xz -o /tmp/blender.txz
+          tar -xf /tmp/blender.txz -C /tmp/
+          /tmp/blender-4.2.1-linux-x64/blender --version
+      - name: Check .blend budgets
+        run: /tmp/blender-4.2.1-linux-x64/blender -b --python tools/check_blend.py
+      - name: Check catalog
+        run: python3 tools/check_catalog.py

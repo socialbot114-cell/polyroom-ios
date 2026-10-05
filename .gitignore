@@ -1,0 +1,9 @@
+build/
+DerivedData/
+*.blend1
+*.xcuserdata/
+xcuserdata/
+*.xcworkspace/xcuserdata/
+.DS_Store
+art-source/_ref/
+*.usdc

@@ -1,0 +1,24 @@
+name: ios-build
+on:
+  push:
+    branches: [main]
+  pull_request:
+jobs:
+  build:
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Select Xcode 16
+        run: sudo xcode-select -s /Applications/Xcode_16.2.app
+      - name: Show versions
+        run: xcodebuild -version && swift --version
+      - name: Build + Test (Simulator iPhone 16)
+        run: |
+          if [ -f "ios-app/Polyroom.xcodeproj/project.pbxproj" ]; then
+            xcodebuild -project ios-app/Polyroom.xcodeproj -scheme Polyroom -destination 'platform=iOS Simulator,name=iPhone 16' -derivedDataPath build/DerivedData build test CODE_SIGNING_ALLOWED=NO | xcpretty || xcodebuild -project ios-app/Polyroom.xcodeproj -scheme Polyroom -destination 'platform=iOS Simulator,name=iPhone 16' -derivedDataPath build/DerivedData build test CODE_SIGNING_ALLOWED=NO
+          else
+            echo "WARN: Xcodeproj ainda nao criado por S2 — placeholder OK no D1"
+            ls -R ios-app || true
+          fi
+      - name: Validate catalog
+        run: python3 tools/check_catalog.py
