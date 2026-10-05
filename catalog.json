@@ -1029,7 +1029,8 @@
       "categoria": "arte",
       "rooms": [
         "quarto",
-        "sala"
+        "sala",
+        "cozinha"
       ],
       "usdz": "art-ios/arte_poster.usdz",
       "thumb": "thumbnails/arte_poster.png",
@@ -1045,7 +1046,8 @@
       "nome": "Relogio Sala",
       "categoria": "arte",
       "rooms": [
-        "sala"
+        "sala",
+        "cozinha"
       ],
       "usdz": "art-ios/arte_relogio_sala.usdz",
       "thumb": "thumbnails/arte_relogio_sala.png",
@@ -1079,7 +1081,8 @@
       "categoria": "eletronicos",
       "rooms": [
         "sala",
-        "quarto"
+        "quarto",
+        "cozinha"
       ],
       "usdz": "art-ios/elet_caixa_som.usdz",
       "thumb": "thumbnails/elet_caixa_som.png",
@@ -1113,7 +1116,8 @@
       "categoria": "eletronicos",
       "rooms": [
         "quarto",
-        "sala"
+        "sala",
+        "cozinha"
       ],
       "usdz": "art-ios/elet_ventilador.usdz",
       "thumb": "thumbnails/elet_ventilador.png",
@@ -1146,7 +1150,8 @@
       "categoria": "kids",
       "rooms": [
         "quarto",
-        "sala"
+        "sala",
+        "cozinha"
       ],
       "usdz": "art-ios/kids_caixa_brinquedos.usdz",
       "thumb": "thumbnails/kids_caixa_brinquedos.png",
