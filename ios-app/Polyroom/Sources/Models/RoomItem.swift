@@ -25,9 +25,26 @@ public struct PlacedItem: Codable, Identifiable {
     public var x: Float; public var z: Float
     public var rotationY: Float
     public var colorIndex: Int
-    public init(catalogId: String, room: Room, x: Float = 0, z: Float = 0, rotationY: Float = 0, colorIndex: Int = 0) {
+    /// mount: "floor" | "wallN" | "wallW". y: altura (0 = piso, 1.6 = parede padrão).
+    public var mount: String
+    public var y: Float
+    public init(catalogId: String, room: Room, x: Float = 0, z: Float = 0, rotationY: Float = 0, colorIndex: Int = 0, mount: String = "floor", y: Float = 0) {
         self.id = UUID(); self.catalogId = catalogId; self.room = room
         self.x = x; self.z = z; self.rotationY = rotationY; self.colorIndex = colorIndex
+        self.mount = mount; self.y = y
+    }
+    private enum CodingKeys: String, CodingKey { case id, catalogId, room, x, z, rotationY, colorIndex, mount, y }
+    public init(from decoder: Decoder) throws {
+        let c = try decoder.container(keyedBy: CodingKeys.self)
+        id = try c.decode(UUID.self, forKey: .id)
+        catalogId = try c.decode(String.self, forKey: .catalogId)
+        room = try c.decode(Room.self, forKey: .room)
+        x = try c.decode(Float.self, forKey: .x)
+        z = try c.decode(Float.self, forKey: .z)
+        rotationY = try c.decode(Float.self, forKey: .rotationY)
+        colorIndex = try c.decode(Int.self, forKey: .colorIndex)
+        mount = try c.decodeIfPresent(String.self, forKey: .mount) ?? "floor"
+        y = try c.decodeIfPresent(Float.self, forKey: .y) ?? 0
     }
 }
 

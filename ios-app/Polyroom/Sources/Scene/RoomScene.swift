@@ -188,8 +188,16 @@ public final class RoomSceneBuilder {
 
     private static func makeItemNode(_ item: PlacedItem, catalog: Catalog) -> SCNNode {
         let holder = SCNNode()
-        holder.position = SCNVector3(item.x, 0, item.z)
-        holder.eulerAngles.y = item.rotationY * .pi / 180
+        if item.mount == "wallN" {
+            holder.position = SCNVector3(item.x, item.y == 0 ? 1.6 : item.y, -2.95)
+            holder.eulerAngles.y = 0
+        } else if item.mount == "wallW" {
+            holder.position = SCNVector3(-2.95, item.y == 0 ? 1.6 : item.y, item.z)
+            holder.eulerAngles.y = .pi / 2
+        } else {
+            holder.position = SCNVector3(item.x, 0, item.z)
+            holder.eulerAngles.y = item.rotationY * .pi / 180
+        }
         holder.name = item.id.uuidString
 
         let content = AssetLoader.load(catalogId: item.catalogId)

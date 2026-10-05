@@ -62,13 +62,18 @@ public final class RoomStore {
     // MARK: - Mutação
 
     /// Coloca um item do catálogo na sala atual (snap 0.25m + clamp 6x6m). Seleciona o novo item.
+    /// Itens de parede (arte/parede/quadro/poster/espelho/relogio/cortina/adesivo/nicho/prateleira/suporte/gancho/chaveiro)
+    /// vão para a parede norte (y=1.6) em vez do piso.
     @discardableResult
     public func place(catalogId: String, x: Float = 0, z: Float = 0) -> PlacedItem {
+        let wall = Self.isWallItem(catalogId, catalog: catalog)
         let placed = PlacedItem(
             catalogId: catalogId,
             room: currentRoom,
             x: snapClamp(x),
-            z: snapClamp(z)
+            z: wall ? Self.wallZ : snapClamp(z),
+            mount: wall ? "wallN" : "floor",
+            y: wall ? Self.wallY : 0
         )
         var list = save.rooms[currentRoom] ?? []
         list.append(placed)
@@ -79,17 +84,59 @@ public final class RoomStore {
     }
 
     /// Move um item (busca em todas as salas; snap + clamp).
+    /// Parede norte: move só em x (z travado), parede oeste: só em z.
     public func move(id: UUID, x: Float, z: Float) {
         for (room, list) in save.rooms {
             if let i = list.firstIndex(where: { $0.id == id }) {
                 var copy = list
-                copy[i].x = snapClamp(x)
-                copy[i].z = snapClamp(z)
+                if copy[i].mount == "wallN" {
+                    copy[i].x = snapClamp(x)
+                    copy[i].z = Self.wallZ
+                } else if copy[i].mount == "wallW" {
+                    copy[i].x = Self.wallX
+                    copy[i].z = snapClamp(z)
+                } else {
+                    copy[i].x = snapClamp(x)
+                    copy[i].z = snapClamp(z)
+                }
                 save.rooms[room] = copy
                 persist()
                 return
             }
         }
+    }
+
+    /// Move item de parede entre norte/oeste/piso. Altura y com clamp 0.6...2.2.
+    public func setMount(id: UUID, mount: String, y: Float? = nil) {
+        for (room, list) in save.rooms {
+            if let i = list.firstIndex(where: { $0.id == id }) {
+                var copy = list
+                copy[i].mount = mount
+                if mount == "wallN" { copy[i].z = Self.wallZ; copy[i].y = y ?? Self.wallY }
+                else if mount == "wallW" { copy[i].x = Self.wallX; copy[i].y = y ?? Self.wallY }
+                else { copy[i].y = 0 }
+                if let yy = y, mount == "floor" { copy[i].y = 0; _ = yy }
+                copy[i].y = min(2.2, max(0, mount == "floor" ? 0 : (y ?? copy[i].y == 0 ? Self.wallY : copy[i].y)))
+                save.rooms[room] = copy
+                persist()
+                return
+            }
+        }
+    }
+
+    public static let wallZ: Float = -2.95
+    public static let wallX: Float = -2.95
+    public static let wallY: Float = 1.6
+
+    public static func isWallItem(_ catalogId: String, catalog: Catalog) -> Bool {
+        let c = catalogId.lowercased()
+        if let item = catalog.items.first(where: { $0.id == catalogId }) {
+            if item.categoria == "arte" || item.categoria == "parede" { return true }
+        }
+        for k in ["quadro", "poster", "espelho", "relogio", "cortina", "adesivo", "nicho", "prateleira", "suporte", "gancho", "chaveiro"] {
+            if c.contains(k) { return true }
+        }
+        return false
     }
 
     /// Gira +step graus (padrão 45°), normalizando para [0, 360).
