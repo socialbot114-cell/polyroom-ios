@@ -4,6 +4,7 @@ Data: 2026-10-05 · Tag alvo: `v1.0-mvp1` · Version: 1.0 (build 1) · iOS 17+, 
 
 > Estado real nesta data: arte `.glb` 44/45 + thumbs 45/45, `.usdz` 0/45 (conversão no Mac pendente).
 > Estes notes descrevem o MVP-1 pretendido + limitações conhecidas. Não shippar como final até os gaps em `docs/BUG-BASH.md` (BB-08/BB-10/BB-15/BB-19) fecharem.
+> Nota 2026-10-06 (sem reescrever release): catalog 480, usdz 0/480, glb 480/480, blends 481. Snapshot + Sobre/Onboarding implementados em `ContentView.swift`/`OnboardingView.swift` (falta só teste device). Matriz 45 obsoleta — ver `docs/GAPS-V1.1.md`.
 
 ## Conteúdo MVP-1
 - 3 quartos diorama 6x6m (piso + 2 paredes h=3m, origem no centro): quarto (BED), cozinha (KIT), sala (LIV). Troca de shell sem reload.

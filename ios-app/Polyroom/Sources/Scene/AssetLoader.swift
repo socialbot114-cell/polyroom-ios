@@ -9,6 +9,7 @@ public struct AssetLoader {
             return n
         }
         let box = SCNBox(width: 0.4, height: 0.4, length: 0.4, chamferRadius: 0.02)
+        print("AssetLoader missing: \(catalogId).usdz")
         #if canImport(UIKit)
         box.firstMaterial?.diffuse.contents = UIColor.systemTeal
         #else

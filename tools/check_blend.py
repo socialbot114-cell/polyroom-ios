@@ -9,6 +9,8 @@ try:
 except ImportError:
     IN_BLENDER = False
 
+NO_BLENDER = os.environ.get("NO_BLENDER", "0") == "1"
+
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SRC = os.path.join(ROOT, "art-source")
 
@@ -22,8 +24,8 @@ def check_file(path):
     global checked
     checked += 1
     name = os.path.basename(path)
-    if "_REF" in name.upper() or "_ref" in path:
-        print(f"SKIP ref {name}")
+    if "_REF" in name.upper() or "_ref" in path or name.startswith("_LIB"):
+        print(f"SKIP lib/ref {name}")
         return
     bpy.ops.wm.open_mainfile(filepath=path)
     for obj in bpy.data.objects:
@@ -45,16 +47,28 @@ def check_file(path):
         if not obj.data.uv_layers:
             errors.append(f"{name}:{obj.name} sem UV")
 
-if not IN_BLENDER:
+if not IN_BLENDER or NO_BLENDER:
     print("check_blend: fora do Blender — validando só existência de arquivos")
     files = glob.glob(os.path.join(SRC, "*.blend"))
     print(f"encontrados: {len(files)}")
+    # Higiene: .blend1 nunca deve ser commitado
+    b1 = sorted(glob.glob(os.path.join(SRC, "*.blend1")))
+    if b1:
+        for f in b1[:20]:
+            print(f"WARN: higiene .blend1 encontrado: {os.path.basename(f)}")
+        if len(b1) > 20:
+            print(f"WARN: higiene .blend1: e mais {len(b1) - 20} arquivos")
+    else:
+        print("higiene .blend1: 0 (OK)")
     sys.exit(0)
 
 files = sorted(glob.glob(os.path.join(SRC, "*.blend")))
 if not files:
     print("WARN: nenhum .blend ainda (D1 OK)")
     sys.exit(0)
+# Higiene (também dentro do Blender): .blend1 só WARN, não falha
+for _b1 in sorted(glob.glob(os.path.join(SRC, "*.blend1")))[:20]:
+    print(f"WARN: higiene .blend1 encontrado: {os.path.basename(_b1)}")
 for f in files:
     check_file(f)
 

@@ -1,5 +1,9 @@
 # GAPS v1.1 — cobertura, USDZ, xcodeproj
 
+> Estado 2026-10-06: 480 itens — matriz 45 abaixo está OBSOLETA (mantida só p/ histórico). Recount completo delegado ao agente catalog (não feito aqui).
+> Contagens novas via leitura `catalog.json` (2026-10-06): total 480; por categoria: `moveis` 70, `kids` 69, `plantas` 66, `eletrodomesticos` 64, `iluminacao` 63, `sub_itens` 18, `acessorios` 17, `pets` 17, `office` 17, `parede` 16, `texteis` 15, `arte` 12, `eletronicos` 12, `piso` 12, `cama_mesa` 12. Slots por room (com overlap): quarto 217, sala 174, cozinha 151. Assets: `.glb` 480/480, `.usdz` 0/480, `.blend` 481.
+> Meta "≥4/categoria/combo" precisa ser recalculada p/ 15 categorias atuais (agente catalog).
+
 Fonte verdade: `catalog.json` v1 (45 únicos) + `art-ios/*.glb` (45) + `demo_save_v1.json`.
 Data: 2026-10-05. Polish final — não quebra nada existente (sem editar blends nem `Sources/*.swift`).
 

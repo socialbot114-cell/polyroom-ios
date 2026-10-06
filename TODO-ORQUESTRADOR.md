@@ -21,6 +21,21 @@
 - [ ] S3: preparar `gh repo create polyroom-ios --private` (aguardando sua autorização p/ push)
 - [ ] ORQ: revisar D2 fim do dia
 
+## Fila D2-D3 (2026-10-06 — 6 agentes disparados, ORQ Docs só registra)
+- [ ] A1 catalog: auditar `catalog.json` 480 itens (recount 15 categorias, matriz GAPS, `check_catalog.py` 480/0 erros)
+- [ ] A2 iOS RoomStore: hardening (wall mount, snap/clamp, rotate/color/duplicate/remove, save corrupto)
+- [ ] A3 iOS scene: perf (<50k tris, 60/30fps) + `AssetLoader` fallback glb/teal sem crash
+- [ ] A4 tools: strict (`check_catalog`/`demo_load`/`check_blend` p/ 480, `ALLOW_MISSING=0` doc)
+- [ ] A5 arte: inventário (481 blends × 480 glb × 0 usdz, thumbs, `bed_moveis_cadeira` + pipeline usdz Mac)
+- [ ] A6 QA-CI: bug-bash device (BB-13 snapshot + BB-14 onboarding/sobre) + `ios-build`/`assets-validate` verdes
+
+## Gates D3 (2026-10-06 — propostos, NÃO feitos)
+- [ ] D3-1: catalog 480 auditado (matriz refeita, 0 erros)
+- [ ] D3-2: RoomStore hardening OK (kill-restore + corrupto + limites)
+- [ ] D3-3: scene perf medida (fps + tris + fallback)
+- [ ] D3-4: tools strict verdes p/ 480
+- [ ] D3-5: arte inventário fechado (480 glb / 0 usdz plano Mac)
+
 ## Riscos
 - Sem Mac local: build só no Actions macos-15. S2 precisa de Mac ou usa `swiftpm` mock até CI validar.
 - Blend 2.7 quebrar no 4.2: fallback Append por coleção.

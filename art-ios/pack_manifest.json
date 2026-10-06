@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "total": 480,
+  "glb_mb": 7.6,
+  "source_mb": 270.6,
+  "tris_total": 78138,
+  "ship": "art-ios/*.glb + thumbnails/*.png + catalog.json (8.5+2.6MB)",
+  "dev_only": "art-source/*.blend (272MB, n\u00e3o shippa no app)"
+}

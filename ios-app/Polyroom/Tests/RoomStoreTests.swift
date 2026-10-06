@@ -106,4 +106,51 @@ final class RoomStoreTests: XCTestCase {
         let store2 = RoomStore(currentRoom: .quarto, save: back, autosaveEnabled: false)
         XCTAssertEqual(store2.items.count, 1)
     }
+
+    func testSetColorClampsTo0To5() {
+        let store = makeStore()
+        let item = store.place(catalogId: "kit_moveis_cadeira")
+        store.setColor(id: item.id, index: -1)
+        XCTAssertEqual(store.item(id: item.id)!.colorIndex, 0)
+        store.setColor(id: item.id, index: 99)
+        XCTAssertEqual(store.item(id: item.id)!.colorIndex, 5)
+        store.setColor(id: item.id, index: 5)
+        XCTAssertEqual(store.item(id: item.id)!.colorIndex, 5)
+    }
+
+    func testRotateNegativeGoesTo315() {
+        let store = makeStore()
+        let item = store.place(catalogId: "kit_moveis_cadeira")
+        store.rotate(id: item.id, step: -45)
+        XCTAssertEqual(store.item(id: item.id)!.rotationY, 315, accuracy: 0.001)
+    }
+
+    func testRotateFullCircleHasNoMinusZero() {
+        let store = makeStore()
+        let item = store.place(catalogId: "kit_moveis_cadeira")
+        for _ in 0..<8 { store.rotate(id: item.id) }
+        let r = store.item(id: item.id)!.rotationY
+        XCTAssertEqual(r, 0, accuracy: 0.001)
+        XCTAssertEqual(r.sign, .plus)
+    }
+
+    func testDuplicatePreservesWallMountAndY() {
+        let store = makeStore()
+        let item = store.place(catalogId: "arte_quadro_grande", x: 1.0, z: 1.0)
+        XCTAssertEqual(item.mount, "wallN")
+        XCTAssertEqual(item.y, RoomStore.wallY, accuracy: 0.001)
+        let copy = store.duplicate(id: item.id)!
+        XCTAssertEqual(copy.mount, "wallN")
+        XCTAssertEqual(copy.y, item.y, accuracy: 0.001)
+        XCTAssertEqual(copy.z, RoomStore.wallZ, accuracy: 0.001)
+        XCTAssertEqual(copy.x, snapClamp(item.x + snapStep), accuracy: 0.001)
+    }
+
+    func testDuplicateClampsAtBorder() {
+        let store = makeStore()
+        let item = store.place(catalogId: "kit_moveis_cadeira", x: 2.9, z: 0)
+        XCTAssertEqual(item.x, 3.0, accuracy: 0.001)
+        let copy = store.duplicate(id: item.id)!
+        XCTAssertEqual(copy.x, 3.0, accuracy: 0.001)
+    }
 }

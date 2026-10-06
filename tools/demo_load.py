@@ -14,9 +14,12 @@ CAT_PATH = os.path.join(ROOT, "catalog.json")
 SAVE_PATH = sys.argv[1] if len(sys.argv) > 1 else os.path.join(ROOT, "demo_save_v1.json")
 
 VALID_ROOMS = {"quarto", "cozinha", "sala"}
+VALID_MOUNT = {"floor", "wallN", "wallW"}
 HALF = 3.0
 STEP = 0.25
 EPS = 1e-6
+WALL_Y_MIN = 0.6
+WALL_Y_MAX = 2.2
 
 errors = []
 warns = []
@@ -117,6 +120,29 @@ for room_key, lst in rooms.items():
             q = round(float(v) / STEP) * STEP
             if abs(float(v) - q) > 1e-4:
                 warn(f"{where} {axis}={v} fora do snap 0.25")
+        # mount: só floor/wallN/wallW; ausente assume floor (compat v1, sem erro)
+        if "mount" not in p:
+            mount = "floor"
+        else:
+            mount = p.get("mount")
+            if mount not in VALID_MOUNT:
+                err(f"{where} mount invalido: {mount!r} (esperado floor/wallN/wallW)")
+                mount = "floor"
+        # y: floor deve ser 0, wall 0.6..2.2 WARN se fora; ausente assume 0/floor (compat v1)
+        if "y" not in p:
+            pass
+        else:
+            y = p.get("y")
+            if not isinstance(y, (int, float)) or isinstance(y, bool):
+                err(f"{where} y nao-numerico: {y!r}")
+            else:
+                yf = float(y)
+                if mount == "floor":
+                    if abs(yf - 0.0) > 1e-4:
+                        warn(f"{where} y={y} fora do esperado floor=0")
+                else:  # wallN / wallW
+                    if not (WALL_Y_MIN - EPS <= yf <= WALL_Y_MAX + EPS):
+                        warn(f"{where} y={y} fora de [0.6,2.2] p/ {mount}")
         # rotationY
         r = p.get("rotationY")
         if not isinstance(r, (int, float)) or isinstance(r, bool):

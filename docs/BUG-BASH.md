@@ -100,12 +100,14 @@ Checklist: snapshot + share.
 1. Montar sala, tocar botão câmera, salvar PNG.
 2. Compartilhar via share sheet com avião ligado.
 Esperado: PNG salvo local, share abre sem rede. Falha se: botão ausente (hoje NÃO IMPLEMENTADO no Swift — gap), permissão de Fotos negada trava, PNG preto.
+Estado 2026-10-06: IMPLEMENTADO em `ios-app/Polyroom/Sources/Views/ContentView.swift` (`takeSnapshot` + `renderPhoto` + `savePNGToDocuments`, AboutView incluso) — falta só teste em device.
 
 ## BB-14 — Onboarding 3 passos + Sobre CC-BY [MEDIA]
 Checklist: onboarding + "Baseado em Low-poly rooms por javiloz1604 (BlendSwap 24957), CC-BY".
 1. Fresh install → verificar 3 cards de onboarding.
 2. Abrir Sobre → procurar crédito exato.
 Esperado: 3 passos puláveis, crédito literal presente. Falha se: ausente (hoje NÃO IMPLEMENTADO — gap), texto diferente, sem atribuição (viola CC-BY).
+Estado 2026-10-06: PARCIAL — `AboutView` existe em `ContentView.swift` (crédito CC-BY literal OK) + `OnboardingView.swift` existe (3 cards: quarto/arrastar/offline, `hasSeenOnboarding`) — falta só teste em device/fresh install.
 
 ## BB-15 — Ícone 1024, splash, version 1.0(1), portrait, iOS 17+ [BLOQ]
 Checklist: ícone/splash/version.

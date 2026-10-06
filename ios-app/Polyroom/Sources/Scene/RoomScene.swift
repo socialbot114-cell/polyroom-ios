@@ -56,7 +56,8 @@ public final class RoomSceneBuilder {
         let root = scene.rootNode
 
         root.addChildNode(makeFloor())
-        root.addChildNode(makeGrid())
+        root.addChildNode(makeGrid(step: 1.0, opacity: 1.0, name: "grid"))
+        root.addChildNode(makeGrid(step: 0.25, opacity: 0.3, name: "grid_fino", skipMajor: true))
         for wall in makeWalls() { root.addChildNode(wall) }
         for light in makeLights() { root.addChildNode(light) }
 
@@ -91,11 +92,17 @@ public final class RoomSceneBuilder {
         return node
     }
 
-    /// Linhas do grid a cada 1m sobre o piso 6x6 (y = 0.01 anti z-fight).
-    private static func makeGrid(step: Float = 1.0, half: Float = 3.0) -> SCNNode {
+    /// Duas malhas sobre o piso 6x6 (y = 0.01 anti z-fight): forte a cada
+    /// 1m + fina sutil a cada 0.25m. Leve (~130 vértices no total).
+    /// `skipMajor` pula as linhas múltiplas de 1m (já cobertas pela malha forte).
+    private static func makeGrid(step: Float = 1.0, half: Float = 3.0, opacity: CGFloat = 1.0, name: String = "grid", skipMajor: Bool = false) -> SCNNode {
         var vertices: [SCNVector3] = []
         var i = -half
         while i <= half + 0.001 {
+            if skipMajor && abs((i / 1.0).rounded() * 1.0 - i) < 0.001 {
+                i += step
+                continue
+            }
             vertices.append(SCNVector3(i, 0.01, -half))
             vertices.append(SCNVector3(i, 0.01, half))
             vertices.append(SCNVector3(-half, 0.01, i))
@@ -107,36 +114,41 @@ public final class RoomSceneBuilder {
         let element = SCNGeometryElement(indices: indices, primitiveType: .line)
         let geo = SCNGeometry(sources: [source], elements: [element])
         geo.firstMaterial?.lightingModel = .constant
+        geo.firstMaterial?.transparency = opacity
         #if canImport(UIKit)
         geo.firstMaterial?.diffuse.contents = UIColor.systemGray3
         #else
         geo.firstMaterial?.diffuse.contents = NSColor.systemGray
         #endif
         let node = SCNNode(geometry: geo)
-        node.name = "grid"
+        node.name = name
         return node
     }
 
-    /// 2 paredes: norte (fundo, z = -3) e oeste (x = -3). Altura 2.6m.
+    /// 2 paredes (docs/CONTRATOS.md §1): norte (fundo, z = -3.1) e oeste
+    /// (x = -3.1). Altura 3m, espessura 0.2m, 6.4m de largura para cobrir o canto.
     private static func makeWalls() -> [SCNNode] {
         let color = RoomPaletteColor(red: 0.95, green: 0.92, blue: 0.87, alpha: 1)
 
-        let northGeo = SCNBox(width: 6.2, height: 2.6, length: 0.1, chamferRadius: 0)
+        let northGeo = SCNBox(width: 6.4, height: 3.0, length: 0.2, chamferRadius: 0)
         northGeo.firstMaterial?.diffuse.contents = color
         let north = SCNNode(geometry: northGeo)
-        north.position = SCNVector3(0, 1.3, -3.05)
+        north.position = SCNVector3(0, 1.5, -3.1)
         north.name = "parede_norte"
 
-        let westGeo = SCNBox(width: 0.1, height: 2.6, length: 6.2, chamferRadius: 0)
+        let westGeo = SCNBox(width: 0.2, height: 3.0, length: 6.4, chamferRadius: 0)
         westGeo.firstMaterial?.diffuse.contents = color
         let west = SCNNode(geometry: westGeo)
-        west.position = SCNVector3(-3.05, 1.3, 0)
+        west.position = SCNVector3(-3.1, 1.5, 0)
         west.name = "parede_oeste"
 
         return [north, west]
     }
 
     // MARK: - Luzes / câmera
+
+    /// Futuro modo leve (ex.: iPhone SE2): sombra 512 em vez de 1024.
+    public static let lowPower = false
 
     private static func makeLights() -> [SCNNode] {
         let sun = SCNNode()
@@ -148,7 +160,8 @@ public final class RoomSceneBuilder {
         sun.light?.color = NSColor.white
         #endif
         sun.light?.castsShadow = true
-        sun.light?.shadowMapSize = CGSize(width: 2048, height: 2048)
+        let shadowRes: CGFloat = lowPower ? 512 : 1024
+        sun.light?.shadowMapSize = CGSize(width: shadowRes, height: shadowRes)
         sun.position = SCNVector3(4, 8, 2)
         sun.name = "sol"
         // Aponta para a origem após entrar na cena (feito pelo chamador? não —

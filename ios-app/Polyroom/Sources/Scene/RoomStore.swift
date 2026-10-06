@@ -106,17 +106,25 @@ public final class RoomStore {
         }
     }
 
-    /// Move item de parede entre norte/oeste/piso. Altura y com clamp 0.6...2.2.
+    /// Move item de parede entre norte/oeste/piso.
+    /// - floor → y = 0 (ignora `y`).
+    /// - wallN/wallW → y = clamp(y ?? atual ?? 1.6, 0.6...2.2).
     public func setMount(id: UUID, mount: String, y: Float? = nil) {
         for (room, list) in save.rooms {
             if let i = list.firstIndex(where: { $0.id == id }) {
                 var copy = list
                 copy[i].mount = mount
-                if mount == "wallN" { copy[i].z = Self.wallZ; copy[i].y = y ?? Self.wallY }
-                else if mount == "wallW" { copy[i].x = Self.wallX; copy[i].y = y ?? Self.wallY }
-                else { copy[i].y = 0 }
-                if let yy = y, mount == "floor" { copy[i].y = 0; _ = yy }
-                copy[i].y = min(2.2, max(0, mount == "floor" ? 0 : (y ?? copy[i].y == 0 ? Self.wallY : copy[i].y)))
+                if mount == "wallN" {
+                    copy[i].z = Self.wallZ
+                    let current = copy[i].y == 0 ? Self.wallY : copy[i].y
+                    copy[i].y = min(2.2, max(0.6, y ?? current))
+                } else if mount == "wallW" {
+                    copy[i].x = Self.wallX
+                    let current = copy[i].y == 0 ? Self.wallY : copy[i].y
+                    copy[i].y = min(2.2, max(0.6, y ?? current))
+                } else {
+                    copy[i].y = 0
+                }
                 save.rooms[room] = copy
                 persist()
                 return
@@ -169,16 +177,31 @@ public final class RoomStore {
     }
 
     /// Duplica um item com offset +0.25m em x (com snap+clamp) e novo UUID. Seleciona a cópia.
+    /// Preserva mount/y do original (parede continua na parede).
     @discardableResult
     public func duplicate(id: UUID) -> PlacedItem? {
         guard let src = item(id: id) else { return nil }
+        let newX: Float
+        let newZ: Float
+        if src.mount == "wallW" {
+            newX = Self.wallX
+            newZ = snapClamp(src.z + snapStep)
+        } else if src.mount == "wallN" {
+            newX = snapClamp(src.x + snapStep)
+            newZ = Self.wallZ
+        } else {
+            newX = snapClamp(src.x + snapStep)
+            newZ = snapClamp(src.z)
+        }
         let copy = PlacedItem(
             catalogId: src.catalogId,
             room: src.room,
-            x: snapClamp(src.x + snapStep),
-            z: snapClamp(src.z),
+            x: newX,
+            z: newZ,
             rotationY: src.rotationY,
-            colorIndex: src.colorIndex
+            colorIndex: src.colorIndex,
+            mount: src.mount,
+            y: src.y
         )
         var list = save.rooms[src.room] ?? []
         list.append(copy)
@@ -188,9 +211,11 @@ public final class RoomStore {
         return copy
     }
 
-    /// Define o índice de cor (tinta). Clampa para >= 0.
+    /// Define o índice de cor (tinta). Clampa para 0...5 (6 swatches cozy).
+    /// Valores > 5 clampam para 5 (não wrap) para casar com `demo_load.py` (WARN > 5).
+    /// Leitura continua compatível com `RoomScene.paletteColor` (wrap via módulo).
     public func setColor(id: UUID, index: Int) {
-        let safe = max(0, index)
+        let safe = min(5, max(0, index))
         for (room, list) in save.rooms {
             if let i = list.firstIndex(where: { $0.id == id }) {
                 var copy = list
