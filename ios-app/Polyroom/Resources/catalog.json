@@ -3722,6 +3722,4026 @@
       "tags": [
         "parede"
       ]
+    },
+    {
+      "id": "mov_beliche",
+      "nome": "Beliche",
+      "categoria": "moveis",
+      "rooms": [
+        "quarto"
+      ],
+      "usdz": "art-ios/mov_beliche.usdz",
+      "thumb": "thumbnails/mov_beliche.png",
+      "footprint": "L",
+      "tintable": true,
+      "tris": 900,
+      "tags": [
+        "movel"
+      ]
+    },
+    {
+      "id": "mov_cama_solteiro",
+      "nome": "Cama Solteiro",
+      "categoria": "moveis",
+      "rooms": [
+        "quarto"
+      ],
+      "usdz": "art-ios/mov_cama_solteiro.usdz",
+      "thumb": "thumbnails/mov_cama_solteiro.png",
+      "footprint": "L",
+      "tintable": true,
+      "tris": 900,
+      "tags": [
+        "movel"
+      ]
+    },
+    {
+      "id": "mov_cama_queen",
+      "nome": "Cama Queen",
+      "categoria": "moveis",
+      "rooms": [
+        "quarto"
+      ],
+      "usdz": "art-ios/mov_cama_queen.usdz",
+      "thumb": "thumbnails/mov_cama_queen.png",
+      "footprint": "L",
+      "tintable": true,
+      "tris": 900,
+      "tags": [
+        "movel"
+      ]
+    },
+    {
+      "id": "mov_criado2",
+      "nome": "Criado 2 Gavetas",
+      "categoria": "moveis",
+      "rooms": [
+        "quarto"
+      ],
+      "usdz": "art-ios/mov_criado2.usdz",
+      "thumb": "thumbnails/mov_criado2.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 900,
+      "tags": [
+        "movel"
+      ]
+    },
+    {
+      "id": "mov_penteadeira",
+      "nome": "Penteadeira",
+      "categoria": "moveis",
+      "rooms": [
+        "quarto"
+      ],
+      "usdz": "art-ios/mov_penteadeira.usdz",
+      "thumb": "thumbnails/mov_penteadeira.png",
+      "footprint": "M",
+      "tintable": true,
+      "tris": 900,
+      "tags": [
+        "movel"
+      ]
+    },
+    {
+      "id": "mov_banco_pe",
+      "nome": "Banco Pe Cama",
+      "categoria": "moveis",
+      "rooms": [
+        "quarto"
+      ],
+      "usdz": "art-ios/mov_banco_pe.usdz",
+      "thumb": "thumbnails/mov_banco_pe.png",
+      "footprint": "M",
+      "tintable": true,
+      "tris": 900,
+      "tags": [
+        "movel"
+      ]
+    },
+    {
+      "id": "mov_closet",
+      "nome": "Closet Aberto",
+      "categoria": "moveis",
+      "rooms": [
+        "quarto"
+      ],
+      "usdz": "art-ios/mov_closet.usdz",
+      "thumb": "thumbnails/mov_closet.png",
+      "footprint": "L",
+      "tintable": true,
+      "tris": 900,
+      "tags": [
+        "movel"
+      ]
+    },
+    {
+      "id": "mov_cabideiro",
+      "nome": "Cabideiro",
+      "categoria": "moveis",
+      "rooms": [
+        "quarto"
+      ],
+      "usdz": "art-ios/mov_cabideiro.usdz",
+      "thumb": "thumbnails/mov_cabideiro.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 900,
+      "tags": [
+        "movel"
+      ]
+    },
+    {
+      "id": "mov_escrivaninha2",
+      "nome": "Escrivaninha 2",
+      "categoria": "moveis",
+      "rooms": [
+        "quarto"
+      ],
+      "usdz": "art-ios/mov_escrivaninha2.usdz",
+      "thumb": "thumbnails/mov_escrivaninha2.png",
+      "footprint": "M",
+      "tintable": true,
+      "tris": 900,
+      "tags": [
+        "movel"
+      ]
+    },
+    {
+      "id": "mov_estante_baixa",
+      "nome": "Estante Baixa",
+      "categoria": "moveis",
+      "rooms": [
+        "quarto"
+      ],
+      "usdz": "art-ios/mov_estante_baixa.usdz",
+      "thumb": "thumbnails/mov_estante_baixa.png",
+      "footprint": "M",
+      "tintable": true,
+      "tris": 900,
+      "tags": [
+        "movel"
+      ]
+    },
+    {
+      "id": "mov_poltrona",
+      "nome": "Poltrona",
+      "categoria": "moveis",
+      "rooms": [
+        "quarto",
+        "sala"
+      ],
+      "usdz": "art-ios/mov_poltrona.usdz",
+      "thumb": "thumbnails/mov_poltrona.png",
+      "footprint": "M",
+      "tintable": true,
+      "tris": 900,
+      "tags": [
+        "movel"
+      ]
+    },
+    {
+      "id": "mov_puff_grande",
+      "nome": "Puff Grande",
+      "categoria": "moveis",
+      "rooms": [
+        "quarto",
+        "sala"
+      ],
+      "usdz": "art-ios/mov_puff_grande.usdz",
+      "thumb": "thumbnails/mov_puff_grande.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 900,
+      "tags": [
+        "movel"
+      ]
+    },
+    {
+      "id": "mov_sofa_cama",
+      "nome": "Sofa Cama",
+      "categoria": "moveis",
+      "rooms": [
+        "sala"
+      ],
+      "usdz": "art-ios/mov_sofa_cama.usdz",
+      "thumb": "thumbnails/mov_sofa_cama.png",
+      "footprint": "L",
+      "tintable": true,
+      "tris": 900,
+      "tags": [
+        "movel"
+      ]
+    },
+    {
+      "id": "mov_sofa_3l",
+      "nome": "Sofa 3 Lugares",
+      "categoria": "moveis",
+      "rooms": [
+        "sala"
+      ],
+      "usdz": "art-ios/mov_sofa_3l.usdz",
+      "thumb": "thumbnails/mov_sofa_3l.png",
+      "footprint": "L",
+      "tintable": true,
+      "tris": 900,
+      "tags": [
+        "movel"
+      ]
+    },
+    {
+      "id": "mov_sofa_canto",
+      "nome": "Sofa Canto",
+      "categoria": "moveis",
+      "rooms": [
+        "sala"
+      ],
+      "usdz": "art-ios/mov_sofa_canto.usdz",
+      "thumb": "thumbnails/mov_sofa_canto.png",
+      "footprint": "L",
+      "tintable": true,
+      "tris": 900,
+      "tags": [
+        "movel"
+      ]
+    },
+    {
+      "id": "mov_chaise",
+      "nome": "Chaise",
+      "categoria": "moveis",
+      "rooms": [
+        "sala"
+      ],
+      "usdz": "art-ios/mov_chaise.usdz",
+      "thumb": "thumbnails/mov_chaise.png",
+      "footprint": "M",
+      "tintable": true,
+      "tris": 900,
+      "tags": [
+        "movel"
+      ]
+    },
+    {
+      "id": "mov_mesa_lateral",
+      "nome": "Mesa Lateral",
+      "categoria": "moveis",
+      "rooms": [
+        "sala"
+      ],
+      "usdz": "art-ios/mov_mesa_lateral.usdz",
+      "thumb": "thumbnails/mov_mesa_lateral.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 900,
+      "tags": [
+        "movel"
+      ]
+    },
+    {
+      "id": "mov_aparador",
+      "nome": "Aparador",
+      "categoria": "moveis",
+      "rooms": [
+        "sala"
+      ],
+      "usdz": "art-ios/mov_aparador.usdz",
+      "thumb": "thumbnails/mov_aparador.png",
+      "footprint": "M",
+      "tintable": true,
+      "tris": 900,
+      "tags": [
+        "movel"
+      ]
+    },
+    {
+      "id": "mov_bar",
+      "nome": "Barzinho",
+      "categoria": "moveis",
+      "rooms": [
+        "sala"
+      ],
+      "usdz": "art-ios/mov_bar.usdz",
+      "thumb": "thumbnails/mov_bar.png",
+      "footprint": "M",
+      "tintable": true,
+      "tris": 900,
+      "tags": [
+        "movel"
+      ]
+    },
+    {
+      "id": "mov_lareira",
+      "nome": "Lareira Fake",
+      "categoria": "moveis",
+      "rooms": [
+        "sala"
+      ],
+      "usdz": "art-ios/mov_lareira.usdz",
+      "thumb": "thumbnails/mov_lareira.png",
+      "footprint": "M",
+      "tintable": true,
+      "tris": 900,
+      "tags": [
+        "movel"
+      ]
+    },
+    {
+      "id": "mov_ilha_cozinha",
+      "nome": "Ilha Cozinha",
+      "categoria": "moveis",
+      "rooms": [
+        "cozinha"
+      ],
+      "usdz": "art-ios/mov_ilha_cozinha.usdz",
+      "thumb": "thumbnails/mov_ilha_cozinha.png",
+      "footprint": "L",
+      "tintable": true,
+      "tris": 900,
+      "tags": [
+        "movel"
+      ]
+    },
+    {
+      "id": "mov_bancada2",
+      "nome": "Bancada 2",
+      "categoria": "moveis",
+      "rooms": [
+        "cozinha"
+      ],
+      "usdz": "art-ios/mov_bancada2.usdz",
+      "thumb": "thumbnails/mov_bancada2.png",
+      "footprint": "L",
+      "tintable": true,
+      "tris": 900,
+      "tags": [
+        "movel"
+      ]
+    },
+    {
+      "id": "mov_armario_alto",
+      "nome": "Armario Alto",
+      "categoria": "moveis",
+      "rooms": [
+        "cozinha"
+      ],
+      "usdz": "art-ios/mov_armario_alto.usdz",
+      "thumb": "thumbnails/mov_armario_alto.png",
+      "footprint": "L",
+      "tintable": true,
+      "tris": 900,
+      "tags": [
+        "movel"
+      ]
+    },
+    {
+      "id": "mov_armario_baixo",
+      "nome": "Armario Baixo",
+      "categoria": "moveis",
+      "rooms": [
+        "cozinha"
+      ],
+      "usdz": "art-ios/mov_armario_baixo.usdz",
+      "thumb": "thumbnails/mov_armario_baixo.png",
+      "footprint": "M",
+      "tintable": true,
+      "tris": 900,
+      "tags": [
+        "movel"
+      ]
+    },
+    {
+      "id": "mov_cristaleira",
+      "nome": "Cristaleira",
+      "categoria": "moveis",
+      "rooms": [
+        "cozinha"
+      ],
+      "usdz": "art-ios/mov_cristaleira.usdz",
+      "thumb": "thumbnails/mov_cristaleira.png",
+      "footprint": "L",
+      "tintable": true,
+      "tris": 900,
+      "tags": [
+        "movel"
+      ]
+    },
+    {
+      "id": "mov_mesa_redonda",
+      "nome": "Mesa Redonda",
+      "categoria": "moveis",
+      "rooms": [
+        "cozinha"
+      ],
+      "usdz": "art-ios/mov_mesa_redonda.usdz",
+      "thumb": "thumbnails/mov_mesa_redonda.png",
+      "footprint": "M",
+      "tintable": true,
+      "tris": 900,
+      "tags": [
+        "movel"
+      ]
+    },
+    {
+      "id": "mov_mesa_6l",
+      "nome": "Mesa 6 Lugares",
+      "categoria": "moveis",
+      "rooms": [
+        "cozinha"
+      ],
+      "usdz": "art-ios/mov_mesa_6l.usdz",
+      "thumb": "thumbnails/mov_mesa_6l.png",
+      "footprint": "L",
+      "tintable": true,
+      "tris": 900,
+      "tags": [
+        "movel"
+      ]
+    },
+    {
+      "id": "mov_banqueta",
+      "nome": "Banqueta",
+      "categoria": "moveis",
+      "rooms": [
+        "cozinha"
+      ],
+      "usdz": "art-ios/mov_banqueta.usdz",
+      "thumb": "thumbnails/mov_banqueta.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 900,
+      "tags": [
+        "movel"
+      ]
+    },
+    {
+      "id": "mov_banqueta2",
+      "nome": "Banqueta Alta",
+      "categoria": "moveis",
+      "rooms": [
+        "cozinha"
+      ],
+      "usdz": "art-ios/mov_banqueta2.usdz",
+      "thumb": "thumbnails/mov_banqueta2.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 900,
+      "tags": [
+        "movel"
+      ]
+    },
+    {
+      "id": "mov_prateleira_coz",
+      "nome": "Prateleira Cozinha",
+      "categoria": "moveis",
+      "rooms": [
+        "cozinha"
+      ],
+      "usdz": "art-ios/mov_prateleira_coz.usdz",
+      "thumb": "thumbnails/mov_prateleira_coz.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 900,
+      "tags": [
+        "movel"
+      ]
+    },
+    {
+      "id": "mov_despensa",
+      "nome": "Despensa",
+      "categoria": "moveis",
+      "rooms": [
+        "cozinha"
+      ],
+      "usdz": "art-ios/mov_despensa.usdz",
+      "thumb": "thumbnails/mov_despensa.png",
+      "footprint": "L",
+      "tintable": true,
+      "tris": 900,
+      "tags": [
+        "movel"
+      ]
+    },
+    {
+      "id": "mov_carrinho_cha",
+      "nome": "Carrinho Cha",
+      "categoria": "moveis",
+      "rooms": [
+        "cozinha",
+        "sala"
+      ],
+      "usdz": "art-ios/mov_carrinho_cha.usdz",
+      "thumb": "thumbnails/mov_carrinho_cha.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 900,
+      "tags": [
+        "movel"
+      ]
+    },
+    {
+      "id": "mov_banco_jardim",
+      "nome": "Banco Interno",
+      "categoria": "moveis",
+      "rooms": [
+        "sala"
+      ],
+      "usdz": "art-ios/mov_banco_jardim.usdz",
+      "thumb": "thumbnails/mov_banco_jardim.png",
+      "footprint": "M",
+      "tintable": true,
+      "tris": 900,
+      "tags": [
+        "movel"
+      ]
+    },
+    {
+      "id": "mov_vitrine",
+      "nome": "Vitrine",
+      "categoria": "moveis",
+      "rooms": [
+        "sala"
+      ],
+      "usdz": "art-ios/mov_vitrine.usdz",
+      "thumb": "thumbnails/mov_vitrine.png",
+      "footprint": "M",
+      "tintable": true,
+      "tris": 900,
+      "tags": [
+        "movel"
+      ]
+    },
+    {
+      "id": "mov_console",
+      "nome": "Console Hall",
+      "categoria": "moveis",
+      "rooms": [
+        "sala"
+      ],
+      "usdz": "art-ios/mov_console.usdz",
+      "thumb": "thumbnails/mov_console.png",
+      "footprint": "M",
+      "tintable": true,
+      "tris": 900,
+      "tags": [
+        "movel"
+      ]
+    },
+    {
+      "id": "mov_sapateira",
+      "nome": "Sapateira",
+      "categoria": "moveis",
+      "rooms": [
+        "quarto"
+      ],
+      "usdz": "art-ios/mov_sapateira.usdz",
+      "thumb": "thumbnails/mov_sapateira.png",
+      "footprint": "M",
+      "tintable": true,
+      "tris": 900,
+      "tags": [
+        "movel"
+      ]
+    },
+    {
+      "id": "mov_comoda",
+      "nome": "Comoda 4 Gavetas",
+      "categoria": "moveis",
+      "rooms": [
+        "quarto"
+      ],
+      "usdz": "art-ios/mov_comoda.usdz",
+      "thumb": "thumbnails/mov_comoda.png",
+      "footprint": "M",
+      "tintable": true,
+      "tris": 900,
+      "tags": [
+        "movel"
+      ]
+    },
+    {
+      "id": "mov_bau",
+      "nome": "Bau",
+      "categoria": "moveis",
+      "rooms": [
+        "quarto"
+      ],
+      "usdz": "art-ios/mov_bau.usdz",
+      "thumb": "thumbnails/mov_bau.png",
+      "footprint": "M",
+      "tintable": true,
+      "tris": 900,
+      "tags": [
+        "movel"
+      ]
+    },
+    {
+      "id": "mov_mesa_cabeceira",
+      "nome": "Mesa Cabeceira",
+      "categoria": "moveis",
+      "rooms": [
+        "quarto"
+      ],
+      "usdz": "art-ios/mov_mesa_cabeceira.usdz",
+      "thumb": "thumbnails/mov_mesa_cabeceira.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 900,
+      "tags": [
+        "movel"
+      ]
+    },
+    {
+      "id": "mov_guarda2",
+      "nome": "Guarda 2 Portas",
+      "categoria": "moveis",
+      "rooms": [
+        "quarto"
+      ],
+      "usdz": "art-ios/mov_guarda2.usdz",
+      "thumb": "thumbnails/mov_guarda2.png",
+      "footprint": "L",
+      "tintable": true,
+      "tris": 900,
+      "tags": [
+        "movel"
+      ]
+    },
+    {
+      "id": "mov_guarda_espelho",
+      "nome": "Guarda Espelho",
+      "categoria": "moveis",
+      "rooms": [
+        "quarto"
+      ],
+      "usdz": "art-ios/mov_guarda_espelho.usdz",
+      "thumb": "thumbnails/mov_guarda_espelho.png",
+      "footprint": "L",
+      "tintable": true,
+      "tris": 900,
+      "tags": [
+        "movel"
+      ]
+    },
+    {
+      "id": "mov_biblioteca",
+      "nome": "Biblioteca",
+      "categoria": "moveis",
+      "rooms": [
+        "sala"
+      ],
+      "usdz": "art-ios/mov_biblioteca.usdz",
+      "thumb": "thumbnails/mov_biblioteca.png",
+      "footprint": "L",
+      "tintable": true,
+      "tris": 900,
+      "tags": [
+        "movel"
+      ]
+    },
+    {
+      "id": "mov_mesa_jantar",
+      "nome": "Mesa Jantar",
+      "categoria": "moveis",
+      "rooms": [
+        "sala"
+      ],
+      "usdz": "art-ios/mov_mesa_jantar.usdz",
+      "thumb": "thumbnails/mov_mesa_jantar.png",
+      "footprint": "L",
+      "tintable": true,
+      "tris": 900,
+      "tags": [
+        "movel"
+      ]
+    },
+    {
+      "id": "mov_cadeira_jantar",
+      "nome": "Cadeira Jantar",
+      "categoria": "moveis",
+      "rooms": [
+        "sala",
+        "cozinha"
+      ],
+      "usdz": "art-ios/mov_cadeira_jantar.usdz",
+      "thumb": "thumbnails/mov_cadeira_jantar.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 900,
+      "tags": [
+        "movel"
+      ]
+    },
+    {
+      "id": "mov_cadeira_escrit",
+      "nome": "Cadeira Escritorio 2",
+      "categoria": "moveis",
+      "rooms": [
+        "quarto"
+      ],
+      "usdz": "art-ios/mov_cadeira_escrit.usdz",
+      "thumb": "thumbnails/mov_cadeira_escrit.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 900,
+      "tags": [
+        "movel"
+      ]
+    },
+    {
+      "id": "mov_banco_bau",
+      "nome": "Banco Bau",
+      "categoria": "moveis",
+      "rooms": [
+        "quarto"
+      ],
+      "usdz": "art-ios/mov_banco_bau.usdz",
+      "thumb": "thumbnails/mov_banco_bau.png",
+      "footprint": "M",
+      "tintable": true,
+      "tris": 900,
+      "tags": [
+        "movel"
+      ]
+    },
+    {
+      "id": "mov_estante_torre",
+      "nome": "Estante Torre",
+      "categoria": "moveis",
+      "rooms": [
+        "sala"
+      ],
+      "usdz": "art-ios/mov_estante_torre.usdz",
+      "thumb": "thumbnails/mov_estante_torre.png",
+      "footprint": "M",
+      "tintable": true,
+      "tris": 900,
+      "tags": [
+        "movel"
+      ]
+    },
+    {
+      "id": "mov_rack2",
+      "nome": "Rack 2",
+      "categoria": "moveis",
+      "rooms": [
+        "sala"
+      ],
+      "usdz": "art-ios/mov_rack2.usdz",
+      "thumb": "thumbnails/mov_rack2.png",
+      "footprint": "M",
+      "tintable": true,
+      "tris": 900,
+      "tags": [
+        "movel"
+      ]
+    },
+    {
+      "id": "mov_painel_tv",
+      "nome": "Painel TV",
+      "categoria": "moveis",
+      "rooms": [
+        "sala"
+      ],
+      "usdz": "art-ios/mov_painel_tv.usdz",
+      "thumb": "thumbnails/mov_painel_tv.png",
+      "footprint": "M",
+      "tintable": true,
+      "tris": 900,
+      "tags": [
+        "movel"
+      ]
+    },
+    {
+      "id": "mov_mesa_centro2",
+      "nome": "Mesa Centro 2",
+      "categoria": "moveis",
+      "rooms": [
+        "sala"
+      ],
+      "usdz": "art-ios/mov_mesa_centro2.usdz",
+      "thumb": "thumbnails/mov_mesa_centro2.png",
+      "footprint": "M",
+      "tintable": true,
+      "tris": 900,
+      "tags": [
+        "movel"
+      ]
+    },
+    {
+      "id": "ilu_pendente_bola",
+      "nome": "Pendente Bola",
+      "categoria": "iluminacao",
+      "rooms": [
+        "quarto"
+      ],
+      "usdz": "art-ios/ilu_pendente_bola.usdz",
+      "thumb": "thumbnails/ilu_pendente_bola.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 450,
+      "tags": [
+        "luz"
+      ]
+    },
+    {
+      "id": "ilu_pendente_cone",
+      "nome": "Pendente Cone",
+      "categoria": "iluminacao",
+      "rooms": [
+        "quarto"
+      ],
+      "usdz": "art-ios/ilu_pendente_cone.usdz",
+      "thumb": "thumbnails/ilu_pendente_cone.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 450,
+      "tags": [
+        "luz"
+      ]
+    },
+    {
+      "id": "ilu_arandela",
+      "nome": "Arandela",
+      "categoria": "iluminacao",
+      "rooms": [
+        "quarto"
+      ],
+      "usdz": "art-ios/ilu_arandela.usdz",
+      "thumb": "thumbnails/ilu_arandela.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 450,
+      "tags": [
+        "luz"
+      ]
+    },
+    {
+      "id": "ilu_abajur_tec",
+      "nome": "Abajur Tecido",
+      "categoria": "iluminacao",
+      "rooms": [
+        "quarto"
+      ],
+      "usdz": "art-ios/ilu_abajur_tec.usdz",
+      "thumb": "thumbnails/ilu_abajur_tec.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 450,
+      "tags": [
+        "luz"
+      ]
+    },
+    {
+      "id": "ilu_luminaria_piso2",
+      "nome": "Luminaria Piso 2",
+      "categoria": "iluminacao",
+      "rooms": [
+        "quarto"
+      ],
+      "usdz": "art-ios/ilu_luminaria_piso2.usdz",
+      "thumb": "thumbnails/ilu_luminaria_piso2.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 450,
+      "tags": [
+        "luz"
+      ]
+    },
+    {
+      "id": "ilu_fita_cama",
+      "nome": "Fita LED Cama",
+      "categoria": "iluminacao",
+      "rooms": [
+        "quarto"
+      ],
+      "usdz": "art-ios/ilu_fita_cama.usdz",
+      "thumb": "thumbnails/ilu_fita_cama.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 450,
+      "tags": [
+        "luz"
+      ]
+    },
+    {
+      "id": "ilu_spot_trilho",
+      "nome": "Spot Trilho",
+      "categoria": "iluminacao",
+      "rooms": [
+        "quarto"
+      ],
+      "usdz": "art-ios/ilu_spot_trilho.usdz",
+      "thumb": "thumbnails/ilu_spot_trilho.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 450,
+      "tags": [
+        "luz"
+      ]
+    },
+    {
+      "id": "ilu_lustre2",
+      "nome": "Lustre 2",
+      "categoria": "iluminacao",
+      "rooms": [
+        "quarto"
+      ],
+      "usdz": "art-ios/ilu_lustre2.usdz",
+      "thumb": "thumbnails/ilu_lustre2.png",
+      "footprint": "M",
+      "tintable": true,
+      "tris": 450,
+      "tags": [
+        "luz"
+      ]
+    },
+    {
+      "id": "ilu_pendente_duplo2",
+      "nome": "Pendente Duplo 2",
+      "categoria": "iluminacao",
+      "rooms": [
+        "quarto"
+      ],
+      "usdz": "art-ios/ilu_pendente_duplo2.usdz",
+      "thumb": "thumbnails/ilu_pendente_duplo2.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 450,
+      "tags": [
+        "luz"
+      ]
+    },
+    {
+      "id": "ilu_lampada_mesa",
+      "nome": "Lampada Mesa",
+      "categoria": "iluminacao",
+      "rooms": [
+        "quarto"
+      ],
+      "usdz": "art-ios/ilu_lampada_mesa.usdz",
+      "thumb": "thumbnails/ilu_lampada_mesa.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 450,
+      "tags": [
+        "luz"
+      ]
+    },
+    {
+      "id": "ilu_pendente_coz1",
+      "nome": "Pendente Cozinha 1",
+      "categoria": "iluminacao",
+      "rooms": [
+        "cozinha"
+      ],
+      "usdz": "art-ios/ilu_pendente_coz1.usdz",
+      "thumb": "thumbnails/ilu_pendente_coz1.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 450,
+      "tags": [
+        "luz"
+      ]
+    },
+    {
+      "id": "ilu_pendente_coz2",
+      "nome": "Pendente Cozinha 2",
+      "categoria": "iluminacao",
+      "rooms": [
+        "cozinha"
+      ],
+      "usdz": "art-ios/ilu_pendente_coz2.usdz",
+      "thumb": "thumbnails/ilu_pendente_coz2.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 450,
+      "tags": [
+        "luz"
+      ]
+    },
+    {
+      "id": "ilu_spot_coz",
+      "nome": "Spot Cozinha",
+      "categoria": "iluminacao",
+      "rooms": [
+        "cozinha"
+      ],
+      "usdz": "art-ios/ilu_spot_coz.usdz",
+      "thumb": "thumbnails/ilu_spot_coz.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 450,
+      "tags": [
+        "luz"
+      ]
+    },
+    {
+      "id": "ilu_fita_armario",
+      "nome": "Fita Armario",
+      "categoria": "iluminacao",
+      "rooms": [
+        "cozinha"
+      ],
+      "usdz": "art-ios/ilu_fita_armario.usdz",
+      "thumb": "thumbnails/ilu_fita_armario.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 450,
+      "tags": [
+        "luz"
+      ]
+    },
+    {
+      "id": "ilu_luminaria_bancada",
+      "nome": "Luminaria Bancada",
+      "categoria": "iluminacao",
+      "rooms": [
+        "cozinha"
+      ],
+      "usdz": "art-ios/ilu_luminaria_bancada.usdz",
+      "thumb": "thumbnails/ilu_luminaria_bancada.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 450,
+      "tags": [
+        "luz"
+      ]
+    },
+    {
+      "id": "ilu_pendente_ilha",
+      "nome": "Pendente Ilha",
+      "categoria": "iluminacao",
+      "rooms": [
+        "cozinha"
+      ],
+      "usdz": "art-ios/ilu_pendente_ilha.usdz",
+      "thumb": "thumbnails/ilu_pendente_ilha.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 450,
+      "tags": [
+        "luz"
+      ]
+    },
+    {
+      "id": "ilu_trilho_coz",
+      "nome": "Trilho Cozinha",
+      "categoria": "iluminacao",
+      "rooms": [
+        "cozinha"
+      ],
+      "usdz": "art-ios/ilu_trilho_coz.usdz",
+      "thumb": "thumbnails/ilu_trilho_coz.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 450,
+      "tags": [
+        "luz"
+      ]
+    },
+    {
+      "id": "ilu_lustre_coz",
+      "nome": "Lustre Cozinha",
+      "categoria": "iluminacao",
+      "rooms": [
+        "cozinha"
+      ],
+      "usdz": "art-ios/ilu_lustre_coz.usdz",
+      "thumb": "thumbnails/ilu_lustre_coz.png",
+      "footprint": "M",
+      "tintable": true,
+      "tris": 450,
+      "tags": [
+        "luz"
+      ]
+    },
+    {
+      "id": "ilu_lampada_parede_coz",
+      "nome": "Lampada Parede Coz",
+      "categoria": "iluminacao",
+      "rooms": [
+        "cozinha"
+      ],
+      "usdz": "art-ios/ilu_lampada_parede_coz.usdz",
+      "thumb": "thumbnails/ilu_lampada_parede_coz.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 450,
+      "tags": [
+        "luz"
+      ]
+    },
+    {
+      "id": "ilu_spot_bancada",
+      "nome": "Spot Bancada",
+      "categoria": "iluminacao",
+      "rooms": [
+        "cozinha"
+      ],
+      "usdz": "art-ios/ilu_spot_bancada.usdz",
+      "thumb": "thumbnails/ilu_spot_bancada.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 450,
+      "tags": [
+        "luz"
+      ]
+    },
+    {
+      "id": "ilu_lustre_sala",
+      "nome": "Lustre Sala",
+      "categoria": "iluminacao",
+      "rooms": [
+        "sala"
+      ],
+      "usdz": "art-ios/ilu_lustre_sala.usdz",
+      "thumb": "thumbnails/ilu_lustre_sala.png",
+      "footprint": "M",
+      "tintable": true,
+      "tris": 450,
+      "tags": [
+        "luz"
+      ]
+    },
+    {
+      "id": "ilu_pendente_sala2",
+      "nome": "Pendente Sala 2",
+      "categoria": "iluminacao",
+      "rooms": [
+        "sala"
+      ],
+      "usdz": "art-ios/ilu_pendente_sala2.usdz",
+      "thumb": "thumbnails/ilu_pendente_sala2.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 450,
+      "tags": [
+        "luz"
+      ]
+    },
+    {
+      "id": "ilu_arco",
+      "nome": "Luminaria Arco",
+      "categoria": "iluminacao",
+      "rooms": [
+        "sala"
+      ],
+      "usdz": "art-ios/ilu_arco.usdz",
+      "thumb": "thumbnails/ilu_arco.png",
+      "footprint": "M",
+      "tintable": true,
+      "tris": 450,
+      "tags": [
+        "luz"
+      ]
+    },
+    {
+      "id": "ilu_piso_bola",
+      "nome": "Piso Bola",
+      "categoria": "iluminacao",
+      "rooms": [
+        "sala"
+      ],
+      "usdz": "art-ios/ilu_piso_bola.usdz",
+      "thumb": "thumbnails/ilu_piso_bola.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 450,
+      "tags": [
+        "luz"
+      ]
+    },
+    {
+      "id": "ilu_abajur_chao2",
+      "nome": "Abajur Chao 2",
+      "categoria": "iluminacao",
+      "rooms": [
+        "sala"
+      ],
+      "usdz": "art-ios/ilu_abajur_chao2.usdz",
+      "thumb": "thumbnails/ilu_abajur_chao2.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 450,
+      "tags": [
+        "luz"
+      ]
+    },
+    {
+      "id": "ilu_fita_tv",
+      "nome": "Fita LED TV",
+      "categoria": "iluminacao",
+      "rooms": [
+        "sala"
+      ],
+      "usdz": "art-ios/ilu_fita_tv.usdz",
+      "thumb": "thumbnails/ilu_fita_tv.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 450,
+      "tags": [
+        "luz"
+      ]
+    },
+    {
+      "id": "ilu_spot_sala",
+      "nome": "Spot Sala",
+      "categoria": "iluminacao",
+      "rooms": [
+        "sala"
+      ],
+      "usdz": "art-ios/ilu_spot_sala.usdz",
+      "thumb": "thumbnails/ilu_spot_sala.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 450,
+      "tags": [
+        "luz"
+      ]
+    },
+    {
+      "id": "ilu_trilho_sala",
+      "nome": "Trilho Sala",
+      "categoria": "iluminacao",
+      "rooms": [
+        "sala"
+      ],
+      "usdz": "art-ios/ilu_trilho_sala.usdz",
+      "thumb": "thumbnails/ilu_trilho_sala.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 450,
+      "tags": [
+        "luz"
+      ]
+    },
+    {
+      "id": "ilu_lampada_mesa2",
+      "nome": "Lampada Mesa 2",
+      "categoria": "iluminacao",
+      "rooms": [
+        "sala"
+      ],
+      "usdz": "art-ios/ilu_lampada_mesa2.usdz",
+      "thumb": "thumbnails/ilu_lampada_mesa2.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 450,
+      "tags": [
+        "luz"
+      ]
+    },
+    {
+      "id": "ilu_pendente_canto",
+      "nome": "Pendente Canto",
+      "categoria": "iluminacao",
+      "rooms": [
+        "sala"
+      ],
+      "usdz": "art-ios/ilu_pendente_canto.usdz",
+      "thumb": "thumbnails/ilu_pendente_canto.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 450,
+      "tags": [
+        "luz"
+      ]
+    },
+    {
+      "id": "ilu_vela_led",
+      "nome": "Vela LED",
+      "categoria": "iluminacao",
+      "rooms": [
+        "sala",
+        "quarto"
+      ],
+      "usdz": "art-ios/ilu_vela_led.usdz",
+      "thumb": "thumbnails/ilu_vela_led.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 450,
+      "tags": [
+        "luz"
+      ]
+    },
+    {
+      "id": "ilu_cordao_luz",
+      "nome": "Cordao Luz",
+      "categoria": "iluminacao",
+      "rooms": [
+        "quarto",
+        "sala"
+      ],
+      "usdz": "art-ios/ilu_cordao_luz.usdz",
+      "thumb": "thumbnails/ilu_cordao_luz.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 450,
+      "tags": [
+        "luz"
+      ]
+    },
+    {
+      "id": "ilu_lanterna",
+      "nome": "Lanterna Decor",
+      "categoria": "iluminacao",
+      "rooms": [
+        "sala"
+      ],
+      "usdz": "art-ios/ilu_lanterna.usdz",
+      "thumb": "thumbnails/ilu_lanterna.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 450,
+      "tags": [
+        "luz"
+      ]
+    },
+    {
+      "id": "ilu_projetor_estrela",
+      "nome": "Projetor Estrela",
+      "categoria": "iluminacao",
+      "rooms": [
+        "quarto"
+      ],
+      "usdz": "art-ios/ilu_projetor_estrela.usdz",
+      "thumb": "thumbnails/ilu_projetor_estrela.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 450,
+      "tags": [
+        "luz"
+      ]
+    },
+    {
+      "id": "ilu_relogio_luz",
+      "nome": "Relogio Luz",
+      "categoria": "iluminacao",
+      "rooms": [
+        "quarto"
+      ],
+      "usdz": "art-ios/ilu_relogio_luz.usdz",
+      "thumb": "thumbnails/ilu_relogio_luz.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 450,
+      "tags": [
+        "luz"
+      ]
+    },
+    {
+      "id": "ilu_espelho_luz",
+      "nome": "Espelho Luz",
+      "categoria": "iluminacao",
+      "rooms": [
+        "quarto"
+      ],
+      "usdz": "art-ios/ilu_espelho_luz.usdz",
+      "thumb": "thumbnails/ilu_espelho_luz.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 450,
+      "tags": [
+        "luz"
+      ]
+    },
+    {
+      "id": "ilu_quadro_luz",
+      "nome": "Quadro Luz",
+      "categoria": "iluminacao",
+      "rooms": [
+        "sala"
+      ],
+      "usdz": "art-ios/ilu_quadro_luz.usdz",
+      "thumb": "thumbnails/ilu_quadro_luz.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 450,
+      "tags": [
+        "luz"
+      ]
+    },
+    {
+      "id": "ilu_prateleira_luz",
+      "nome": "Prateleira Luz",
+      "categoria": "iluminacao",
+      "rooms": [
+        "sala"
+      ],
+      "usdz": "art-ios/ilu_prateleira_luz.usdz",
+      "thumb": "thumbnails/ilu_prateleira_luz.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 450,
+      "tags": [
+        "luz"
+      ]
+    },
+    {
+      "id": "ilu_nicho_luz",
+      "nome": "Nicho Luz",
+      "categoria": "iluminacao",
+      "rooms": [
+        "cozinha"
+      ],
+      "usdz": "art-ios/ilu_nicho_luz.usdz",
+      "thumb": "thumbnails/ilu_nicho_luz.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 450,
+      "tags": [
+        "luz"
+      ]
+    },
+    {
+      "id": "ilu_gaveta_luz",
+      "nome": "Fita Gaveta",
+      "categoria": "iluminacao",
+      "rooms": [
+        "cozinha"
+      ],
+      "usdz": "art-ios/ilu_gaveta_luz.usdz",
+      "thumb": "thumbnails/ilu_gaveta_luz.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 450,
+      "tags": [
+        "luz"
+      ]
+    },
+    {
+      "id": "ilu_sensor",
+      "nome": "Sensor Presenca",
+      "categoria": "iluminacao",
+      "rooms": [
+        "cozinha",
+        "sala"
+      ],
+      "usdz": "art-ios/ilu_sensor.usdz",
+      "thumb": "thumbnails/ilu_sensor.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 450,
+      "tags": [
+        "luz"
+      ]
+    },
+    {
+      "id": "ilu_dimmer",
+      "nome": "Dimmer",
+      "categoria": "iluminacao",
+      "rooms": [
+        "sala"
+      ],
+      "usdz": "art-ios/ilu_dimmer.usdz",
+      "thumb": "thumbnails/ilu_dimmer.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 450,
+      "tags": [
+        "luz"
+      ]
+    },
+    {
+      "id": "ilu_pendente_triplo",
+      "nome": "Pendente Triplo",
+      "categoria": "iluminacao",
+      "rooms": [
+        "sala"
+      ],
+      "usdz": "art-ios/ilu_pendente_triplo.usdz",
+      "thumb": "thumbnails/ilu_pendente_triplo.png",
+      "footprint": "M",
+      "tintable": true,
+      "tris": 450,
+      "tags": [
+        "luz"
+      ]
+    },
+    {
+      "id": "ilu_cúpula",
+      "nome": "Cupula Tecido",
+      "categoria": "iluminacao",
+      "rooms": [
+        "quarto"
+      ],
+      "usdz": "art-ios/ilu_cúpula.usdz",
+      "thumb": "thumbnails/ilu_cúpula.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 450,
+      "tags": [
+        "luz"
+      ]
+    },
+    {
+      "id": "ilu_base_madeira",
+      "nome": "Base Madeira",
+      "categoria": "iluminacao",
+      "rooms": [
+        "sala"
+      ],
+      "usdz": "art-ios/ilu_base_madeira.usdz",
+      "thumb": "thumbnails/ilu_base_madeira.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 450,
+      "tags": [
+        "luz"
+      ]
+    },
+    {
+      "id": "ilu_haste_preta",
+      "nome": "Haste Preta",
+      "categoria": "iluminacao",
+      "rooms": [
+        "quarto"
+      ],
+      "usdz": "art-ios/ilu_haste_preta.usdz",
+      "thumb": "thumbnails/ilu_haste_preta.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 450,
+      "tags": [
+        "luz"
+      ]
+    },
+    {
+      "id": "ilu_globo",
+      "nome": "Globo Opalino",
+      "categoria": "iluminacao",
+      "rooms": [
+        "sala"
+      ],
+      "usdz": "art-ios/ilu_globo.usdz",
+      "thumb": "thumbnails/ilu_globo.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 450,
+      "tags": [
+        "luz"
+      ]
+    },
+    {
+      "id": "ilu_tubo",
+      "nome": "Tubo LED",
+      "categoria": "iluminacao",
+      "rooms": [
+        "cozinha"
+      ],
+      "usdz": "art-ios/ilu_tubo.usdz",
+      "thumb": "thumbnails/ilu_tubo.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 450,
+      "tags": [
+        "luz"
+      ]
+    },
+    {
+      "id": "ilu_painel",
+      "nome": "Painel LED",
+      "categoria": "iluminacao",
+      "rooms": [
+        "cozinha"
+      ],
+      "usdz": "art-ios/ilu_painel.usdz",
+      "thumb": "thumbnails/ilu_painel.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 450,
+      "tags": [
+        "luz"
+      ]
+    },
+    {
+      "id": "ilu_emergencia",
+      "nome": "Luz Emergencia",
+      "categoria": "iluminacao",
+      "rooms": [
+        "cozinha"
+      ],
+      "usdz": "art-ios/ilu_emergencia.usdz",
+      "thumb": "thumbnails/ilu_emergencia.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 450,
+      "tags": [
+        "luz"
+      ]
+    },
+    {
+      "id": "pla_vaso_p1",
+      "nome": "Vaso P",
+      "categoria": "plantas",
+      "rooms": [
+        "quarto"
+      ],
+      "usdz": "art-ios/pla_vaso_p1.usdz",
+      "thumb": "thumbnails/pla_vaso_p1.png",
+      "footprint": "S",
+      "tintable": false,
+      "tris": 500,
+      "tags": [
+        "verde"
+      ]
+    },
+    {
+      "id": "pla_vaso_m1",
+      "nome": "Vaso M Casa",
+      "categoria": "plantas",
+      "rooms": [
+        "quarto"
+      ],
+      "usdz": "art-ios/pla_vaso_m1.usdz",
+      "thumb": "thumbnails/pla_vaso_m1.png",
+      "footprint": "S",
+      "tintable": false,
+      "tris": 500,
+      "tags": [
+        "verde"
+      ]
+    },
+    {
+      "id": "pla_vaso_g1",
+      "nome": "Vaso G",
+      "categoria": "plantas",
+      "rooms": [
+        "quarto"
+      ],
+      "usdz": "art-ios/pla_vaso_g1.usdz",
+      "thumb": "thumbnails/pla_vaso_g1.png",
+      "footprint": "M",
+      "tintable": false,
+      "tris": 500,
+      "tags": [
+        "verde"
+      ]
+    },
+    {
+      "id": "pla_suculenta2",
+      "nome": "Suculenta 2",
+      "categoria": "plantas",
+      "rooms": [
+        "quarto"
+      ],
+      "usdz": "art-ios/pla_suculenta2.usdz",
+      "thumb": "thumbnails/pla_suculenta2.png",
+      "footprint": "S",
+      "tintable": false,
+      "tris": 500,
+      "tags": [
+        "verde"
+      ]
+    },
+    {
+      "id": "pla_cacto_medio",
+      "nome": "Cacto Medio",
+      "categoria": "plantas",
+      "rooms": [
+        "quarto"
+      ],
+      "usdz": "art-ios/pla_cacto_medio.usdz",
+      "thumb": "thumbnails/pla_cacto_medio.png",
+      "footprint": "S",
+      "tintable": false,
+      "tris": 500,
+      "tags": [
+        "verde"
+      ]
+    },
+    {
+      "id": "pla_jiboia2",
+      "nome": "Jiboia 2",
+      "categoria": "plantas",
+      "rooms": [
+        "quarto"
+      ],
+      "usdz": "art-ios/pla_jiboia2.usdz",
+      "thumb": "thumbnails/pla_jiboia2.png",
+      "footprint": "S",
+      "tintable": false,
+      "tris": 500,
+      "tags": [
+        "verde"
+      ]
+    },
+    {
+      "id": "pla_pendente_pothos",
+      "nome": "Pothos",
+      "categoria": "plantas",
+      "rooms": [
+        "quarto"
+      ],
+      "usdz": "art-ios/pla_pendente_pothos.usdz",
+      "thumb": "thumbnails/pla_pendente_pothos.png",
+      "footprint": "S",
+      "tintable": false,
+      "tris": 500,
+      "tags": [
+        "verde"
+      ]
+    },
+    {
+      "id": "pla_horta_janela",
+      "nome": "Horta Janela",
+      "categoria": "plantas",
+      "rooms": [
+        "quarto"
+      ],
+      "usdz": "art-ios/pla_horta_janela.usdz",
+      "thumb": "thumbnails/pla_horta_janela.png",
+      "footprint": "S",
+      "tintable": false,
+      "tris": 500,
+      "tags": [
+        "verde"
+      ]
+    },
+    {
+      "id": "pla_bonsai",
+      "nome": "Bonsai",
+      "categoria": "plantas",
+      "rooms": [
+        "quarto"
+      ],
+      "usdz": "art-ios/pla_bonsai.usdz",
+      "thumb": "thumbnails/pla_bonsai.png",
+      "footprint": "S",
+      "tintable": false,
+      "tris": 500,
+      "tags": [
+        "verde"
+      ]
+    },
+    {
+      "id": "pla_orquidea2",
+      "nome": "Orquidea 2",
+      "categoria": "plantas",
+      "rooms": [
+        "quarto"
+      ],
+      "usdz": "art-ios/pla_orquidea2.usdz",
+      "thumb": "thumbnails/pla_orquidea2.png",
+      "footprint": "S",
+      "tintable": false,
+      "tris": 500,
+      "tags": [
+        "verde"
+      ]
+    },
+    {
+      "id": "pla_palmeira_mini",
+      "nome": "Palmeira Mini",
+      "categoria": "plantas",
+      "rooms": [
+        "quarto"
+      ],
+      "usdz": "art-ios/pla_palmeira_mini.usdz",
+      "thumb": "thumbnails/pla_palmeira_mini.png",
+      "footprint": "S",
+      "tintable": false,
+      "tris": 500,
+      "tags": [
+        "verde"
+      ]
+    },
+    {
+      "id": "pla_espada",
+      "nome": "Espada Sao Jorge",
+      "categoria": "plantas",
+      "rooms": [
+        "quarto"
+      ],
+      "usdz": "art-ios/pla_espada.usdz",
+      "thumb": "thumbnails/pla_espada.png",
+      "footprint": "S",
+      "tintable": false,
+      "tris": 500,
+      "tags": [
+        "verde"
+      ]
+    },
+    {
+      "id": "pla_zamioculca",
+      "nome": "Zamioculca",
+      "categoria": "plantas",
+      "rooms": [
+        "quarto"
+      ],
+      "usdz": "art-ios/pla_zamioculca.usdz",
+      "thumb": "thumbnails/pla_zamioculca.png",
+      "footprint": "S",
+      "tintable": false,
+      "tris": 500,
+      "tags": [
+        "verde"
+      ]
+    },
+    {
+      "id": "pla_ficus",
+      "nome": "Ficus",
+      "categoria": "plantas",
+      "rooms": [
+        "quarto"
+      ],
+      "usdz": "art-ios/pla_ficus.usdz",
+      "thumb": "thumbnails/pla_ficus.png",
+      "footprint": "M",
+      "tintable": false,
+      "tris": 500,
+      "tags": [
+        "verde"
+      ]
+    },
+    {
+      "id": "pla_costela",
+      "nome": "Costela Adao",
+      "categoria": "plantas",
+      "rooms": [
+        "quarto"
+      ],
+      "usdz": "art-ios/pla_costela.usdz",
+      "thumb": "thumbnails/pla_costela.png",
+      "footprint": "M",
+      "tintable": false,
+      "tris": 500,
+      "tags": [
+        "verde"
+      ]
+    },
+    {
+      "id": "pla_hera",
+      "nome": "Hera",
+      "categoria": "plantas",
+      "rooms": [
+        "quarto"
+      ],
+      "usdz": "art-ios/pla_hera.usdz",
+      "thumb": "thumbnails/pla_hera.png",
+      "footprint": "S",
+      "tintable": false,
+      "tris": 500,
+      "tags": [
+        "verde"
+      ]
+    },
+    {
+      "id": "pla_vaso_coz1",
+      "nome": "Vaso Cozinha 1",
+      "categoria": "plantas",
+      "rooms": [
+        "cozinha"
+      ],
+      "usdz": "art-ios/pla_vaso_coz1.usdz",
+      "thumb": "thumbnails/pla_vaso_coz1.png",
+      "footprint": "S",
+      "tintable": false,
+      "tris": 500,
+      "tags": [
+        "verde"
+      ]
+    },
+    {
+      "id": "pla_horta_bancada",
+      "nome": "Horta Bancada",
+      "categoria": "plantas",
+      "rooms": [
+        "cozinha"
+      ],
+      "usdz": "art-ios/pla_horta_bancada.usdz",
+      "thumb": "thumbnails/pla_horta_bancada.png",
+      "footprint": "S",
+      "tintable": false,
+      "tris": 500,
+      "tags": [
+        "verde"
+      ]
+    },
+    {
+      "id": "pla_temperos2",
+      "nome": "Temperos 2",
+      "categoria": "plantas",
+      "rooms": [
+        "cozinha"
+      ],
+      "usdz": "art-ios/pla_temperos2.usdz",
+      "thumb": "thumbnails/pla_temperos2.png",
+      "footprint": "S",
+      "tintable": false,
+      "tris": 500,
+      "tags": [
+        "verde"
+      ]
+    },
+    {
+      "id": "pla_suculenta_coz",
+      "nome": "Suculenta Coz",
+      "categoria": "plantas",
+      "rooms": [
+        "cozinha"
+      ],
+      "usdz": "art-ios/pla_suculenta_coz.usdz",
+      "thumb": "thumbnails/pla_suculenta_coz.png",
+      "footprint": "S",
+      "tintable": false,
+      "tris": 500,
+      "tags": [
+        "verde"
+      ]
+    },
+    {
+      "id": "pla_horta_parede",
+      "nome": "Horta Parede",
+      "categoria": "plantas",
+      "rooms": [
+        "cozinha"
+      ],
+      "usdz": "art-ios/pla_horta_parede.usdz",
+      "thumb": "thumbnails/pla_horta_parede.png",
+      "footprint": "S",
+      "tintable": false,
+      "tris": 500,
+      "tags": [
+        "verde"
+      ]
+    },
+    {
+      "id": "pla_vaso_suspenso",
+      "nome": "Vaso Suspenso",
+      "categoria": "plantas",
+      "rooms": [
+        "cozinha"
+      ],
+      "usdz": "art-ios/pla_vaso_suspenso.usdz",
+      "thumb": "thumbnails/pla_vaso_suspenso.png",
+      "footprint": "S",
+      "tintable": false,
+      "tris": 500,
+      "tags": [
+        "verde"
+      ]
+    },
+    {
+      "id": "pla_manjericao2",
+      "nome": "Manjericao 2",
+      "categoria": "plantas",
+      "rooms": [
+        "cozinha"
+      ],
+      "usdz": "art-ios/pla_manjericao2.usdz",
+      "thumb": "thumbnails/pla_manjericao2.png",
+      "footprint": "S",
+      "tintable": false,
+      "tris": 500,
+      "tags": [
+        "verde"
+      ]
+    },
+    {
+      "id": "pla_hortela",
+      "nome": "Hortela",
+      "categoria": "plantas",
+      "rooms": [
+        "cozinha"
+      ],
+      "usdz": "art-ios/pla_hortela.usdz",
+      "thumb": "thumbnails/pla_hortela.png",
+      "footprint": "S",
+      "tintable": false,
+      "tris": 500,
+      "tags": [
+        "verde"
+      ]
+    },
+    {
+      "id": "pla_alecrim",
+      "nome": "Alecrim",
+      "categoria": "plantas",
+      "rooms": [
+        "cozinha"
+      ],
+      "usdz": "art-ios/pla_alecrim.usdz",
+      "thumb": "thumbnails/pla_alecrim.png",
+      "footprint": "S",
+      "tintable": false,
+      "tris": 500,
+      "tags": [
+        "verde"
+      ]
+    },
+    {
+      "id": "pla_pimenta",
+      "nome": "Pimenteira",
+      "categoria": "plantas",
+      "rooms": [
+        "cozinha"
+      ],
+      "usdz": "art-ios/pla_pimenta.usdz",
+      "thumb": "thumbnails/pla_pimenta.png",
+      "footprint": "S",
+      "tintable": false,
+      "tris": 500,
+      "tags": [
+        "verde"
+      ]
+    },
+    {
+      "id": "pla_tomateiro",
+      "nome": "Tomateiro",
+      "categoria": "plantas",
+      "rooms": [
+        "cozinha"
+      ],
+      "usdz": "art-ios/pla_tomateiro.usdz",
+      "thumb": "thumbnails/pla_tomateiro.png",
+      "footprint": "S",
+      "tintable": false,
+      "tris": 500,
+      "tags": [
+        "verde"
+      ]
+    },
+    {
+      "id": "pla_flor_coz",
+      "nome": "Flor Cozinha",
+      "categoria": "plantas",
+      "rooms": [
+        "cozinha"
+      ],
+      "usdz": "art-ios/pla_flor_coz.usdz",
+      "thumb": "thumbnails/pla_flor_coz.png",
+      "footprint": "S",
+      "tintable": false,
+      "tris": 500,
+      "tags": [
+        "verde"
+      ]
+    },
+    {
+      "id": "pla_vaso_sala1",
+      "nome": "Vaso Sala 1",
+      "categoria": "plantas",
+      "rooms": [
+        "sala"
+      ],
+      "usdz": "art-ios/pla_vaso_sala1.usdz",
+      "thumb": "thumbnails/pla_vaso_sala1.png",
+      "footprint": "S",
+      "tintable": false,
+      "tris": 500,
+      "tags": [
+        "verde"
+      ]
+    },
+    {
+      "id": "pla_palmeira_sala",
+      "nome": "Palmeira Sala",
+      "categoria": "plantas",
+      "rooms": [
+        "sala"
+      ],
+      "usdz": "art-ios/pla_palmeira_sala.usdz",
+      "thumb": "thumbnails/pla_palmeira_sala.png",
+      "footprint": "M",
+      "tintable": false,
+      "tris": 500,
+      "tags": [
+        "verde"
+      ]
+    },
+    {
+      "id": "pla_ficus_sala",
+      "nome": "Ficus Sala",
+      "categoria": "plantas",
+      "rooms": [
+        "sala"
+      ],
+      "usdz": "art-ios/pla_ficus_sala.usdz",
+      "thumb": "thumbnails/pla_ficus_sala.png",
+      "footprint": "M",
+      "tintable": false,
+      "tris": 500,
+      "tags": [
+        "verde"
+      ]
+    },
+    {
+      "id": "pla_costela_sala",
+      "nome": "Costela Sala",
+      "categoria": "plantas",
+      "rooms": [
+        "sala"
+      ],
+      "usdz": "art-ios/pla_costela_sala.usdz",
+      "thumb": "thumbnails/pla_costela_sala.png",
+      "footprint": "M",
+      "tintable": false,
+      "tris": 500,
+      "tags": [
+        "verde"
+      ]
+    },
+    {
+      "id": "pla_jiboia_sala",
+      "nome": "Jiboia Sala",
+      "categoria": "plantas",
+      "rooms": [
+        "sala"
+      ],
+      "usdz": "art-ios/pla_jiboia_sala.usdz",
+      "thumb": "thumbnails/pla_jiboia_sala.png",
+      "footprint": "S",
+      "tintable": false,
+      "tris": 500,
+      "tags": [
+        "verde"
+      ]
+    },
+    {
+      "id": "pla_samambaia2",
+      "nome": "Samambaia 2",
+      "categoria": "plantas",
+      "rooms": [
+        "sala"
+      ],
+      "usdz": "art-ios/pla_samambaia2.usdz",
+      "thumb": "thumbnails/pla_samambaia2.png",
+      "footprint": "M",
+      "tintable": false,
+      "tris": 500,
+      "tags": [
+        "verde"
+      ]
+    },
+    {
+      "id": "pla_cacto_sala2",
+      "nome": "Cacto Sala 2",
+      "categoria": "plantas",
+      "rooms": [
+        "sala"
+      ],
+      "usdz": "art-ios/pla_cacto_sala2.usdz",
+      "thumb": "thumbnails/pla_cacto_sala2.png",
+      "footprint": "S",
+      "tintable": false,
+      "tris": 500,
+      "tags": [
+        "verde"
+      ]
+    },
+    {
+      "id": "pla_orquidea_sala",
+      "nome": "Orquidea Sala",
+      "categoria": "plantas",
+      "rooms": [
+        "sala"
+      ],
+      "usdz": "art-ios/pla_orquidea_sala.usdz",
+      "thumb": "thumbnails/pla_orquidea_sala.png",
+      "footprint": "S",
+      "tintable": false,
+      "tris": 500,
+      "tags": [
+        "verde"
+      ]
+    },
+    {
+      "id": "pla_bonsai_sala",
+      "nome": "Bonsai Sala",
+      "categoria": "plantas",
+      "rooms": [
+        "sala"
+      ],
+      "usdz": "art-ios/pla_bonsai_sala.usdz",
+      "thumb": "thumbnails/pla_bonsai_sala.png",
+      "footprint": "S",
+      "tintable": false,
+      "tris": 500,
+      "tags": [
+        "verde"
+      ]
+    },
+    {
+      "id": "pla_flor_sala",
+      "nome": "Arranjo Floral",
+      "categoria": "plantas",
+      "rooms": [
+        "sala"
+      ],
+      "usdz": "art-ios/pla_flor_sala.usdz",
+      "thumb": "thumbnails/pla_flor_sala.png",
+      "footprint": "S",
+      "tintable": false,
+      "tris": 500,
+      "tags": [
+        "verde"
+      ]
+    },
+    {
+      "id": "pla_centro_mesa",
+      "nome": "Centro Mesa Verde",
+      "categoria": "plantas",
+      "rooms": [
+        "sala"
+      ],
+      "usdz": "art-ios/pla_centro_mesa.usdz",
+      "thumb": "thumbnails/pla_centro_mesa.png",
+      "footprint": "S",
+      "tintable": false,
+      "tris": 500,
+      "tags": [
+        "verde"
+      ]
+    },
+    {
+      "id": "pla_canto_alto",
+      "nome": "Planta Canto",
+      "categoria": "plantas",
+      "rooms": [
+        "sala"
+      ],
+      "usdz": "art-ios/pla_canto_alto.usdz",
+      "thumb": "thumbnails/pla_canto_alto.png",
+      "footprint": "M",
+      "tintable": false,
+      "tris": 500,
+      "tags": [
+        "verde"
+      ]
+    },
+    {
+      "id": "pla_pendente_sala",
+      "nome": "Pendente Verde",
+      "categoria": "plantas",
+      "rooms": [
+        "sala"
+      ],
+      "usdz": "art-ios/pla_pendente_sala.usdz",
+      "thumb": "thumbnails/pla_pendente_sala.png",
+      "footprint": "S",
+      "tintable": false,
+      "tris": 500,
+      "tags": [
+        "verde"
+      ]
+    },
+    {
+      "id": "pla_mini_cacto",
+      "nome": "Mini Cacto",
+      "categoria": "plantas",
+      "rooms": [
+        "sala"
+      ],
+      "usdz": "art-ios/pla_mini_cacto.usdz",
+      "thumb": "thumbnails/pla_mini_cacto.png",
+      "footprint": "S",
+      "tintable": false,
+      "tris": 500,
+      "tags": [
+        "verde"
+      ]
+    },
+    {
+      "id": "pla_suculenta_sala",
+      "nome": "Suculenta Sala",
+      "categoria": "plantas",
+      "rooms": [
+        "sala"
+      ],
+      "usdz": "art-ios/pla_suculenta_sala.usdz",
+      "thumb": "thumbnails/pla_suculenta_sala.png",
+      "footprint": "S",
+      "tintable": false,
+      "tris": 500,
+      "tags": [
+        "verde"
+      ]
+    },
+    {
+      "id": "pla_oliveira2",
+      "nome": "Oliveira 2",
+      "categoria": "plantas",
+      "rooms": [
+        "sala"
+      ],
+      "usdz": "art-ios/pla_oliveira2.usdz",
+      "thumb": "thumbnails/pla_oliveira2.png",
+      "footprint": "M",
+      "tintable": false,
+      "tris": 500,
+      "tags": [
+        "verde"
+      ]
+    },
+    {
+      "id": "pla_limão",
+      "nome": "Limoeiro Vaso",
+      "categoria": "plantas",
+      "rooms": [
+        "cozinha",
+        "sala"
+      ],
+      "usdz": "art-ios/pla_limão.usdz",
+      "thumb": "thumbnails/pla_limão.png",
+      "footprint": "M",
+      "tintable": false,
+      "tris": 500,
+      "tags": [
+        "verde"
+      ]
+    },
+    {
+      "id": "pla_horta_inteligente",
+      "nome": "Horta Smart",
+      "categoria": "plantas",
+      "rooms": [
+        "cozinha"
+      ],
+      "usdz": "art-ios/pla_horta_inteligente.usdz",
+      "thumb": "thumbnails/pla_horta_inteligente.png",
+      "footprint": "S",
+      "tintable": false,
+      "tris": 500,
+      "tags": [
+        "verde"
+      ]
+    },
+    {
+      "id": "pla_musgo",
+      "nome": "Quadro Musgo",
+      "categoria": "plantas",
+      "rooms": [
+        "sala"
+      ],
+      "usdz": "art-ios/pla_musgo.usdz",
+      "thumb": "thumbnails/pla_musgo.png",
+      "footprint": "S",
+      "tintable": false,
+      "tris": 500,
+      "tags": [
+        "verde"
+      ]
+    },
+    {
+      "id": "pla_kokedama",
+      "nome": "Kokedama",
+      "categoria": "plantas",
+      "rooms": [
+        "sala"
+      ],
+      "usdz": "art-ios/pla_kokedama.usdz",
+      "thumb": "thumbnails/pla_kokedama.png",
+      "footprint": "S",
+      "tintable": false,
+      "tris": 500,
+      "tags": [
+        "verde"
+      ]
+    },
+    {
+      "id": "pla_bambu",
+      "nome": "Bambu",
+      "categoria": "plantas",
+      "rooms": [
+        "sala"
+      ],
+      "usdz": "art-ios/pla_bambu.usdz",
+      "thumb": "thumbnails/pla_bambu.png",
+      "footprint": "M",
+      "tintable": false,
+      "tris": 500,
+      "tags": [
+        "verde"
+      ]
+    },
+    {
+      "id": "eld_geladeira_duplex",
+      "nome": "Geladeira Duplex",
+      "categoria": "eletrodomesticos",
+      "rooms": [
+        "cozinha"
+      ],
+      "usdz": "art-ios/eld_geladeira_duplex.usdz",
+      "thumb": "thumbnails/eld_geladeira_duplex.png",
+      "footprint": "L",
+      "tintable": false,
+      "tris": 650,
+      "tags": [
+        "eletro"
+      ]
+    },
+    {
+      "id": "eld_freezer",
+      "nome": "Freezer Vertical",
+      "categoria": "eletrodomesticos",
+      "rooms": [
+        "cozinha"
+      ],
+      "usdz": "art-ios/eld_freezer.usdz",
+      "thumb": "thumbnails/eld_freezer.png",
+      "footprint": "M",
+      "tintable": false,
+      "tris": 650,
+      "tags": [
+        "eletro"
+      ]
+    },
+    {
+      "id": "eld_fogao_4b",
+      "nome": "Fogao 4 Bocas",
+      "categoria": "eletrodomesticos",
+      "rooms": [
+        "cozinha"
+      ],
+      "usdz": "art-ios/eld_fogao_4b.usdz",
+      "thumb": "thumbnails/eld_fogao_4b.png",
+      "footprint": "M",
+      "tintable": false,
+      "tris": 650,
+      "tags": [
+        "eletro"
+      ]
+    },
+    {
+      "id": "eld_forno_eletrico",
+      "nome": "Forno Eletrico",
+      "categoria": "eletrodomesticos",
+      "rooms": [
+        "cozinha"
+      ],
+      "usdz": "art-ios/eld_forno_eletrico.usdz",
+      "thumb": "thumbnails/eld_forno_eletrico.png",
+      "footprint": "M",
+      "tintable": false,
+      "tris": 650,
+      "tags": [
+        "eletro"
+      ]
+    },
+    {
+      "id": "eld_micro_ondas2",
+      "nome": "Micro-ondas 2",
+      "categoria": "eletrodomesticos",
+      "rooms": [
+        "cozinha"
+      ],
+      "usdz": "art-ios/eld_micro_ondas2.usdz",
+      "thumb": "thumbnails/eld_micro_ondas2.png",
+      "footprint": "S",
+      "tintable": false,
+      "tris": 650,
+      "tags": [
+        "eletro"
+      ]
+    },
+    {
+      "id": "eld_coifa_ilha",
+      "nome": "Coifa Ilha",
+      "categoria": "eletrodomesticos",
+      "rooms": [
+        "cozinha"
+      ],
+      "usdz": "art-ios/eld_coifa_ilha.usdz",
+      "thumb": "thumbnails/eld_coifa_ilha.png",
+      "footprint": "M",
+      "tintable": false,
+      "tris": 650,
+      "tags": [
+        "eletro"
+      ]
+    },
+    {
+      "id": "eld_cooktop_inducao",
+      "nome": "Cooktop Inducao",
+      "categoria": "eletrodomesticos",
+      "rooms": [
+        "cozinha"
+      ],
+      "usdz": "art-ios/eld_cooktop_inducao.usdz",
+      "thumb": "thumbnails/eld_cooktop_inducao.png",
+      "footprint": "M",
+      "tintable": false,
+      "tris": 650,
+      "tags": [
+        "eletro"
+      ]
+    },
+    {
+      "id": "eld_lava_loucas2",
+      "nome": "Lava-loucas 2",
+      "categoria": "eletrodomesticos",
+      "rooms": [
+        "cozinha"
+      ],
+      "usdz": "art-ios/eld_lava_loucas2.usdz",
+      "thumb": "thumbnails/eld_lava_loucas2.png",
+      "footprint": "M",
+      "tintable": false,
+      "tris": 650,
+      "tags": [
+        "eletro"
+      ]
+    },
+    {
+      "id": "eld_cafeteira2",
+      "nome": "Cafeteira 2",
+      "categoria": "eletrodomesticos",
+      "rooms": [
+        "cozinha"
+      ],
+      "usdz": "art-ios/eld_cafeteira2.usdz",
+      "thumb": "thumbnails/eld_cafeteira2.png",
+      "footprint": "S",
+      "tintable": false,
+      "tris": 650,
+      "tags": [
+        "eletro"
+      ]
+    },
+    {
+      "id": "eld_liquidificador2",
+      "nome": "Liquidificador 2",
+      "categoria": "eletrodomesticos",
+      "rooms": [
+        "cozinha"
+      ],
+      "usdz": "art-ios/eld_liquidificador2.usdz",
+      "thumb": "thumbnails/eld_liquidificador2.png",
+      "footprint": "S",
+      "tintable": false,
+      "tris": 650,
+      "tags": [
+        "eletro"
+      ]
+    },
+    {
+      "id": "eld_batedeira2",
+      "nome": "Batedeira 2",
+      "categoria": "eletrodomesticos",
+      "rooms": [
+        "cozinha"
+      ],
+      "usdz": "art-ios/eld_batedeira2.usdz",
+      "thumb": "thumbnails/eld_batedeira2.png",
+      "footprint": "S",
+      "tintable": false,
+      "tris": 650,
+      "tags": [
+        "eletro"
+      ]
+    },
+    {
+      "id": "eld_airfryer2",
+      "nome": "Airfryer 2",
+      "categoria": "eletrodomesticos",
+      "rooms": [
+        "cozinha"
+      ],
+      "usdz": "art-ios/eld_airfryer2.usdz",
+      "thumb": "thumbnails/eld_airfryer2.png",
+      "footprint": "S",
+      "tintable": false,
+      "tris": 650,
+      "tags": [
+        "eletro"
+      ]
+    },
+    {
+      "id": "eld_torradeira2",
+      "nome": "Torradeira 2",
+      "categoria": "eletrodomesticos",
+      "rooms": [
+        "cozinha"
+      ],
+      "usdz": "art-ios/eld_torradeira2.usdz",
+      "thumb": "thumbnails/eld_torradeira2.png",
+      "footprint": "S",
+      "tintable": false,
+      "tris": 650,
+      "tags": [
+        "eletro"
+      ]
+    },
+    {
+      "id": "eld_bule2",
+      "nome": "Chaleira 2",
+      "categoria": "eletrodomesticos",
+      "rooms": [
+        "cozinha"
+      ],
+      "usdz": "art-ios/eld_bule2.usdz",
+      "thumb": "thumbnails/eld_bule2.png",
+      "footprint": "S",
+      "tintable": false,
+      "tris": 650,
+      "tags": [
+        "eletro"
+      ]
+    },
+    {
+      "id": "eld_sanduicheira2",
+      "nome": "Grill 2",
+      "categoria": "eletrodomesticos",
+      "rooms": [
+        "cozinha"
+      ],
+      "usdz": "art-ios/eld_sanduicheira2.usdz",
+      "thumb": "thumbnails/eld_sanduicheira2.png",
+      "footprint": "S",
+      "tintable": false,
+      "tris": 650,
+      "tags": [
+        "eletro"
+      ]
+    },
+    {
+      "id": "eld_panela_pressao",
+      "nome": "Panela Pressao Eletrica",
+      "categoria": "eletrodomesticos",
+      "rooms": [
+        "cozinha"
+      ],
+      "usdz": "art-ios/eld_panela_pressao.usdz",
+      "thumb": "thumbnails/eld_panela_pressao.png",
+      "footprint": "S",
+      "tintable": false,
+      "tris": 650,
+      "tags": [
+        "eletro"
+      ]
+    },
+    {
+      "id": "eld_processador",
+      "nome": "Processador",
+      "categoria": "eletrodomesticos",
+      "rooms": [
+        "cozinha"
+      ],
+      "usdz": "art-ios/eld_processador.usdz",
+      "thumb": "thumbnails/eld_processador.png",
+      "footprint": "S",
+      "tintable": false,
+      "tris": 650,
+      "tags": [
+        "eletro"
+      ]
+    },
+    {
+      "id": "eld_espremedor",
+      "nome": "Espremedor",
+      "categoria": "eletrodomesticos",
+      "rooms": [
+        "cozinha"
+      ],
+      "usdz": "art-ios/eld_espremedor.usdz",
+      "thumb": "thumbnails/eld_espremedor.png",
+      "footprint": "S",
+      "tintable": false,
+      "tris": 650,
+      "tags": [
+        "eletro"
+      ]
+    },
+    {
+      "id": "eld_cafeteira_cap",
+      "nome": "Cafeteira Capsula",
+      "categoria": "eletrodomesticos",
+      "rooms": [
+        "cozinha"
+      ],
+      "usdz": "art-ios/eld_cafeteira_cap.usdz",
+      "thumb": "thumbnails/eld_cafeteira_cap.png",
+      "footprint": "S",
+      "tintable": false,
+      "tris": 650,
+      "tags": [
+        "eletro"
+      ]
+    },
+    {
+      "id": "eld_churrasqueira",
+      "nome": "Grill Eletrico",
+      "categoria": "eletrodomesticos",
+      "rooms": [
+        "cozinha"
+      ],
+      "usdz": "art-ios/eld_churrasqueira.usdz",
+      "thumb": "thumbnails/eld_churrasqueira.png",
+      "footprint": "S",
+      "tintable": false,
+      "tris": 650,
+      "tags": [
+        "eletro"
+      ]
+    },
+    {
+      "id": "eld_lava_roupa",
+      "nome": "Lava-roupas",
+      "categoria": "eletrodomesticos",
+      "rooms": [
+        "cozinha"
+      ],
+      "usdz": "art-ios/eld_lava_roupa.usdz",
+      "thumb": "thumbnails/eld_lava_roupa.png",
+      "footprint": "M",
+      "tintable": false,
+      "tris": 650,
+      "tags": [
+        "eletro"
+      ]
+    },
+    {
+      "id": "eld_seca_roupa",
+      "nome": "Secadora",
+      "categoria": "eletrodomesticos",
+      "rooms": [
+        "cozinha"
+      ],
+      "usdz": "art-ios/eld_seca_roupa.usdz",
+      "thumb": "thumbnails/eld_seca_roupa.png",
+      "footprint": "M",
+      "tintable": false,
+      "tris": 650,
+      "tags": [
+        "eletro"
+      ]
+    },
+    {
+      "id": "eld_aspirador",
+      "nome": "Aspirador Robo",
+      "categoria": "eletrodomesticos",
+      "rooms": [
+        "cozinha",
+        "sala"
+      ],
+      "usdz": "art-ios/eld_aspirador.usdz",
+      "thumb": "thumbnails/eld_aspirador.png",
+      "footprint": "S",
+      "tintable": false,
+      "tris": 650,
+      "tags": [
+        "eletro"
+      ]
+    },
+    {
+      "id": "eld_ventilador_teto",
+      "nome": "Ventilador Teto",
+      "categoria": "eletrodomesticos",
+      "rooms": [
+        "sala",
+        "quarto"
+      ],
+      "usdz": "art-ios/eld_ventilador_teto.usdz",
+      "thumb": "thumbnails/eld_ventilador_teto.png",
+      "footprint": "S",
+      "tintable": false,
+      "tris": 650,
+      "tags": [
+        "eletro"
+      ]
+    },
+    {
+      "id": "eld_ar_condicionado",
+      "nome": "Ar-condicionado",
+      "categoria": "eletrodomesticos",
+      "rooms": [
+        "quarto",
+        "sala"
+      ],
+      "usdz": "art-ios/eld_ar_condicionado.usdz",
+      "thumb": "thumbnails/eld_ar_condicionado.png",
+      "footprint": "M",
+      "tintable": false,
+      "tris": 650,
+      "tags": [
+        "eletro"
+      ]
+    },
+    {
+      "id": "eld_aquecedor",
+      "nome": "Aquecedor",
+      "categoria": "eletrodomesticos",
+      "rooms": [
+        "quarto"
+      ],
+      "usdz": "art-ios/eld_aquecedor.usdz",
+      "thumb": "thumbnails/eld_aquecedor.png",
+      "footprint": "S",
+      "tintable": false,
+      "tris": 650,
+      "tags": [
+        "eletro"
+      ]
+    },
+    {
+      "id": "eld_umidificador",
+      "nome": "Umidificador",
+      "categoria": "eletrodomesticos",
+      "rooms": [
+        "quarto"
+      ],
+      "usdz": "art-ios/eld_umidificador.usdz",
+      "thumb": "thumbnails/eld_umidificador.png",
+      "footprint": "S",
+      "tintable": false,
+      "tris": 650,
+      "tags": [
+        "eletro"
+      ]
+    },
+    {
+      "id": "eld_purificador",
+      "nome": "Purificador Ar",
+      "categoria": "eletrodomesticos",
+      "rooms": [
+        "quarto",
+        "sala"
+      ],
+      "usdz": "art-ios/eld_purificador.usdz",
+      "thumb": "thumbnails/eld_purificador.png",
+      "footprint": "S",
+      "tintable": false,
+      "tris": 650,
+      "tags": [
+        "eletro"
+      ]
+    },
+    {
+      "id": "eld_tv_50",
+      "nome": "TV 50",
+      "categoria": "eletrodomesticos",
+      "rooms": [
+        "sala"
+      ],
+      "usdz": "art-ios/eld_tv_50.usdz",
+      "thumb": "thumbnails/eld_tv_50.png",
+      "footprint": "M",
+      "tintable": false,
+      "tris": 650,
+      "tags": [
+        "eletro"
+      ]
+    },
+    {
+      "id": "eld_tv_43",
+      "nome": "TV 43",
+      "categoria": "eletrodomesticos",
+      "rooms": [
+        "quarto"
+      ],
+      "usdz": "art-ios/eld_tv_43.usdz",
+      "thumb": "thumbnails/eld_tv_43.png",
+      "footprint": "M",
+      "tintable": false,
+      "tris": 650,
+      "tags": [
+        "eletro"
+      ]
+    },
+    {
+      "id": "eld_home_theater",
+      "nome": "Home Theater",
+      "categoria": "eletrodomesticos",
+      "rooms": [
+        "sala"
+      ],
+      "usdz": "art-ios/eld_home_theater.usdz",
+      "thumb": "thumbnails/eld_home_theater.png",
+      "footprint": "M",
+      "tintable": false,
+      "tris": 650,
+      "tags": [
+        "eletro"
+      ]
+    },
+    {
+      "id": "eld_projetor2",
+      "nome": "Projetor 2",
+      "categoria": "eletrodomesticos",
+      "rooms": [
+        "sala"
+      ],
+      "usdz": "art-ios/eld_projetor2.usdz",
+      "thumb": "thumbnails/eld_projetor2.png",
+      "footprint": "S",
+      "tintable": false,
+      "tris": 650,
+      "tags": [
+        "eletro"
+      ]
+    },
+    {
+      "id": "eld_video_game2",
+      "nome": "Console 2",
+      "categoria": "eletrodomesticos",
+      "rooms": [
+        "sala"
+      ],
+      "usdz": "art-ios/eld_video_game2.usdz",
+      "thumb": "thumbnails/eld_video_game2.png",
+      "footprint": "S",
+      "tintable": false,
+      "tris": 650,
+      "tags": [
+        "eletro"
+      ]
+    },
+    {
+      "id": "eld_caixa_som2",
+      "nome": "Caixa Som 2",
+      "categoria": "eletrodomesticos",
+      "rooms": [
+        "sala"
+      ],
+      "usdz": "art-ios/eld_caixa_som2.usdz",
+      "thumb": "thumbnails/eld_caixa_som2.png",
+      "footprint": "S",
+      "tintable": false,
+      "tris": 650,
+      "tags": [
+        "eletro"
+      ]
+    },
+    {
+      "id": "eld_notebook2",
+      "nome": "Notebook 2",
+      "categoria": "eletrodomesticos",
+      "rooms": [
+        "quarto"
+      ],
+      "usdz": "art-ios/eld_notebook2.usdz",
+      "thumb": "thumbnails/eld_notebook2.png",
+      "footprint": "S",
+      "tintable": false,
+      "tris": 650,
+      "tags": [
+        "eletro"
+      ]
+    },
+    {
+      "id": "eld_monitor_27",
+      "nome": "Monitor 27",
+      "categoria": "eletrodomesticos",
+      "rooms": [
+        "quarto"
+      ],
+      "usdz": "art-ios/eld_monitor_27.usdz",
+      "thumb": "thumbnails/eld_monitor_27.png",
+      "footprint": "S",
+      "tintable": false,
+      "tris": 650,
+      "tags": [
+        "eletro"
+      ]
+    },
+    {
+      "id": "eld_impressora",
+      "nome": "Impressora",
+      "categoria": "eletrodomesticos",
+      "rooms": [
+        "quarto"
+      ],
+      "usdz": "art-ios/eld_impressora.usdz",
+      "thumb": "thumbnails/eld_impressora.png",
+      "footprint": "S",
+      "tintable": false,
+      "tris": 650,
+      "tags": [
+        "eletro"
+      ]
+    },
+    {
+      "id": "eld_roteador",
+      "nome": "Roteador",
+      "categoria": "eletrodomesticos",
+      "rooms": [
+        "sala",
+        "quarto"
+      ],
+      "usdz": "art-ios/eld_roteador.usdz",
+      "thumb": "thumbnails/eld_roteador.png",
+      "footprint": "S",
+      "tintable": false,
+      "tris": 650,
+      "tags": [
+        "eletro"
+      ]
+    },
+    {
+      "id": "eld_luminaria_smart",
+      "nome": "Luminaria Smart",
+      "categoria": "eletrodomesticos",
+      "rooms": [
+        "quarto"
+      ],
+      "usdz": "art-ios/eld_luminaria_smart.usdz",
+      "thumb": "thumbnails/eld_luminaria_smart.png",
+      "footprint": "S",
+      "tintable": false,
+      "tris": 650,
+      "tags": [
+        "eletro"
+      ]
+    },
+    {
+      "id": "eld_fechadura",
+      "nome": "Fechadura Smart",
+      "categoria": "eletrodomesticos",
+      "rooms": [
+        "sala"
+      ],
+      "usdz": "art-ios/eld_fechadura.usdz",
+      "thumb": "thumbnails/eld_fechadura.png",
+      "footprint": "S",
+      "tintable": false,
+      "tris": 650,
+      "tags": [
+        "eletro"
+      ]
+    },
+    {
+      "id": "eld_camera",
+      "nome": "Camera Smart",
+      "categoria": "eletrodomesticos",
+      "rooms": [
+        "sala"
+      ],
+      "usdz": "art-ios/eld_camera.usdz",
+      "thumb": "thumbnails/eld_camera.png",
+      "footprint": "S",
+      "tintable": false,
+      "tris": 650,
+      "tags": [
+        "eletro"
+      ]
+    },
+    {
+      "id": "eld_assistente",
+      "nome": "Assistente Voz",
+      "categoria": "eletrodomesticos",
+      "rooms": [
+        "sala",
+        "quarto"
+      ],
+      "usdz": "art-ios/eld_assistente.usdz",
+      "thumb": "thumbnails/eld_assistente.png",
+      "footprint": "S",
+      "tintable": false,
+      "tris": 650,
+      "tags": [
+        "eletro"
+      ]
+    },
+    {
+      "id": "eld_carregador2",
+      "nome": "Carregador Turbo",
+      "categoria": "eletrodomesticos",
+      "rooms": [
+        "quarto"
+      ],
+      "usdz": "art-ios/eld_carregador2.usdz",
+      "thumb": "thumbnails/eld_carregador2.png",
+      "footprint": "S",
+      "tintable": false,
+      "tris": 650,
+      "tags": [
+        "eletro"
+      ]
+    },
+    {
+      "id": "eld_powerbank",
+      "nome": "Powerbank",
+      "categoria": "eletrodomesticos",
+      "rooms": [
+        "quarto"
+      ],
+      "usdz": "art-ios/eld_powerbank.usdz",
+      "thumb": "thumbnails/eld_powerbank.png",
+      "footprint": "S",
+      "tintable": false,
+      "tris": 650,
+      "tags": [
+        "eletro"
+      ]
+    },
+    {
+      "id": "eld_ferro",
+      "nome": "Ferro Passar",
+      "categoria": "eletrodomesticos",
+      "rooms": [
+        "quarto"
+      ],
+      "usdz": "art-ios/eld_ferro.usdz",
+      "thumb": "thumbnails/eld_ferro.png",
+      "footprint": "S",
+      "tintable": false,
+      "tris": 650,
+      "tags": [
+        "eletro"
+      ]
+    },
+    {
+      "id": "eld_tabua_passar",
+      "nome": "Tabua Passar",
+      "categoria": "eletrodomesticos",
+      "rooms": [
+        "quarto"
+      ],
+      "usdz": "art-ios/eld_tabua_passar.usdz",
+      "thumb": "thumbnails/eld_tabua_passar.png",
+      "footprint": "S",
+      "tintable": false,
+      "tris": 650,
+      "tags": [
+        "eletro"
+      ]
+    },
+    {
+      "id": "eld_carrinho_limpeza",
+      "nome": "Carrinho Limpeza",
+      "categoria": "eletrodomesticos",
+      "rooms": [
+        "cozinha"
+      ],
+      "usdz": "art-ios/eld_carrinho_limpeza.usdz",
+      "thumb": "thumbnails/eld_carrinho_limpeza.png",
+      "footprint": "S",
+      "tintable": false,
+      "tris": 650,
+      "tags": [
+        "eletro"
+      ]
+    },
+    {
+      "id": "eld_organizador_gel",
+      "nome": "Organizador Geladeira",
+      "categoria": "eletrodomesticos",
+      "rooms": [
+        "cozinha"
+      ],
+      "usdz": "art-ios/eld_organizador_gel.usdz",
+      "thumb": "thumbnails/eld_organizador_gel.png",
+      "footprint": "S",
+      "tintable": false,
+      "tris": 650,
+      "tags": [
+        "eletro"
+      ]
+    },
+    {
+      "id": "eld_porta_frios",
+      "nome": "Porta Frios",
+      "categoria": "eletrodomesticos",
+      "rooms": [
+        "cozinha"
+      ],
+      "usdz": "art-ios/eld_porta_frios.usdz",
+      "thumb": "thumbnails/eld_porta_frios.png",
+      "footprint": "S",
+      "tintable": false,
+      "tris": 650,
+      "tags": [
+        "eletro"
+      ]
+    },
+    {
+      "id": "eld_dispenser",
+      "nome": "Dispenser",
+      "categoria": "eletrodomesticos",
+      "rooms": [
+        "cozinha"
+      ],
+      "usdz": "art-ios/eld_dispenser.usdz",
+      "thumb": "thumbnails/eld_dispenser.png",
+      "footprint": "S",
+      "tintable": false,
+      "tris": 650,
+      "tags": [
+        "eletro"
+      ]
+    },
+    {
+      "id": "kid_cama_inf",
+      "nome": "Cama Infantil",
+      "categoria": "kids",
+      "rooms": [
+        "quarto"
+      ],
+      "usdz": "art-ios/kid_cama_inf.usdz",
+      "thumb": "thumbnails/kid_cama_inf.png",
+      "footprint": "L",
+      "tintable": true,
+      "tris": 500,
+      "tags": [
+        "toy"
+      ]
+    },
+    {
+      "id": "kid_beliche_inf",
+      "nome": "Beliche Infantil",
+      "categoria": "kids",
+      "rooms": [
+        "quarto"
+      ],
+      "usdz": "art-ios/kid_beliche_inf.usdz",
+      "thumb": "thumbnails/kid_beliche_inf.png",
+      "footprint": "L",
+      "tintable": true,
+      "tris": 500,
+      "tags": [
+        "toy"
+      ]
+    },
+    {
+      "id": "kid_criado_inf",
+      "nome": "Criado Infantil",
+      "categoria": "kids",
+      "rooms": [
+        "quarto"
+      ],
+      "usdz": "art-ios/kid_criado_inf.usdz",
+      "thumb": "thumbnails/kid_criado_inf.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 500,
+      "tags": [
+        "toy"
+      ]
+    },
+    {
+      "id": "kid_guarda_inf",
+      "nome": "Guarda Infantil",
+      "categoria": "kids",
+      "rooms": [
+        "quarto"
+      ],
+      "usdz": "art-ios/kid_guarda_inf.usdz",
+      "thumb": "thumbnails/kid_guarda_inf.png",
+      "footprint": "L",
+      "tintable": true,
+      "tris": 500,
+      "tags": [
+        "toy"
+      ]
+    },
+    {
+      "id": "kid_escrivaninha_inf",
+      "nome": "Escrivaninha Infantil",
+      "categoria": "kids",
+      "rooms": [
+        "quarto"
+      ],
+      "usdz": "art-ios/kid_escrivaninha_inf.usdz",
+      "thumb": "thumbnails/kid_escrivaninha_inf.png",
+      "footprint": "M",
+      "tintable": true,
+      "tris": 500,
+      "tags": [
+        "toy"
+      ]
+    },
+    {
+      "id": "kid_cadeira_inf",
+      "nome": "Cadeira Infantil",
+      "categoria": "kids",
+      "rooms": [
+        "quarto"
+      ],
+      "usdz": "art-ios/kid_cadeira_inf.usdz",
+      "thumb": "thumbnails/kid_cadeira_inf.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 500,
+      "tags": [
+        "toy"
+      ]
+    },
+    {
+      "id": "kid_prateleira_inf",
+      "nome": "Prateleira Infantil",
+      "categoria": "kids",
+      "rooms": [
+        "quarto"
+      ],
+      "usdz": "art-ios/kid_prateleira_inf.usdz",
+      "thumb": "thumbnails/kid_prateleira_inf.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 500,
+      "tags": [
+        "toy"
+      ]
+    },
+    {
+      "id": "kid_bau_inf",
+      "nome": "Bau Brinquedos 2",
+      "categoria": "kids",
+      "rooms": [
+        "quarto"
+      ],
+      "usdz": "art-ios/kid_bau_inf.usdz",
+      "thumb": "thumbnails/kid_bau_inf.png",
+      "footprint": "M",
+      "tintable": true,
+      "tris": 500,
+      "tags": [
+        "toy"
+      ]
+    },
+    {
+      "id": "kid_tapete_pista",
+      "nome": "Tapete Pista",
+      "categoria": "kids",
+      "rooms": [
+        "quarto"
+      ],
+      "usdz": "art-ios/kid_tapete_pista.usdz",
+      "thumb": "thumbnails/kid_tapete_pista.png",
+      "footprint": "M",
+      "tintable": true,
+      "tris": 500,
+      "tags": [
+        "toy"
+      ]
+    },
+    {
+      "id": "kid_tenda2",
+      "nome": "Tenda 2",
+      "categoria": "kids",
+      "rooms": [
+        "quarto"
+      ],
+      "usdz": "art-ios/kid_tenda2.usdz",
+      "thumb": "thumbnails/kid_tenda2.png",
+      "footprint": "M",
+      "tintable": true,
+      "tris": 500,
+      "tags": [
+        "toy"
+      ]
+    },
+    {
+      "id": "kid_cabana2",
+      "nome": "Cabana 2",
+      "categoria": "kids",
+      "rooms": [
+        "quarto"
+      ],
+      "usdz": "art-ios/kid_cabana2.usdz",
+      "thumb": "thumbnails/kid_cabana2.png",
+      "footprint": "M",
+      "tintable": true,
+      "tris": 500,
+      "tags": [
+        "toy"
+      ]
+    },
+    {
+      "id": "kid_puff_inf",
+      "nome": "Puff Infantil",
+      "categoria": "kids",
+      "rooms": [
+        "quarto"
+      ],
+      "usdz": "art-ios/kid_puff_inf.usdz",
+      "thumb": "thumbnails/kid_puff_inf.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 500,
+      "tags": [
+        "toy"
+      ]
+    },
+    {
+      "id": "kid_pelucia2",
+      "nome": "Pelucia 2",
+      "categoria": "kids",
+      "rooms": [
+        "quarto"
+      ],
+      "usdz": "art-ios/kid_pelucia2.usdz",
+      "thumb": "thumbnails/kid_pelucia2.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 500,
+      "tags": [
+        "toy"
+      ]
+    },
+    {
+      "id": "kid_boneca2",
+      "nome": "Boneca 2",
+      "categoria": "kids",
+      "rooms": [
+        "quarto"
+      ],
+      "usdz": "art-ios/kid_boneca2.usdz",
+      "thumb": "thumbnails/kid_boneca2.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 500,
+      "tags": [
+        "toy"
+      ]
+    },
+    {
+      "id": "kid_carrinho2",
+      "nome": "Carrinho 2",
+      "categoria": "kids",
+      "rooms": [
+        "quarto"
+      ],
+      "usdz": "art-ios/kid_carrinho2.usdz",
+      "thumb": "thumbnails/kid_carrinho2.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 500,
+      "tags": [
+        "toy"
+      ]
+    },
+    {
+      "id": "kid_blocos2",
+      "nome": "Blocos 2",
+      "categoria": "kids",
+      "rooms": [
+        "quarto"
+      ],
+      "usdz": "art-ios/kid_blocos2.usdz",
+      "thumb": "thumbnails/kid_blocos2.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 500,
+      "tags": [
+        "toy"
+      ]
+    },
+    {
+      "id": "kid_quebra_cabeca",
+      "nome": "Quebra-cabeca",
+      "categoria": "kids",
+      "rooms": [
+        "quarto"
+      ],
+      "usdz": "art-ios/kid_quebra_cabeca.usdz",
+      "thumb": "thumbnails/kid_quebra_cabeca.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 500,
+      "tags": [
+        "toy"
+      ]
+    },
+    {
+      "id": "kid_jogo_tabuleiro",
+      "nome": "Jogo Tabuleiro",
+      "categoria": "kids",
+      "rooms": [
+        "quarto",
+        "sala"
+      ],
+      "usdz": "art-ios/kid_jogo_tabuleiro.usdz",
+      "thumb": "thumbnails/kid_jogo_tabuleiro.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 500,
+      "tags": [
+        "toy"
+      ]
+    },
+    {
+      "id": "kid_livro_inf",
+      "nome": "Livro Infantil",
+      "categoria": "kids",
+      "rooms": [
+        "quarto"
+      ],
+      "usdz": "art-ios/kid_livro_inf.usdz",
+      "thumb": "thumbnails/kid_livro_inf.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 500,
+      "tags": [
+        "toy"
+      ]
+    },
+    {
+      "id": "kid_gibi",
+      "nome": "Gibi",
+      "categoria": "kids",
+      "rooms": [
+        "quarto"
+      ],
+      "usdz": "art-ios/kid_gibi.usdz",
+      "thumb": "thumbnails/kid_gibi.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 500,
+      "tags": [
+        "toy"
+      ]
+    },
+    {
+      "id": "kid_lapis_cor",
+      "nome": "Lapis Cor 2",
+      "categoria": "kids",
+      "rooms": [
+        "quarto"
+      ],
+      "usdz": "art-ios/kid_lapis_cor.usdz",
+      "thumb": "thumbnails/kid_lapis_cor.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 500,
+      "tags": [
+        "toy"
+      ]
+    },
+    {
+      "id": "kid_massa",
+      "nome": "Massinha",
+      "categoria": "kids",
+      "rooms": [
+        "quarto"
+      ],
+      "usdz": "art-ios/kid_massa.usdz",
+      "thumb": "thumbnails/kid_massa.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 500,
+      "tags": [
+        "toy"
+      ]
+    },
+    {
+      "id": "kid_tinta",
+      "nome": "Kit Pintura",
+      "categoria": "kids",
+      "rooms": [
+        "quarto"
+      ],
+      "usdz": "art-ios/kid_tinta.usdz",
+      "thumb": "thumbnails/kid_tinta.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 500,
+      "tags": [
+        "toy"
+      ]
+    },
+    {
+      "id": "kid_cavalete",
+      "nome": "Cavalete",
+      "categoria": "kids",
+      "rooms": [
+        "quarto"
+      ],
+      "usdz": "art-ios/kid_cavalete.usdz",
+      "thumb": "thumbnails/kid_cavalete.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 500,
+      "tags": [
+        "toy"
+      ]
+    },
+    {
+      "id": "kid_instrumento",
+      "nome": "Teclado Infantil",
+      "categoria": "kids",
+      "rooms": [
+        "quarto",
+        "sala"
+      ],
+      "usdz": "art-ios/kid_instrumento.usdz",
+      "thumb": "thumbnails/kid_instrumento.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 500,
+      "tags": [
+        "toy"
+      ]
+    },
+    {
+      "id": "kid_bateria",
+      "nome": "Bateria Toy",
+      "categoria": "kids",
+      "rooms": [
+        "quarto"
+      ],
+      "usdz": "art-ios/kid_bateria.usdz",
+      "thumb": "thumbnails/kid_bateria.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 500,
+      "tags": [
+        "toy"
+      ]
+    },
+    {
+      "id": "kid_fantasia",
+      "nome": "Bau Fantasias",
+      "categoria": "kids",
+      "rooms": [
+        "quarto"
+      ],
+      "usdz": "art-ios/kid_fantasia.usdz",
+      "thumb": "thumbnails/kid_fantasia.png",
+      "footprint": "M",
+      "tintable": true,
+      "tris": 500,
+      "tags": [
+        "toy"
+      ]
+    },
+    {
+      "id": "kid_escorrega",
+      "nome": "Escorrega",
+      "categoria": "kids",
+      "rooms": [
+        "quarto",
+        "sala"
+      ],
+      "usdz": "art-ios/kid_escorrega.usdz",
+      "thumb": "thumbnails/kid_escorrega.png",
+      "footprint": "M",
+      "tintable": true,
+      "tris": 500,
+      "tags": [
+        "toy"
+      ]
+    },
+    {
+      "id": "kid_piscina_bolinhas",
+      "nome": "Piscina Bolinhas",
+      "categoria": "kids",
+      "rooms": [
+        "sala"
+      ],
+      "usdz": "art-ios/kid_piscina_bolinhas.usdz",
+      "thumb": "thumbnails/kid_piscina_bolinhas.png",
+      "footprint": "L",
+      "tintable": true,
+      "tris": 500,
+      "tags": [
+        "toy"
+      ]
+    },
+    {
+      "id": "kid_casinha",
+      "nome": "Casinha",
+      "categoria": "kids",
+      "rooms": [
+        "sala",
+        "quarto"
+      ],
+      "usdz": "art-ios/kid_casinha.usdz",
+      "thumb": "thumbnails/kid_casinha.png",
+      "footprint": "M",
+      "tintable": true,
+      "tris": 500,
+      "tags": [
+        "toy"
+      ]
+    },
+    {
+      "id": "kid_cozinha_toy",
+      "nome": "Cozinha Toy",
+      "categoria": "kids",
+      "rooms": [
+        "quarto"
+      ],
+      "usdz": "art-ios/kid_cozinha_toy.usdz",
+      "thumb": "thumbnails/kid_cozinha_toy.png",
+      "footprint": "M",
+      "tintable": true,
+      "tris": 500,
+      "tags": [
+        "toy"
+      ]
+    },
+    {
+      "id": "kid_ferramentas",
+      "nome": "Bancada Ferramentas",
+      "categoria": "kids",
+      "rooms": [
+        "quarto"
+      ],
+      "usdz": "art-ios/kid_ferramentas.usdz",
+      "thumb": "thumbnails/kid_ferramentas.png",
+      "footprint": "M",
+      "tintable": true,
+      "tris": 500,
+      "tags": [
+        "toy"
+      ]
+    },
+    {
+      "id": "kid_medico",
+      "nome": "Kit Medico",
+      "categoria": "kids",
+      "rooms": [
+        "quarto"
+      ],
+      "usdz": "art-ios/kid_medico.usdz",
+      "thumb": "thumbnails/kid_medico.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 500,
+      "tags": [
+        "toy"
+      ]
+    },
+    {
+      "id": "kid_bola",
+      "nome": "Bola",
+      "categoria": "kids",
+      "rooms": [
+        "sala",
+        "quarto"
+      ],
+      "usdz": "art-ios/kid_bola.usdz",
+      "thumb": "thumbnails/kid_bola.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 500,
+      "tags": [
+        "toy"
+      ]
+    },
+    {
+      "id": "kid_patins",
+      "nome": "Patins",
+      "categoria": "kids",
+      "rooms": [
+        "quarto"
+      ],
+      "usdz": "art-ios/kid_patins.usdz",
+      "thumb": "thumbnails/kid_patins.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 500,
+      "tags": [
+        "toy"
+      ]
+    },
+    {
+      "id": "kid_skate",
+      "nome": "Skate",
+      "categoria": "kids",
+      "rooms": [
+        "quarto"
+      ],
+      "usdz": "art-ios/kid_skate.usdz",
+      "thumb": "thumbnails/kid_skate.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 500,
+      "tags": [
+        "toy"
+      ]
+    },
+    {
+      "id": "kid_bicicleta",
+      "nome": "Bicicleta Aro 12",
+      "categoria": "kids",
+      "rooms": [
+        "quarto"
+      ],
+      "usdz": "art-ios/kid_bicicleta.usdz",
+      "thumb": "thumbnails/kid_bicicleta.png",
+      "footprint": "M",
+      "tintable": true,
+      "tris": 500,
+      "tags": [
+        "toy"
+      ]
+    },
+    {
+      "id": "kid_patente",
+      "nome": "Patinete",
+      "categoria": "kids",
+      "rooms": [
+        "quarto"
+      ],
+      "usdz": "art-ios/kid_patente.usdz",
+      "thumb": "thumbnails/kid_patente.png",
+      "footprint": "M",
+      "tintable": true,
+      "tris": 500,
+      "tags": [
+        "toy"
+      ]
+    },
+    {
+      "id": "kid_mochila",
+      "nome": "Mochila",
+      "categoria": "kids",
+      "rooms": [
+        "quarto"
+      ],
+      "usdz": "art-ios/kid_mochila.usdz",
+      "thumb": "thumbnails/kid_mochila.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 500,
+      "tags": [
+        "toy"
+      ]
+    },
+    {
+      "id": "kid_lancheira",
+      "nome": "Lancheira",
+      "categoria": "kids",
+      "rooms": [
+        "cozinha",
+        "quarto"
+      ],
+      "usdz": "art-ios/kid_lancheira.usdz",
+      "thumb": "thumbnails/kid_lancheira.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 500,
+      "tags": [
+        "toy"
+      ]
+    },
+    {
+      "id": "kid_copo",
+      "nome": "Copo Infantil",
+      "categoria": "kids",
+      "rooms": [
+        "cozinha"
+      ],
+      "usdz": "art-ios/kid_copo.usdz",
+      "thumb": "thumbnails/kid_copo.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 500,
+      "tags": [
+        "toy"
+      ]
+    },
+    {
+      "id": "kid_prato_inf",
+      "nome": "Prato Infantil",
+      "categoria": "kids",
+      "rooms": [
+        "cozinha"
+      ],
+      "usdz": "art-ios/kid_prato_inf.usdz",
+      "thumb": "thumbnails/kid_prato_inf.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 500,
+      "tags": [
+        "toy"
+      ]
+    },
+    {
+      "id": "kid_cadeira_ali",
+      "nome": "Cadeira Alimentacao",
+      "categoria": "kids",
+      "rooms": [
+        "cozinha"
+      ],
+      "usdz": "art-ios/kid_cadeira_ali.usdz",
+      "thumb": "thumbnails/kid_cadeira_ali.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 500,
+      "tags": [
+        "toy"
+      ]
+    },
+    {
+      "id": "kid_babador",
+      "nome": "Babador",
+      "categoria": "kids",
+      "rooms": [
+        "cozinha"
+      ],
+      "usdz": "art-ios/kid_babador.usdz",
+      "thumb": "thumbnails/kid_babador.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 500,
+      "tags": [
+        "toy"
+      ]
+    },
+    {
+      "id": "kid_tapete_atividade",
+      "nome": "Tapete Atividade",
+      "categoria": "kids",
+      "rooms": [
+        "sala"
+      ],
+      "usdz": "art-ios/kid_tapete_atividade.usdz",
+      "thumb": "thumbnails/kid_tapete_atividade.png",
+      "footprint": "M",
+      "tintable": true,
+      "tris": 500,
+      "tags": [
+        "toy"
+      ]
+    },
+    {
+      "id": "kid_protetor",
+      "nome": "Protetor Quina",
+      "categoria": "kids",
+      "rooms": [
+        "sala"
+      ],
+      "usdz": "art-ios/kid_protetor.usdz",
+      "thumb": "thumbnails/kid_protetor.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 500,
+      "tags": [
+        "toy"
+      ]
+    },
+    {
+      "id": "kid_grade",
+      "nome": "Grade Seguranca",
+      "categoria": "kids",
+      "rooms": [
+        "sala"
+      ],
+      "usdz": "art-ios/kid_grade.usdz",
+      "thumb": "thumbnails/kid_grade.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 500,
+      "tags": [
+        "toy"
+      ]
+    },
+    {
+      "id": "kid_monitor_bebe",
+      "nome": "Monitor Bebe",
+      "categoria": "kids",
+      "rooms": [
+        "quarto"
+      ],
+      "usdz": "art-ios/kid_monitor_bebe.usdz",
+      "thumb": "thumbnails/kid_monitor_bebe.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 500,
+      "tags": [
+        "toy"
+      ]
+    },
+    {
+      "id": "kid_abajur_inf",
+      "nome": "Abajur Infantil",
+      "categoria": "kids",
+      "rooms": [
+        "quarto"
+      ],
+      "usdz": "art-ios/kid_abajur_inf.usdz",
+      "thumb": "thumbnails/kid_abajur_inf.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 500,
+      "tags": [
+        "toy"
+      ]
+    },
+    {
+      "id": "kid_cortina_inf",
+      "nome": "Cortina Infantil",
+      "categoria": "kids",
+      "rooms": [
+        "quarto"
+      ],
+      "usdz": "art-ios/kid_cortina_inf.usdz",
+      "thumb": "thumbnails/kid_cortina_inf.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 500,
+      "tags": [
+        "toy"
+      ]
+    },
+    {
+      "id": "kid_adesivo_parede",
+      "nome": "Adesivo Infantil",
+      "categoria": "kids",
+      "rooms": [
+        "quarto"
+      ],
+      "usdz": "art-ios/kid_adesivo_parede.usdz",
+      "thumb": "thumbnails/kid_adesivo_parede.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 500,
+      "tags": [
+        "toy"
+      ]
     }
   ],
   "version": 1
