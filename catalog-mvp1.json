@@ -1,0 +1,736 @@
+{
+  "items": [
+    {
+      "categoria": "moveis",
+      "footprint": "L",
+      "id": "bed_moveis_cama_casal",
+      "nome": "Cama Casal",
+      "rooms": [
+        "quarto"
+      ],
+      "tags": [
+        "madeira",
+        "cozy"
+      ],
+      "thumb": "thumbnails/bed_moveis_cama_casal.png",
+      "tintable": true,
+      "tris": 2400,
+      "usdz": "art-ios/bed_moveis_cama_casal.usdz"
+    },
+    {
+      "categoria": "moveis",
+      "footprint": "S",
+      "id": "bed_moveis_criado",
+      "nome": "Criado-mudo",
+      "rooms": [
+        "quarto"
+      ],
+      "tags": [
+        "madeira"
+      ],
+      "thumb": "thumbnails/bed_moveis_criado.png",
+      "tintable": true,
+      "tris": 900,
+      "usdz": "art-ios/bed_moveis_criado.usdz"
+    },
+    {
+      "categoria": "moveis",
+      "footprint": "L",
+      "id": "bed_moveis_guarda_roupa",
+      "nome": "Guarda-roupa",
+      "rooms": [
+        "quarto"
+      ],
+      "tags": [
+        "madeira"
+      ],
+      "thumb": "thumbnails/bed_moveis_guarda_roupa.png",
+      "tintable": true,
+      "tris": 2800,
+      "usdz": "art-ios/bed_moveis_guarda_roupa.usdz"
+    },
+    {
+      "categoria": "moveis",
+      "footprint": "M",
+      "id": "bed_moveis_escrivaninha",
+      "nome": "Escrivaninha",
+      "rooms": [
+        "quarto"
+      ],
+      "tags": [
+        "estudo"
+      ],
+      "thumb": "thumbnails/bed_moveis_escrivaninha.png",
+      "tintable": true,
+      "tris": 1800,
+      "usdz": "art-ios/bed_moveis_escrivaninha.usdz"
+    },
+    {
+      "categoria": "moveis",
+      "footprint": "S",
+      "id": "bed_moveis_cadeira",
+      "nome": "Cadeira Quarto",
+      "rooms": [
+        "quarto",
+        "sala"
+      ],
+      "tags": [
+        "madeira"
+      ],
+      "thumb": "thumbnails/bed_moveis_cadeira.png",
+      "tintable": true,
+      "tris": 1100,
+      "usdz": "art-ios/bed_moveis_cadeira.usdz"
+    },
+    {
+      "categoria": "acessorios",
+      "footprint": "S",
+      "id": "bed_aces_livros",
+      "nome": "Pilha Livros",
+      "rooms": [
+        "quarto",
+        "sala"
+      ],
+      "tags": [
+        "decor"
+      ],
+      "thumb": "thumbnails/bed_aces_livros.png",
+      "tintable": false,
+      "tris": 400,
+      "usdz": "art-ios/bed_aces_livros.usdz"
+    },
+    {
+      "categoria": "acessorios",
+      "footprint": "S",
+      "id": "bed_aces_quadro",
+      "nome": "Quadro Parede",
+      "rooms": [
+        "quarto",
+        "sala"
+      ],
+      "tags": [
+        "parede"
+      ],
+      "thumb": "thumbnails/bed_aces_quadro.png",
+      "tintable": true,
+      "tris": 300,
+      "usdz": "art-ios/bed_aces_quadro.usdz"
+    },
+    {
+      "categoria": "sub_itens",
+      "footprint": "S",
+      "id": "bed_sub_almofada",
+      "nome": "Almofada",
+      "rooms": [
+        "quarto",
+        "sala"
+      ],
+      "tags": [
+        "tecido"
+      ],
+      "thumb": "thumbnails/bed_sub_almofada.png",
+      "tintable": true,
+      "tris": 500,
+      "usdz": "art-ios/bed_sub_almofada.usdz"
+    },
+    {
+      "categoria": "iluminacao",
+      "footprint": "S",
+      "id": "bed_ilum_abajur",
+      "nome": "Abajur",
+      "rooms": [
+        "quarto"
+      ],
+      "tags": [
+        "luz"
+      ],
+      "thumb": "thumbnails/bed_ilum_abajur.png",
+      "tintable": true,
+      "tris": 700,
+      "usdz": "art-ios/bed_ilum_abajur.usdz"
+    },
+    {
+      "categoria": "texteis",
+      "footprint": "M",
+      "id": "bed_textil_tapete",
+      "nome": "Tapete Quarto",
+      "rooms": [
+        "quarto"
+      ],
+      "tags": [
+        "tecido"
+      ],
+      "thumb": "thumbnails/bed_textil_tapete.png",
+      "tintable": true,
+      "tris": 200,
+      "usdz": "art-ios/bed_textil_tapete.usdz"
+    },
+    {
+      "categoria": "plantas",
+      "footprint": "S",
+      "id": "bed_planta_vaso",
+      "nome": "Vaso Planta",
+      "rooms": [
+        "quarto",
+        "sala",
+        "cozinha"
+      ],
+      "tags": [
+        "verde"
+      ],
+      "thumb": "thumbnails/bed_planta_vaso.png",
+      "tintable": false,
+      "tris": 800,
+      "usdz": "art-ios/bed_planta_vaso.usdz"
+    },
+    {
+      "categoria": "moveis",
+      "footprint": "S",
+      "id": "bed_moveis_luminaria_pe",
+      "nome": "Luminaria Pe",
+      "rooms": [
+        "quarto",
+        "sala"
+      ],
+      "tags": [
+        "luz"
+      ],
+      "thumb": "thumbnails/bed_moveis_luminaria_pe.png",
+      "tintable": false,
+      "tris": 900,
+      "usdz": "art-ios/bed_moveis_luminaria_pe.usdz"
+    },
+    {
+      "categoria": "acessorios",
+      "footprint": "S",
+      "id": "bed_aces_relogio",
+      "nome": "Relogio Parede",
+      "rooms": [
+        "quarto",
+        "cozinha"
+      ],
+      "tags": [
+        "parede"
+      ],
+      "thumb": "thumbnails/bed_aces_relogio.png",
+      "tintable": false,
+      "tris": 350,
+      "usdz": "art-ios/bed_aces_relogio.usdz"
+    },
+    {
+      "categoria": "sub_itens",
+      "footprint": "S",
+      "id": "bed_sub_caixa",
+      "nome": "Caixa Organizadora",
+      "rooms": [
+        "quarto"
+      ],
+      "tags": [
+        "storage"
+      ],
+      "thumb": "thumbnails/bed_sub_caixa.png",
+      "tintable": true,
+      "tris": 600,
+      "usdz": "art-ios/bed_sub_caixa.usdz"
+    },
+    {
+      "categoria": "texteis",
+      "footprint": "S",
+      "id": "bed_textil_cortina",
+      "nome": "Cortina",
+      "rooms": [
+        "quarto",
+        "sala"
+      ],
+      "tags": [
+        "tecido"
+      ],
+      "thumb": "thumbnails/bed_textil_cortina.png",
+      "tintable": true,
+      "tris": 450,
+      "usdz": "art-ios/bed_textil_cortina.usdz"
+    },
+    {
+      "categoria": "moveis",
+      "footprint": "L",
+      "id": "kit_moveis_bancada",
+      "nome": "Bancada Cozinha",
+      "rooms": [
+        "cozinha"
+      ],
+      "tags": [
+        "madeira"
+      ],
+      "thumb": "thumbnails/kit_moveis_bancada.png",
+      "tintable": true,
+      "tris": 2600,
+      "usdz": "art-ios/kit_moveis_bancada.usdz"
+    },
+    {
+      "categoria": "moveis",
+      "footprint": "L",
+      "id": "kit_moveis_armario",
+      "nome": "Armario Cozinha",
+      "rooms": [
+        "cozinha"
+      ],
+      "tags": [
+        "madeira"
+      ],
+      "thumb": "thumbnails/kit_moveis_armario.png",
+      "tintable": true,
+      "tris": 2500,
+      "usdz": "art-ios/kit_moveis_armario.usdz"
+    },
+    {
+      "categoria": "moveis",
+      "footprint": "M",
+      "id": "kit_moveis_geladeira",
+      "nome": "Geladeira",
+      "rooms": [
+        "cozinha"
+      ],
+      "tags": [
+        "eletro"
+      ],
+      "thumb": "thumbnails/kit_moveis_geladeira.png",
+      "tintable": true,
+      "tris": 1800,
+      "usdz": "art-ios/kit_moveis_geladeira.usdz"
+    },
+    {
+      "categoria": "moveis",
+      "footprint": "M",
+      "id": "kit_moveis_fogao",
+      "nome": "Fogao",
+      "rooms": [
+        "cozinha"
+      ],
+      "tags": [
+        "eletro"
+      ],
+      "thumb": "thumbnails/kit_moveis_fogao.png",
+      "tintable": false,
+      "tris": 2000,
+      "usdz": "art-ios/kit_moveis_fogao.usdz"
+    },
+    {
+      "categoria": "moveis",
+      "footprint": "M",
+      "id": "kit_moveis_mesa",
+      "nome": "Mesa Cozinha",
+      "rooms": [
+        "cozinha"
+      ],
+      "tags": [
+        "madeira"
+      ],
+      "thumb": "thumbnails/kit_moveis_mesa.png",
+      "tintable": true,
+      "tris": 1600,
+      "usdz": "art-ios/kit_moveis_mesa.usdz"
+    },
+    {
+      "categoria": "moveis",
+      "footprint": "S",
+      "id": "kit_moveis_cadeira",
+      "nome": "Cadeira Cozinha",
+      "rooms": [
+        "cozinha"
+      ],
+      "tags": [
+        "madeira"
+      ],
+      "thumb": "thumbnails/kit_moveis_cadeira.png",
+      "tintable": true,
+      "tris": 1000,
+      "usdz": "art-ios/kit_moveis_cadeira.usdz"
+    },
+    {
+      "categoria": "acessorios",
+      "footprint": "S",
+      "id": "kit_aces_panela",
+      "nome": "Panela",
+      "rooms": [
+        "cozinha"
+      ],
+      "tags": [
+        "metal"
+      ],
+      "thumb": "thumbnails/kit_aces_panela.png",
+      "tintable": false,
+      "tris": 600,
+      "usdz": "art-ios/kit_aces_panela.usdz"
+    },
+    {
+      "categoria": "acessorios",
+      "footprint": "S",
+      "id": "kit_aces_pratos",
+      "nome": "Pilha Pratos",
+      "rooms": [
+        "cozinha"
+      ],
+      "tags": [
+        "ceramica"
+      ],
+      "thumb": "thumbnails/kit_aces_pratos.png",
+      "tintable": true,
+      "tris": 500,
+      "usdz": "art-ios/kit_aces_pratos.usdz"
+    },
+    {
+      "categoria": "sub_itens",
+      "footprint": "S",
+      "id": "kit_sub_frutas",
+      "nome": "Fruteira",
+      "rooms": [
+        "cozinha"
+      ],
+      "tags": [
+        "comida"
+      ],
+      "thumb": "thumbnails/kit_sub_frutas.png",
+      "tintable": false,
+      "tris": 700,
+      "usdz": "art-ios/kit_sub_frutas.usdz"
+    },
+    {
+      "categoria": "iluminacao",
+      "footprint": "S",
+      "id": "kit_ilum_pendente",
+      "nome": "Pendente",
+      "rooms": [
+        "cozinha"
+      ],
+      "tags": [
+        "luz"
+      ],
+      "thumb": "thumbnails/kit_ilum_pendente.png",
+      "tintable": true,
+      "tris": 650,
+      "usdz": "art-ios/kit_ilum_pendente.usdz"
+    },
+    {
+      "categoria": "texteis",
+      "footprint": "S",
+      "id": "kit_textil_pano",
+      "nome": "Pano Prato",
+      "rooms": [
+        "cozinha"
+      ],
+      "tags": [
+        "tecido"
+      ],
+      "thumb": "thumbnails/kit_textil_pano.png",
+      "tintable": true,
+      "tris": 250,
+      "usdz": "art-ios/kit_textil_pano.usdz"
+    },
+    {
+      "categoria": "plantas",
+      "footprint": "S",
+      "id": "kit_planta_temperos",
+      "nome": "Vaso Temperos",
+      "rooms": [
+        "cozinha"
+      ],
+      "tags": [
+        "verde"
+      ],
+      "thumb": "thumbnails/kit_planta_temperos.png",
+      "tintable": false,
+      "tris": 600,
+      "usdz": "art-ios/kit_planta_temperos.usdz"
+    },
+    {
+      "categoria": "acessorios",
+      "footprint": "S",
+      "id": "kit_aces_torneira",
+      "nome": "Torneira + Pia",
+      "rooms": [
+        "cozinha"
+      ],
+      "tags": [
+        "metal"
+      ],
+      "thumb": "thumbnails/kit_aces_torneira.png",
+      "tintable": false,
+      "tris": 800,
+      "usdz": "art-ios/kit_aces_torneira.usdz"
+    },
+    {
+      "categoria": "sub_itens",
+      "footprint": "S",
+      "id": "kit_sub_tabuinha",
+      "nome": "Tabua Corte",
+      "rooms": [
+        "cozinha"
+      ],
+      "tags": [
+        "madeira"
+      ],
+      "thumb": "thumbnails/kit_sub_tabuinha.png",
+      "tintable": false,
+      "tris": 300,
+      "usdz": "art-ios/kit_sub_tabuinha.usdz"
+    },
+    {
+      "categoria": "texteis",
+      "footprint": "M",
+      "id": "kit_textil_tapete",
+      "nome": "Tapete Cozinha",
+      "rooms": [
+        "cozinha"
+      ],
+      "tags": [
+        "tecido"
+      ],
+      "thumb": "thumbnails/kit_textil_tapete.png",
+      "tintable": true,
+      "tris": 200,
+      "usdz": "art-ios/kit_textil_tapete.usdz"
+    },
+    {
+      "categoria": "moveis",
+      "footprint": "L",
+      "id": "liv_moveis_sofa",
+      "nome": "Sofa 2 Lugares",
+      "rooms": [
+        "sala"
+      ],
+      "tags": [
+        "tecido"
+      ],
+      "thumb": "thumbnails/liv_moveis_sofa.png",
+      "tintable": true,
+      "tris": 2800,
+      "usdz": "art-ios/liv_moveis_sofa.usdz"
+    },
+    {
+      "categoria": "moveis",
+      "footprint": "M",
+      "id": "liv_moveis_rack",
+      "nome": "Rack TV",
+      "rooms": [
+        "sala"
+      ],
+      "tags": [
+        "madeira"
+      ],
+      "thumb": "thumbnails/liv_moveis_rack.png",
+      "tintable": true,
+      "tris": 1700,
+      "usdz": "art-ios/liv_moveis_rack.usdz"
+    },
+    {
+      "categoria": "moveis",
+      "footprint": "S",
+      "id": "liv_moveis_tv",
+      "nome": "TV",
+      "rooms": [
+        "sala"
+      ],
+      "tags": [
+        "eletro"
+      ],
+      "thumb": "thumbnails/liv_moveis_tv.png",
+      "tintable": false,
+      "tris": 600,
+      "usdz": "art-ios/liv_moveis_tv.usdz"
+    },
+    {
+      "categoria": "moveis",
+      "footprint": "L",
+      "id": "liv_moveis_estante",
+      "nome": "Estante",
+      "rooms": [
+        "sala",
+        "quarto"
+      ],
+      "tags": [
+        "madeira"
+      ],
+      "thumb": "thumbnails/liv_moveis_estante.png",
+      "tintable": true,
+      "tris": 2200,
+      "usdz": "art-ios/liv_moveis_estante.usdz"
+    },
+    {
+      "categoria": "moveis",
+      "footprint": "M",
+      "id": "liv_moveis_mesa_centro",
+      "nome": "Mesa Centro",
+      "rooms": [
+        "sala"
+      ],
+      "tags": [
+        "madeira"
+      ],
+      "thumb": "thumbnails/liv_moveis_mesa_centro.png",
+      "tintable": true,
+      "tris": 1400,
+      "usdz": "art-ios/liv_moveis_mesa_centro.usdz"
+    },
+    {
+      "categoria": "acessorios",
+      "footprint": "S",
+      "id": "liv_aces_quadro",
+      "nome": "Quadro Sala",
+      "rooms": [
+        "sala"
+      ],
+      "tags": [
+        "parede"
+      ],
+      "thumb": "thumbnails/liv_aces_quadro.png",
+      "tintable": true,
+      "tris": 300,
+      "usdz": "art-ios/liv_aces_quadro.usdz"
+    },
+    {
+      "categoria": "acessorios",
+      "footprint": "S",
+      "id": "liv_aces_livros",
+      "nome": "Livros Estante",
+      "rooms": [
+        "sala"
+      ],
+      "tags": [
+        "decor"
+      ],
+      "thumb": "thumbnails/liv_aces_livros.png",
+      "tintable": false,
+      "tris": 450,
+      "usdz": "art-ios/liv_aces_livros.usdz"
+    },
+    {
+      "categoria": "sub_itens",
+      "footprint": "S",
+      "id": "liv_sub_almofada",
+      "nome": "Almofada Sofa",
+      "rooms": [
+        "sala"
+      ],
+      "tags": [
+        "tecido"
+      ],
+      "thumb": "thumbnails/liv_sub_almofada.png",
+      "tintable": true,
+      "tris": 480,
+      "usdz": "art-ios/liv_sub_almofada.usdz"
+    },
+    {
+      "categoria": "iluminacao",
+      "footprint": "S",
+      "id": "liv_ilum_chao",
+      "nome": "Luminaria Chao",
+      "rooms": [
+        "sala"
+      ],
+      "tags": [
+        "luz"
+      ],
+      "thumb": "thumbnails/liv_ilum_chao.png",
+      "tintable": true,
+      "tris": 850,
+      "usdz": "art-ios/liv_ilum_chao.usdz"
+    },
+    {
+      "categoria": "texteis",
+      "footprint": "M",
+      "id": "liv_textil_tapete_redondo",
+      "nome": "Tapete Redondo",
+      "rooms": [
+        "sala"
+      ],
+      "tags": [
+        "tecido"
+      ],
+      "thumb": "thumbnails/liv_textil_tapete_redondo.png",
+      "tintable": true,
+      "tris": 250,
+      "usdz": "art-ios/liv_textil_tapete_redondo.usdz"
+    },
+    {
+      "categoria": "plantas",
+      "footprint": "M",
+      "id": "liv_planta_grande",
+      "nome": "Planta Grande",
+      "rooms": [
+        "sala"
+      ],
+      "tags": [
+        "verde"
+      ],
+      "thumb": "thumbnails/liv_planta_grande.png",
+      "tintable": false,
+      "tris": 1200,
+      "usdz": "art-ios/liv_planta_grande.usdz"
+    },
+    {
+      "categoria": "moveis",
+      "footprint": "M",
+      "id": "shell_quarto",
+      "nome": "Shell Quarto",
+      "rooms": [
+        "quarto"
+      ],
+      "tags": [
+        "shell"
+      ],
+      "thumb": "thumbnails/shell_quarto.png",
+      "tintable": false,
+      "tris": 4000,
+      "usdz": "art-ios/shell_quarto.usdz"
+    },
+    {
+      "categoria": "moveis",
+      "footprint": "M",
+      "id": "shell_cozinha",
+      "nome": "Shell Cozinha",
+      "rooms": [
+        "cozinha"
+      ],
+      "tags": [
+        "shell"
+      ],
+      "thumb": "thumbnails/shell_cozinha.png",
+      "tintable": false,
+      "tris": 4200,
+      "usdz": "art-ios/shell_cozinha.usdz"
+    },
+    {
+      "categoria": "moveis",
+      "footprint": "M",
+      "id": "shell_sala",
+      "nome": "Shell Sala",
+      "rooms": [
+        "sala"
+      ],
+      "tags": [
+        "shell"
+      ],
+      "thumb": "thumbnails/shell_sala.png",
+      "tintable": false,
+      "tris": 4100,
+      "usdz": "art-ios/shell_sala.usdz"
+    },
+    {
+      "id": "liv_aces_vaso_decor",
+      "nome": "Vaso Decor",
+      "categoria": "acessorios",
+      "rooms": [
+        "sala"
+      ],
+      "usdz": "art-ios/liv_aces_vaso_decor.usdz",
+      "thumb": "thumbnails/liv_aces_vaso_decor.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 550,
+      "tags": [
+        "ceramica"
+      ]
+    }
+  ],
+  "version": 1
+}
