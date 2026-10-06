@@ -43,3 +43,4 @@
 
 ## Log
 - 2026-10-05 02:28: D1 executado pelo ORQ (desbloqueio): inventario + cadeira 72tris + skeleton SwiftPM + release checklist. Validações locais verdes. Commit pendente. S1/S2/S3 podem assumir D2 dos prompts/.
+- 2026-10-06 01:55: push inicial p/ github.com/socialbot114-cell/polyroom-ios (privado) + 3 Actions verdes no commit 36b2325: assets-validate (Blender 4.2.1, checked=481 errors=0, catalog 480/0, demo 9/0, mvp1-45 OK), previews (contact-sheet-480 + 15 sheets, artifact polyroom-prints 790KB), ios-build (Xcode 16.2, placeholder sem xcodeproj — gap Mac). Fix: 3 ids acento→ASCII, script 480.
