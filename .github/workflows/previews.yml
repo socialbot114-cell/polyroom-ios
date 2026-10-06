@@ -1,0 +1,28 @@
+name: previews
+on:
+  push:
+    paths: ["catalog.json", "thumbnails/**", "tools/make_contact_sheet.py", "previews/**", ".github/workflows/previews.yml"]
+  pull_request:
+    paths: ["catalog.json", "thumbnails/**", "tools/make_contact_sheet.py"]
+  workflow_dispatch:
+jobs:
+  contact-sheet:
+    runs-on: ubuntu-latest
+    timeout-minutes: 14
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Python + Pillow
+        run: pip install --quiet pillow
+      - name: Validate catalog
+        run: python3 tools/check_catalog.py
+      - name: Generate contact sheets
+        run: python3 tools/make_contact_sheet.py --per-category
+      - name: Upload prints
+        uses: actions/upload-artifact@v4
+        with:
+          name: polyroom-prints
+          path: |
+            previews/contact-sheet-*.png
+            previews/relatorio-*.md
+            previews/sheets/*.png
+          retention-days: 14

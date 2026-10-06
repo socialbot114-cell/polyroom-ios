@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# tools/convert_glb_usdz_mac.sh — GLB -> USDZ no Mac (45 ids do catalog.json)
+# tools/convert_glb_usdz_mac.sh — GLB -> USDZ no Mac (480 ids do catalog.json)
 #
 # Uso:
 #   bash tools/convert_glb_usdz_mac.sh           # converte faltantes, pula se .usdz já existe
@@ -8,9 +8,12 @@
 # Requer: macOS + Xcode Command Line Tools (xcrun usdz_converter).
 #   xcode-select --install
 #
-# Origem dos IDs: catalog.json (campo items[].id, esperado 45).
-#   src: art-ios/<id>.glb  (existe no Linux, 45 arquivos)
-#   dst: art-ios/<id>.usdz (0/45 no repo — gerar no Mac, D2)
+# Origem dos IDs: catalog.json (campo items[].id, esperado 480).
+#   src: art-ios/<id>.glb  (existe no Linux, 480 arquivos)
+#   dst: art-ios/<id>.usdz (0/480 no repo — gerar no Mac, D2)
+#
+# Comportamento:
+#   - loop sobre os 480 ids do catalog.json (via python3, sem depender de jq)
 #
 # Comportamento:
 #   - loop sobre os 45 ids do catalog.json (via python3, sem depender de jq)
@@ -52,7 +55,7 @@ fi
 
 # Lista de ids via python3 (sem jq)
 mapfile -t IDS < <(python3 -c "import json; d=json.load(open('$CAT')); print('\n'.join(it['id'] for it in d['items']))")
-echo "ids catalog.json: ${#IDS[@]} (esperado 45)"
+echo "ids catalog.json: ${#IDS[@]} (esperado 480)"
 
 ok=0
 skipped=0
@@ -88,4 +91,4 @@ done
 
 echo "---- resumo ----"
 echo "convertidos=$ok pulados=$skipped falhas=$failed glb_ausente=$missing_glb total_ids=${#IDS[@]}"
-ls -lh "$ART"/*.usdz 2>/dev/null || echo "(nenhum .usdz ainda — esperado antes de rodar no Mac: 0/45)"
+ls -lh "$ART"/*.usdz 2>/dev/null || echo "(nenhum .usdz ainda — esperado antes de rodar no Mac: 0/480)"

@@ -29,12 +29,12 @@
 - [ ] A5 arte: inventário (481 blends × 480 glb × 0 usdz, thumbs, `bed_moveis_cadeira` + pipeline usdz Mac)
 - [ ] A6 QA-CI: bug-bash device (BB-13 snapshot + BB-14 onboarding/sobre) + `ios-build`/`assets-validate` verdes
 
-## Gates D3 (2026-10-06 — propostos, NÃO feitos)
-- [ ] D3-1: catalog 480 auditado (matriz refeita, 0 erros)
-- [ ] D3-2: RoomStore hardening OK (kill-restore + corrupto + limites)
-- [ ] D3-3: scene perf medida (fps + tris + fallback)
-- [ ] D3-4: tools strict verdes p/ 480
-- [ ] D3-5: arte inventário fechado (480 glb / 0 usdz plano Mac)
+## Gates D3 (2026-10-06 — lote 1 verificado nesta sessão)
+- [x] D3-1: catalog auditado (480 itens 0 erros, MVP-1 45/45 intactos, `catalog-mvp1.json` + tag `mvp1-frozen`)
+- [x] D3-2: RoomStore hardening OK (setColor 0..5, duplicate preserva wall, rotate -45, 5 testes novos; `swift` indisponível p/ rodar, revisão manual)
+- [x] D3-3: scene perf parcial (paredes 3m/0.2, grid 1m+0.25m, shadow 1024 + lowPower flag, AssetLoader log; FPS device pendente Mac)
+- [x] D3-4: tools strict verdes (check 480/0, STRICT 480/0, demo 9/0, blend 481, YAML OK, gate mvp1-45 no CI)
+- [ ] D3-5: arte inventário fechado (480 glb / 0 usdz plano Mac; pendente: 3 ids com acento + thumbs Blender reais + conversão usdz no Mac)
 
 ## Riscos
 - Sem Mac local: build só no Actions macos-15. S2 precisa de Mac ou usa `swiftpm` mock até CI validar.

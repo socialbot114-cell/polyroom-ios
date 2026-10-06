@@ -2501,14 +2501,14 @@
       ]
     },
     {
-      "id": "arte_tapeçaria",
+      "id": "arte_tapecaria",
       "nome": "Tapecaria",
       "categoria": "arte",
       "rooms": [
         "quarto"
       ],
-      "usdz": "art-ios/arte_tapeçaria.usdz",
-      "thumb": "thumbnails/arte_tapeçaria.png",
+      "usdz": "art-ios/arte_tapecaria.usdz",
+      "thumb": "thumbnails/arte_tapecaria.png",
       "footprint": "S",
       "tintable": true,
       "tris": 350,
@@ -5219,14 +5219,14 @@
       ]
     },
     {
-      "id": "ilu_cúpula",
+      "id": "ilu_cupula",
       "nome": "Cupula Tecido",
       "categoria": "iluminacao",
       "rooms": [
         "quarto"
       ],
-      "usdz": "art-ios/ilu_cúpula.usdz",
-      "thumb": "thumbnails/ilu_cúpula.png",
+      "usdz": "art-ios/ilu_cupula.usdz",
+      "thumb": "thumbnails/ilu_cupula.png",
       "footprint": "S",
       "tintable": true,
       "tris": 450,
@@ -6035,15 +6035,15 @@
       ]
     },
     {
-      "id": "pla_limão",
+      "id": "pla_limao",
       "nome": "Limoeiro Vaso",
       "categoria": "plantas",
       "rooms": [
         "cozinha",
         "sala"
       ],
-      "usdz": "art-ios/pla_limão.usdz",
-      "thumb": "thumbnails/pla_limão.png",
+      "usdz": "art-ios/pla_limao.usdz",
+      "thumb": "thumbnails/pla_limao.png",
       "footprint": "M",
       "tintable": false,
       "tris": 500,

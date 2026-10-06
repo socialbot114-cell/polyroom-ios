@@ -22,3 +22,7 @@ jobs:
         run: python3 tools/check_catalog.py
       - name: Check demo save
         run: python3 tools/demo_load.py
+      - name: Check MVP-1 frozen subset (45)
+        run: |
+          python3 -c "import json; d=json.load(open('catalog-mvp1.json')); assert len(d['items'])==45, d; print('mvp1_items=45 OK')"
+          python3 tools/demo_load.py
