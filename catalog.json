@@ -7921,6 +7921,57 @@
         "sala",
         "office"
       ]
+    },
+    {
+      "id": "mesa_manta_sala",
+      "nome": "Manta Sala",
+      "categoria": "cama_mesa",
+      "rooms": [
+        "sala"
+      ],
+      "usdz": "art-ios/mesa_manta_sala.usdz",
+      "thumb": "thumbnails/mesa_manta_sala.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 240,
+      "tags": [
+        "cozy",
+        "sala"
+      ]
+    },
+    {
+      "id": "mesa_jogo_sala2",
+      "nome": "Jogo Americano Sala 2",
+      "categoria": "cama_mesa",
+      "rooms": [
+        "sala"
+      ],
+      "usdz": "art-ios/mesa_jogo_sala2.usdz",
+      "thumb": "thumbnails/mesa_jogo_sala2.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 328,
+      "tags": [
+        "cozy",
+        "sala"
+      ]
+    },
+    {
+      "id": "mesa_toalha_sala2",
+      "nome": "Toalha Sala 2",
+      "categoria": "cama_mesa",
+      "rooms": [
+        "sala"
+      ],
+      "usdz": "art-ios/mesa_toalha_sala2.usdz",
+      "thumb": "thumbnails/mesa_toalha_sala2.png",
+      "footprint": "M",
+      "tintable": true,
+      "tris": 264,
+      "tags": [
+        "cozy",
+        "sala"
+      ]
     }
   ],
   "version": 1

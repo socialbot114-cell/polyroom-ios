@@ -1,0 +1,27 @@
+# Prints Polyroom — 493 itens
+
+| categoria | qtd |
+|---|---|
+| acessorios | 17 |
+| arte | 13 |
+| cama_mesa | 15 |
+| eletrodomesticos | 64 |
+| eletronicos | 12 |
+| iluminacao | 63 |
+| kids | 69 |
+| moveis | 70 |
+| office | 25 |
+| parede | 16 |
+| pets | 17 |
+| piso | 13 |
+| plantas | 66 |
+| sub_itens | 18 |
+| texteis | 15 |
+
+| room | slots |
+|---|---|
+| cozinha | 157 |
+| quarto | 217 |
+| sala | 181 |
+
+Thumbs ausentes/corrompidas: 0
