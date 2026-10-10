@@ -1,5 +1,12 @@
 # Brief de conteúdo v1.1/v1.2 (p/ S1 modelar)
 
+> 2026-10-10: 2/15 prontos — `piso_tapete_cozinha3` (PISO_TapeteCozinha3,
+> 432 tris) e `arte_quadro_cozinha2` (ARTE_QuadroCozinha2, 324 tris), ambos
+> com .blend + .glb + thumb + catalog. Lição aprendida: no Blender, ligar
+> o nó Color Attribute → Base Color do `Polyroom_PBR`, senão o export glTF
+> injeta um `COLOR_0` branco e as cores reais caem em `COLOR_1` (thumb sai
+> desbotada). Faltam 13 abaixo.
+
 Matriz room×categoria (2026-10-10, 480 itens): 6 células < 4. Modelar **15
 novos** (1 .blend + .glb + thumb cada, mesmos contratos: `Polyroom_PBR`,
 vertex color, tris de prop, sem acento) para zerar o déficit:

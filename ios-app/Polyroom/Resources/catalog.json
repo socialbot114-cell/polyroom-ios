@@ -7742,6 +7742,41 @@
       "tags": [
         "toy"
       ]
+    },
+    {
+      "id": "piso_tapete_cozinha3",
+      "nome": "Tapete Cozinha 3",
+      "categoria": "piso",
+      "rooms": [
+        "cozinha"
+      ],
+      "usdz": "art-ios/piso_tapete_cozinha3.usdz",
+      "thumb": "thumbnails/piso_tapete_cozinha3.png",
+      "footprint": "M",
+      "tintable": true,
+      "tris": 432,
+      "tags": [
+        "cozy",
+        "cozinha"
+      ]
+    },
+    {
+      "id": "arte_quadro_cozinha2",
+      "nome": "Quadro Cozinha 2",
+      "categoria": "arte",
+      "rooms": [
+        "cozinha"
+      ],
+      "usdz": "art-ios/arte_quadro_cozinha2.usdz",
+      "thumb": "thumbnails/arte_quadro_cozinha2.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 324,
+      "tags": [
+        "cozy",
+        "cozinha",
+        "parede"
+      ]
     }
   ],
   "version": 1
