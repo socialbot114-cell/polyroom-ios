@@ -680,7 +680,7 @@
       ],
       "thumb": "thumbnails/shell_quarto.png",
       "tintable": false,
-      "tris": 4000,
+      "tris": 36,
       "usdz": "art-ios/shell_quarto.usdz"
     },
     {
@@ -696,7 +696,7 @@
       ],
       "thumb": "thumbnails/shell_cozinha.png",
       "tintable": false,
-      "tris": 4200,
+      "tris": 36,
       "usdz": "art-ios/shell_cozinha.usdz"
     },
     {
@@ -712,7 +712,7 @@
       ],
       "thumb": "thumbnails/shell_sala.png",
       "tintable": false,
-      "tris": 4100,
+      "tris": 36,
       "usdz": "art-ios/shell_sala.usdz"
     },
     {
