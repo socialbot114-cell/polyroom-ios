@@ -84,5 +84,29 @@ Backlog sugerido (27 únicos, prioridade onde gap é 3):
 3. Modelar backlog §2 (ilum/plantas/sub primeiro), export `.glb`, thumb Blender, atualizar `catalog.json` (manter espelho em `Resources/catalog.json`).
 4. Recalcular este doc: meta é zerar tabela de déficit (todas as 18 células >=4).
 
-## R2b (thumbs reais)
+## 5b. Cobertura room×categoria recalculada (15 categorias, 2026-10-10)
+
+Fonte: leitura direta de `catalog.json` (480 itens). Regra: cada combo
+room×categoria com ≥4 opções.
+
+| room | acessorios | arte | cama_mesa | eletrodomesticos | eletronicos | iluminacao | kids | moveis | office | parede | pets | piso | plantas | sub_itens | texteis |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| quarto | 7 | 8 | 6 | 16 | 8 | 22 | 59 | 28 | 17 | 4 | 5 | 4 | 21 | 7 | 5 |
+| cozinha | 6 | 2 | 5 | 41 | 3 | 21 | 7 | 20 | 0 | 7 | 4 | 3 | 20 | 7 | 5 |
+| sala | 7 | 10 | 1 | 14 | 9 | 26 | 15 | 29 | 0 | 6 | 9 | 5 | 29 | 8 | 6 |
+
+6 células abaixo de 4 (backlog de variedade, ordem de impacto):
+cozinha×office (0), sala×office (0), sala×cama_mesa (1), cozinha×arte (2),
+cozinha×eletronicos (3), cozinha×piso (3). Limítrofes em 4 (monitorar):
+quarto×parede (4), quarto×piso (4), cozinha×pets (4).
+
+## R2b (thumbs reais) — CONCLUÍDO 2026-10-10
+480/480 `thumbnails/<id>.png` 256×256 renderizados da geometria real via
+`tools/render_catalog_thumbnails.py` (Blender 4.2.1 headless, EEVEE 64
+samples, fundo cozy `#F3EDE4`, 3-point, override por categoria quando a cor
+de vértice é plana; detalhe em `docs/THUMBNAILS.md`). Contact-sheet +
+15 sheets por categoria regenerados (`previews/`, `thumbs_problema=0`).
+Tentativa antiga 14:29 com ortho+sun (thumbs escuras) superada: o pipeline
+final usa mundo claro + key/fill/rim + base por categoria (ex. `#C9A87A`-like
+p/ moveis) e fundo opaco 256px.
 Tentativa 14:29 com ortho+sun gerou thumbs escuras (materiais cinza, falta 3-point + HDRI) — revertido para placeholders PIL. Refazer com: world HDRI cozy, key/fill/rim, material base #C9A87A e fundo #F1E3D3 opaco 256px.

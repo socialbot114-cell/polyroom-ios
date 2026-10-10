@@ -35,6 +35,7 @@
 - [x] D3-3: scene perf parcial (paredes 3m/0.2, grid 1m+0.25m, shadow 1024 + lowPower flag, AssetLoader log; FPS device pendente Mac)
 - [x] D3-4: tools strict verdes (check 480/0, STRICT 480/0, demo 9/0, blend 481, YAML OK, gate mvp1-45 no CI)
 - [ ] D3-5: arte inventário fechado (480 glb / 0 usdz plano Mac; pendente: 3 ids com acento + thumbs Blender reais + conversão usdz no Mac)
+  - 2026-10-10: thumbs Blender reais ✅ 480/480 (`tools/render_catalog_thumbnails.py` + `docs/THUMBNAILS.md`); previews + 15 sheets regenerados; gate local verde (catalog 480/0, STRICT 480/0, pack 480/0/0, demo 9/0, blend 481/0). Resta D3-5: conversão usdz no Mac.
 
 ## Riscos
 - Sem Mac local: build só no Actions macos-15. S2 precisa de Mac ou usa `swiftpm` mock até CI validar.
