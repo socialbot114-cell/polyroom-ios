@@ -669,7 +669,7 @@
     },
     {
       "categoria": "moveis",
-      "footprint": "M",
+      "footprint": "L",
       "id": "shell_quarto",
       "nome": "Shell Quarto",
       "rooms": [
@@ -685,7 +685,7 @@
     },
     {
       "categoria": "moveis",
-      "footprint": "M",
+      "footprint": "L",
       "id": "shell_cozinha",
       "nome": "Shell Cozinha",
       "rooms": [
@@ -701,7 +701,7 @@
     },
     {
       "categoria": "moveis",
-      "footprint": "M",
+      "footprint": "L",
       "id": "shell_sala",
       "nome": "Shell Sala",
       "rooms": [
