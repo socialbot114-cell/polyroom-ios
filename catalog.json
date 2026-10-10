@@ -7777,6 +7777,78 @@
         "cozinha",
         "parede"
       ]
+    },
+    {
+      "id": "office_porta_canetas_coz",
+      "nome": "Porta-Canetas Cozinha",
+      "categoria": "office",
+      "rooms": [
+        "cozinha"
+      ],
+      "usdz": "art-ios/office_porta_canetas_coz.usdz",
+      "thumb": "thumbnails/office_porta_canetas_coz.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 504,
+      "tags": [
+        "cozy",
+        "cozinha",
+        "office"
+      ]
+    },
+    {
+      "id": "office_luminaria_mesa_coz",
+      "nome": "Luminária Mesa Cozinha",
+      "categoria": "office",
+      "rooms": [
+        "cozinha"
+      ],
+      "usdz": "art-ios/office_luminaria_mesa_coz.usdz",
+      "thumb": "thumbnails/office_luminaria_mesa_coz.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 276,
+      "tags": [
+        "cozy",
+        "cozinha",
+        "office"
+      ]
+    },
+    {
+      "id": "office_quadro_avisos_coz",
+      "nome": "Quadro de Avisos Cozinha",
+      "categoria": "office",
+      "rooms": [
+        "cozinha"
+      ],
+      "usdz": "art-ios/office_quadro_avisos_coz.usdz",
+      "thumb": "thumbnails/office_quadro_avisos_coz.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 516,
+      "tags": [
+        "cozy",
+        "cozinha",
+        "office"
+      ]
+    },
+    {
+      "id": "office_prateleira_coz",
+      "nome": "Prateleira Cozinha",
+      "categoria": "office",
+      "rooms": [
+        "cozinha"
+      ],
+      "usdz": "art-ios/office_prateleira_coz.usdz",
+      "thumb": "thumbnails/office_prateleira_coz.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 264,
+      "tags": [
+        "cozy",
+        "cozinha",
+        "office"
+      ]
     }
   ],
   "version": 1
