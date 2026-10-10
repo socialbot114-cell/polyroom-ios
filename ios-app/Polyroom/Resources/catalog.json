@@ -7849,6 +7849,78 @@
         "cozinha",
         "office"
       ]
+    },
+    {
+      "id": "office_escrivaninha_sala",
+      "nome": "Escrivaninha Sala",
+      "categoria": "office",
+      "rooms": [
+        "sala"
+      ],
+      "usdz": "art-ios/office_escrivaninha_sala.usdz",
+      "thumb": "thumbnails/office_escrivaninha_sala.png",
+      "footprint": "M",
+      "tintable": true,
+      "tris": 696,
+      "tags": [
+        "cozy",
+        "sala",
+        "office"
+      ]
+    },
+    {
+      "id": "office_cadeira_escrit_sala",
+      "nome": "Cadeira Escritório Sala",
+      "categoria": "office",
+      "rooms": [
+        "sala"
+      ],
+      "usdz": "art-ios/office_cadeira_escrit_sala.usdz",
+      "thumb": "thumbnails/office_cadeira_escrit_sala.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 372,
+      "tags": [
+        "cozy",
+        "sala",
+        "office"
+      ]
+    },
+    {
+      "id": "office_luminaria_mesa_sala",
+      "nome": "Luminária Mesa Sala",
+      "categoria": "office",
+      "rooms": [
+        "sala"
+      ],
+      "usdz": "art-ios/office_luminaria_mesa_sala.usdz",
+      "thumb": "thumbnails/office_luminaria_mesa_sala.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 276,
+      "tags": [
+        "cozy",
+        "sala",
+        "office"
+      ]
+    },
+    {
+      "id": "office_porta_canetas_sala",
+      "nome": "Porta-Canetas Sala",
+      "categoria": "office",
+      "rooms": [
+        "sala"
+      ],
+      "usdz": "art-ios/office_porta_canetas_sala.usdz",
+      "thumb": "thumbnails/office_porta_canetas_sala.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 552,
+      "tags": [
+        "cozy",
+        "sala",
+        "office"
+      ]
     }
   ],
   "version": 1
