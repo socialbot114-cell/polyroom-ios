@@ -330,7 +330,7 @@ public struct ContentView: View {
         #endif
         let view = SCNView(frame: CGRect(origin: .zero, size: size))
         view.scene = scene
-        view.layoutIfNeeded()
+        view.layoutSubtreeIfNeeded()
         return view.snapshot()
     }
 

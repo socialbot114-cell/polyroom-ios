@@ -52,4 +52,12 @@ public struct RoomSave: Codable {
     public var version: Int = 1
     public var rooms: [Room: [PlacedItem]] = [.quarto: [], .cozinha: [], .sala: []]
     public var coins: Int = 70
+
+    public init(version: Int = 1,
+                rooms: [Room: [PlacedItem]] = [.quarto: [], .cozinha: [], .sala: []],
+                coins: Int = 70) {
+        self.version = version
+        self.rooms = rooms
+        self.coins = coins
+    }
 }

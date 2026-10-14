@@ -210,7 +210,11 @@ public final class RoomSceneBuilder {
             holder.eulerAngles.y = .pi / 2
         } else {
             holder.position = SCNVector3(item.x, 0, item.z)
+#if canImport(UIKit)
             holder.eulerAngles.y = item.rotationY * .pi / 180
+#else
+            holder.eulerAngles.y = CGFloat(item.rotationY) * .pi / 180
+#endif
         }
         holder.name = item.id.uuidString
 
