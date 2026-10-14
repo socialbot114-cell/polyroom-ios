@@ -14,15 +14,9 @@ import Combine
 /// Persiste em `UserDefaults` (chaves `cozyCoins` / `unlockedRooms`).
 /// Não toca em `RoomSave`/`SaveManager` (não quebra persistência existente;
 /// unificar `RoomSave.coins` ↔ `CoinsStore` é trabalho futuro).
-#if canImport(Combine)
 public final class CoinsStore: ObservableObject {
     @Published public private(set) var coins: Int
     @Published public private(set) var unlockedRooms: Set<Room>
-#else
-public final class CoinsStore {
-    public private(set) var coins: Int
-    public private(set) var unlockedRooms: Set<Room>
-#endif
 
     public static let coinsKey = "cozyCoins"
     public static let unlockedKey = "unlockedRooms"

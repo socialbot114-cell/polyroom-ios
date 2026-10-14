@@ -17,17 +17,10 @@ public struct Mission: Identifiable {
     public var goalDescription: String
 }
 
-#if canImport(Combine)
 public final class MissionStore: ObservableObject {
     @Published public private(set) var claimed: Set<String>
     @Published public private(set) var photosTaken: Int
     @Published public private(set) var tintsDone: Int
-#else
-public final class MissionStore {
-    public private(set) var claimed: Set<String>
-    public private(set) var photosTaken: Int
-    public private(set) var tintsDone: Int
-#endif
 
     public static let claimedKey = "claimedMissions"
     public static let photosKey = "missionPhotos"

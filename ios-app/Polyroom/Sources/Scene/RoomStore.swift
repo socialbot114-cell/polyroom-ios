@@ -5,19 +5,11 @@ import Combine
 
 /// Store puro de modelo (sem SceneKit/SwiftUI) para a sala atual.
 /// Compila no Linux (swift test) e no Mac (SwiftUI observa via ObservableObject).
-#if canImport(Combine)
 public final class RoomStore: ObservableObject {
     @Published public var currentRoom: Room
     @Published public var save: RoomSave
     @Published public var selectedId: UUID?
     @Published public var catalog: Catalog
-#else
-public final class RoomStore {
-    public var currentRoom: Room
-    public var save: RoomSave
-    public var selectedId: UUID?
-    public var catalog: Catalog
-#endif
 
     /// Desligue nos testes para não tocar o filesystem.
     public var autosaveEnabled: Bool
