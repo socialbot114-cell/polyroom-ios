@@ -3,6 +3,7 @@ import json, os, sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CAT = os.path.join(ROOT, "catalog.json")
+MIRROR_CAT = os.path.join(ROOT, "ios-app", "Polyroom", "Resources", "catalog.json")
 VALID_CAT = {"moveis", "acessorios", "sub_itens", "iluminacao", "texteis", "plantas", "eletronicos", "arte", "kids", "piso", "cama_mesa", "pets", "office", "eletrodomesticos", "parede"}
 VALID_ROOMS = {"quarto", "cozinha", "sala"}
 VALID_FOOTPRINT = {"S", "M", "L"}
@@ -20,6 +21,14 @@ with open(CAT, encoding="utf-8") as f:
 assert "items" in data, "catalog sem items"
 ids = set()
 errors = []
+if os.path.isfile(MIRROR_CAT):
+    try:
+        with open(MIRROR_CAT, encoding="utf-8") as f:
+            mirror = json.load(f)
+        if mirror != data:
+            errors.append("ios-app/Polyroom/Resources/catalog.json diverge do catalog.json raiz")
+    except Exception as e:
+        errors.append(f"catalog espelho ilegivel: {e}")
 for it in data["items"]:
     for k in ["id", "nome", "categoria", "rooms", "usdz", "thumb", "footprint", "tintable"]:
         if k not in it:

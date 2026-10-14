@@ -7972,6 +7972,41 @@
         "cozy",
         "sala"
       ]
+    },
+    {
+      "id": "arte_relogio_cozinha2",
+      "nome": "Relógio Cozinha 2",
+      "categoria": "arte",
+      "rooms": [
+        "cozinha"
+      ],
+      "usdz": "art-ios/arte_relogio_cozinha2.usdz",
+      "thumb": "thumbnails/arte_relogio_cozinha2.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 396,
+      "tags": [
+        "cozy",
+        "cozinha",
+        "parede"
+      ]
+    },
+    {
+      "id": "elet_balanca_coz",
+      "nome": "Balança Digital Cozinha",
+      "categoria": "eletronicos",
+      "rooms": [
+        "cozinha"
+      ],
+      "usdz": "art-ios/elet_balanca_coz.usdz",
+      "thumb": "thumbnails/elet_balanca_coz.png",
+      "footprint": "S",
+      "tintable": true,
+      "tris": 520,
+      "tags": [
+        "cozinha",
+        "digital"
+      ]
     }
   ],
   "version": 1

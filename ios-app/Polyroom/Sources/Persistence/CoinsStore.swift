@@ -32,6 +32,13 @@ public final class CoinsStore {
     public static let placeReward = 5
     public static let photoReward = 10
 
+    /// Recompensa avulsa de missão; `MissionStore` já garante o claim 1x.
+    public func earnMission(_ reward: Int) {
+        guard reward > 0 else { return }
+        coins += reward
+        persist()
+    }
+
     /// MVP: `true` = tudo liberado para teste (padrão).
     public var mvpUnlockAll: Bool
 

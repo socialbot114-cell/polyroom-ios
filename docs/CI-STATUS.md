@@ -1,17 +1,12 @@
 # CI-STATUS
 
-Validação local D1:
-- `python3 tools/check_catalog.py` -> 45 itens, 0 erros (WARNs de .usdz/.png ausentes OK até I1)
-- `blender -b --python tools/check_blend.py` -> checked=1 errors=0 (cadeira 72 tris)
-
-> Estado 2026-10-06: esperado atualizado para 480 itens (não 45). `check_catalog.py` deve reportar `itens=480 erros=0` (WARNs `.usdz` 0/480 OK até conversão Mac). `check_blend.py` existência: 481 `.blend`. Matriz/gates antigos de 45 obsoletos.
+> Histórico D1/D3: 45 e depois 480 itens; ver git history.
 >
-> Estado 2026-10-10: gate local verde — `check_catalog` 480/0 (normal e `STRICT=1`), `check_pack` 480/0/0, `demo_load` 9/0, `check_blend` 481/0; thumbnails reais 480/480 (`docs/THUMBNAILS.md`); `previews/contact-sheet-480.png` + 15 sheets + `relatorio-480.md` regenerados (`thumbs_problema=0`). Pendente Mac: `.usdz` 0/480, xcodeproj, FPS device.
+> Estado atual 2026-10-13: 495 catalog items + espelho idêntico; thumbs reais 495/495; cobertura 45/45 combos com ≥4. Gate local: `check_catalog` e STRICT 495/0, `check_pack` 495/0/0, `demo_load` 9/0, `check_scale` 0 errors (WARNs semânticos documentados), `check_blend` 496/0. `ios-build` agora compila/testa o Swift Package e depois roda o target Xcode se existir. Mac segue necessário para `.usdz`, xcodeproj e FPS/device.
 
-Ativação remota (S3 quando autorizado):
+CI remota ativa em repositório público: `socialbot114-cell/polyroom-ios`.
 ```bash
-gh repo create polyroom-ios --private --source=. --push
-git push -u origin main
+gh run list --limit 5
 gh run watch
 ```
-Badges esperados no README futuro: `ios-build passing`, `assets-validate passing`. Tempo alvo <15min (Blender ~3min + Xcode ~8min).
+Workflows esperados: `ios-build`, `assets-validate`, `previews` verdes.

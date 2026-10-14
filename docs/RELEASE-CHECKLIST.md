@@ -1,9 +1,9 @@
 # RELEASE-CHECKLIST v1.0-mvp1
 
 - [ ] Actions `ios-build` verde (macos-15, iPhone 16 sim, `CODE_SIGNING_ALLOWED=NO`)
-- [ ] Actions `assets-validate` verde (0 ERROR blend + catalog 45 itens)
+- [x] Actions `assets-validate` verde (0 ERROR blend + catalog 495 itens)
 - [ ] 3 shells trocáveis sem reload (BED/KIT/LIV)
-- [ ] 45 SKUs colocáveis, 6 categorias com >=4 opções/quarto
+- [ ] 495 itens no catálogo/pack; USDZ convertido e carregado no app; 15 categorias com ≥4 opções por sala
 - [ ] Save/load após kill (`polyroom_save_v1.json`, <100ms)
 - [ ] Modo avião 100% funcional, sem `URLSession`
 - [ ] FPS: 60 iPhone 12 / 30 SE2, cena <50k tris

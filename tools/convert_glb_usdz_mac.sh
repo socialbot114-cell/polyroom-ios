@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# tools/convert_glb_usdz_mac.sh — GLB -> USDZ no Mac (480 ids do catalog.json)
+# tools/convert_glb_usdz_mac.sh — GLB -> USDZ no Mac (ids lidos do catálogo)
 #
 # Uso:
 #   bash tools/convert_glb_usdz_mac.sh           # converte faltantes, pula se .usdz já existe
@@ -8,15 +8,12 @@
 # Requer: macOS + Xcode Command Line Tools (xcrun usdz_converter).
 #   xcode-select --install
 #
-# Origem dos IDs: catalog.json (campo items[].id, esperado 480).
-#   src: art-ios/<id>.glb  (existe no Linux, 480 arquivos)
-#   dst: art-ios/<id>.usdz (0/480 no repo — gerar no Mac, D2)
+# Origem dos IDs: catalog.json (campo items[].id; hoje 495).
+#   src: art-ios/<id>.glb
+#   dst: art-ios/<id>.usdz (conversão pendente no Mac)
 #
 # Comportamento:
-#   - loop sobre os 480 ids do catalog.json (via python3, sem depender de jq)
-#
-# Comportamento:
-#   - loop sobre os 45 ids do catalog.json (via python3, sem depender de jq)
+#   - loop sobre todos os ids atuais do catalog.json (via python3, sem jq)
 #   - pula se .usdz já existe (salvo --force)
 #   - loga tamanhos .glb -> .usdz (du -h) + resumo final
 #
@@ -49,13 +46,22 @@ if ! command -v xcrun >/dev/null 2>&1; then
   exit 1
 fi
 
+if ! xcrun --find usdz_converter >/dev/null 2>&1; then
+  echo "ERRO: usdz_converter indisponível neste Xcode/Command Line Tools." >&2
+  echo "Use Reality Converter no Mac ou instale a ferramenta de conversão suportada pelo Xcode." >&2
+  exit 1
+fi
+
 if ! xcrun usdz_converter --help >/dev/null 2>&1; then
   echo "AVISO: 'xcrun usdz_converter' não respondeu a --help; tentando mesmo assim..." >&2
 fi
 
-# Lista de ids via python3 (sem jq)
-mapfile -t IDS < <(python3 -c "import json; d=json.load(open('$CAT')); print('\n'.join(it['id'] for it in d['items']))")
-echo "ids catalog.json: ${#IDS[@]} (esperado 480)"
+# Lista de ids via python3 (Bash 3.2 do macOS é suportado; sem mapfile)
+IDS=()
+while IFS= read -r id; do
+  [[ -n "$id" ]] && IDS+=("$id")
+done < <(python3 -c "import json; d=json.load(open('$CAT')); print('\n'.join(it['id'] for it in d['items']))")
+echo "ids catalog.json: ${#IDS[@]}"
 
 ok=0
 skipped=0
@@ -91,4 +97,4 @@ done
 
 echo "---- resumo ----"
 echo "convertidos=$ok pulados=$skipped falhas=$failed glb_ausente=$missing_glb total_ids=${#IDS[@]}"
-ls -lh "$ART"/*.usdz 2>/dev/null || echo "(nenhum .usdz ainda — esperado antes de rodar no Mac: 0/480)"
+ls -lh "$ART"/*.usdz 2>/dev/null || echo "(nenhum .usdz no repo)"

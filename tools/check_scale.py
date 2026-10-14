@@ -1,91 +1,124 @@
 #!/usr/bin/env python3
-"""Sentinela de escala (INFORMATIVO, nunca falha): compara o footprint S/M/L
-de catalog.json com a extensao XZ real de art-ios/<id>.glb.
+"""Sentinela de escala do footprint S/M/L usando dimensões XZ dos GLBs.
 
-Regra (docs/CATALOG-SCHEMA.md): S<0.5m, M<1.2m, L>=1.2m, com epsilon de 1cm
-para casos de borda. Divergencias saem como WARN para revisao humana, pois
-ha ambiguidade semantica conhecida: itens de parede (arte/parede/quadros) e
-pecas altas e finas (cortinas, luminarias de piso) tem footprint de chao ~0
-mas extensao >0.5m — o catalog os marca S (peca pequena) por decisao de
-gameplay, nao por erro de escala. Erros GROSSEIROS de escala (fator >3x, ex.
-GLB em centimetros ou shell com conteudo trocado) sairiam como ERROR.
+Sem dependências externas; roda local e no Ubuntu CI. A regra base é
+S<0.5m, M<1.2m, L>=1.2m (docs/CATALOG-SCHEMA.md), com epsilon de 1cm.
+Diferenças semânticas são WARN: itens de parede e objetos altos/finos usam
+footprint de colocação/uso, não necessariamente sua maior dimensão XZ.
+Anomalias físicas grosseiras (bbox vazio, unidade/escala extrema ou item L
+degenerado) são ERROR.
 
 Uso: python3 tools/check_scale.py [--ids a,b,c] [--eps 0.01]
 """
 import argparse
-import glob
 import json
+import math
 import os
 import struct
 import sys
 
-try:
-    import numpy as np
-except ImportError:
-    print("ERRO: numpy necessario (pip install numpy)")
-    sys.exit(2)
-
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 EPS_DEFAULT = 0.01
-WALL_CATS = {"arte", "parede"}  # piso ~0 por design (pendura na parede)
+WALL_CATS = {"arte", "parede"}
 
 
-def mat_of(node):
+def identity():
+    return [[1.0 if r == c else 0.0 for c in range(4)] for r in range(4)]
+
+
+def matmul(a, b):
+    return [[sum(a[r][k] * b[k][c] for k in range(4)) for c in range(4)]
+            for r in range(4)]
+
+
+def node_matrix(node):
     if "matrix" in node:
-        return np.array(node["matrix"], dtype=np.float64).reshape(4, 4).T
-    m = np.eye(4)
-    if "scale" in node:
-        m = m @ np.diag(list(node["scale"]) + [1.0])
-    if "rotation" in node:
-        x, y, z, w = node["rotation"]
-        m = m @ np.array([
-            [1 - 2 * (y * y + z * z), 2 * (x * y - z * w), 2 * (x * z + y * w), 0],
-            [2 * (x * y + z * w), 1 - 2 * (x * x + z * z), 2 * (y * z - x * w), 0],
-            [2 * (x * z - y * w), 2 * (y * z + x * w), 1 - 2 * (x * x + y * y), 0],
-            [0, 0, 0, 1]])
-    if "translation" in node:
-        t = np.eye(4)
-        t[:3, 3] = node["translation"]
-        m = t @ m
-    return m
+        # glTF stores column-major 4x4 matrices; our representation is row-major.
+        flat = node["matrix"]
+        return [[float(flat[c * 4 + r]) for c in range(4)] for r in range(4)]
+
+    x, y, z = node.get("scale", (1.0, 1.0, 1.0))
+    scale = [[x, 0, 0, 0], [0, y, 0, 0], [0, 0, z, 0], [0, 0, 0, 1]]
+    qx, qy, qz, qw = node.get("rotation", (0.0, 0.0, 0.0, 1.0))
+    rotation = [
+        [1 - 2 * (qy*qy + qz*qz), 2 * (qx*qy - qz*qw), 2 * (qx*qz + qy*qw), 0],
+        [2 * (qx*qy + qz*qw), 1 - 2 * (qx*qx + qz*qz), 2 * (qy*qz - qx*qw), 0],
+        [2 * (qx*qz - qy*qw), 2 * (qy*qz + qx*qw), 1 - 2 * (qx*qx + qy*qy), 0],
+        [0, 0, 0, 1],
+    ]
+    tx, ty, tz = node.get("translation", (0.0, 0.0, 0.0))
+    translation = [[1, 0, 0, tx], [0, 1, 0, ty], [0, 0, 1, tz], [0, 0, 0, 1]]
+    return matmul(translation, matmul(rotation, scale))
+
+
+def transform_point(matrix, point):
+    x, y, z = point
+    p = (x, y, z, 1.0)
+    out = [sum(matrix[r][c] * p[c] for c in range(4)) for r in range(4)]
+    w = out[3] or 1.0
+    return (out[0] / w, out[1] / w, out[2] / w)
 
 
 def glb_size(path):
     with open(path, "rb") as f:
-        data = f.read()
-    clen = struct.unpack("<I", data[12:16])[0]
-    j = json.loads(data[20:20 + clen].decode("utf-8"))
-    acc = j.get("accessors", [])
-    mesh_box = {}
-    for mi, m in enumerate(j.get("meshes", [])):
-        mn = np.full(3, np.inf)
-        mx = np.full(3, -np.inf)
-        for p in m.get("primitives", []):
-            a = acc[p["attributes"]["POSITION"]]
-            mn = np.minimum(mn, a["min"])
-            mx = np.maximum(mx, a["max"])
-        mesh_box[mi] = (mn, mx)
-    nodes = j.get("nodes", [])
-    gmin = np.full(3, np.inf)
-    gmax = np.full(3, -np.inf)
+        header = f.read(12)
+        if len(header) != 12 or header[:4] != b"glTF":
+            raise ValueError("header GLB inválido")
+        json_length = struct.unpack("<I", f.read(4))[0]
+        chunk_type = f.read(4)
+        if chunk_type != b"JSON":
+            raise ValueError("primeiro chunk GLB não é JSON")
+        doc = json.loads(f.read(json_length).decode("utf-8"))
 
-    def visit(ni, parent):
-        nonlocal gmin, gmax
-        n = nodes[ni]
-        w = parent @ mat_of(n)
-        if "mesh" in n:
-            mn, mx = mesh_box[n["mesh"]]
-            cs = np.array([[x, y, z] for x in (mn[0], mx[0])
-                           for y in (mn[1], mx[1]) for z in (mn[2], mx[2])])
-            pts = (w @ np.hstack([cs, np.ones((8, 1))]).T)[:3, :].T
-            gmin = np.minimum(gmin, pts.min(0))
-            gmax = np.maximum(gmax, pts.max(0))
-        for c in n.get("children", []):
-            visit(c, w)
+    mesh_bounds = []
+    for mesh in doc.get("meshes", []):
+        mins = [math.inf, math.inf, math.inf]
+        maxs = [-math.inf, -math.inf, -math.inf]
+        for primitive in mesh.get("primitives", []):
+            accessor = doc["accessors"][primitive["attributes"]["POSITION"]]
+            for axis in range(3):
+                mins[axis] = min(mins[axis], float(accessor["min"][axis]))
+                maxs[axis] = max(maxs[axis], float(accessor["max"][axis]))
+        if all(math.isfinite(v) for v in mins + maxs):
+            mesh_bounds.append((mins, maxs))
+        else:
+            mesh_bounds.append(None)
 
-    for ni in j.get("scenes", [{}])[0].get("nodes", []):
-        visit(ni, np.eye(4))
-    return gmax - gmin
+    nodes = doc.get("nodes", [])
+    global_min = [math.inf, math.inf, math.inf]
+    global_max = [-math.inf, -math.inf, -math.inf]
+    mesh_count = 0
+
+    def visit(node_index, parent_matrix):
+        nonlocal mesh_count
+        node = nodes[node_index]
+        world = matmul(parent_matrix, node_matrix(node))
+        if "mesh" in node:
+            bound = mesh_bounds[node["mesh"]]
+            if bound is None:
+                raise ValueError(f"mesh {node['mesh']} sem bounds de POSITION")
+            mins, maxs = bound
+            corners = [(x, y, z)
+                       for x in (mins[0], maxs[0])
+                       for y in (mins[1], maxs[1])
+                       for z in (mins[2], maxs[2])]
+            for corner in corners:
+                p = transform_point(world, corner)
+                for axis in range(3):
+                    global_min[axis] = min(global_min[axis], p[axis])
+                    global_max[axis] = max(global_max[axis], p[axis])
+            mesh_count += 1
+        for child in node.get("children", []):
+            visit(child, world)
+
+    scenes = doc.get("scenes", [{}])
+    scene_index = doc.get("scene", 0)
+    roots = scenes[scene_index].get("nodes", [])
+    for root in roots:
+        visit(root, identity())
+    if not mesh_count:
+        raise ValueError("GLB não contém geometria em nós de cena")
+    return tuple(global_max[i] - global_min[i] for i in range(3))
 
 
 def expected(fxz, eps):
@@ -102,57 +135,52 @@ def main(argv=None):
     ap.add_argument("--eps", type=float, default=EPS_DEFAULT)
     args = ap.parse_args(argv)
 
-    items = {i["id"]: i for i in json.load(
-        open(os.path.join(ROOT, "catalog.json"), encoding="utf-8"))["items"]}
+    with open(os.path.join(ROOT, "catalog.json"), encoding="utf-8") as f:
+        items = {i["id"]: i for i in json.load(f)["items"]}
     ids = [i.strip() for i in args.ids.split(",") if i.strip()] or sorted(items)
     warns, errors, wall = [], [], []
-    for gid in ids:
-        it = items.get(gid)
-        if it is None:
-            errors.append(f"{gid}: fora do catalog")
+    for item_id in ids:
+        item = items.get(item_id)
+        if item is None:
+            errors.append(f"{item_id}: fora do catálogo")
             continue
-        p = os.path.join(ROOT, "art-ios", gid + ".glb")
-        if not os.path.isfile(p):
-            errors.append(f"{gid}: glb ausente")
+        path = os.path.join(ROOT, "art-ios", item_id + ".glb")
+        if not os.path.isfile(path):
+            errors.append(f"{item_id}: GLB ausente")
             continue
         try:
-            s = glb_size(p)
-        except Exception as e:  # noqa: BLE001
-            errors.append(f"{gid}: glb ilegivel ({e})")
+            size = glb_size(path)
+        except Exception as exc:  # validação deve reportar erro por id e seguir
+            errors.append(f"{item_id}: GLB ilegível ({exc})")
             continue
-        fxz, h = float(max(s[0], s[2])), float(s[1])
-        maxd = float(max(fxz, h))
-        exp = expected(fxz, args.eps)
-        if exp != it.get("footprint"):
-            # GROSS = anomalia fisica quase certa (unidade errada, bbox
-            # degenerado ou conteudo trocado), nao divergencia semantica:
-            # divergencias de 1 degrau (S<->M<->L) sao WARN p/ revisao humana.
-            gross = (
-                not np.isfinite(maxd)
-                or maxd <= 0.0
-                or maxd > 12.0  # quarto tem 6m; 12m+ = unidade errada
-                or (it.get("footprint") == "L" and maxd < 0.3)
-            )
-            entry = f"{gid}: catalog={it['footprint']} xz={fxz:.2f}m h={h:.2f}m (esperado {exp})"
-            if gross:
-                errors.append("GROSS " + entry)
-            elif it.get("categoria") in WALL_CATS:
-                wall.append(entry + " [wall-mounted]")
-            else:
-                warns.append(entry)
+        fxz, height = max(size[0], size[2]), size[1]
+        max_dimension = max(fxz, height)
+        expected_footprint = expected(fxz, args.eps)
+        if expected_footprint == item.get("footprint"):
+            continue
+
+        gross = (not math.isfinite(max_dimension) or max_dimension <= 0
+                 or max_dimension > 12.0
+                 or (item.get("footprint") == "L" and max_dimension < 0.3))
+        message = (f"{item_id}: catalog={item['footprint']} xz={fxz:.2f}m "
+                   f"h={height:.2f}m (dimensão sugere {expected_footprint})")
+        if gross:
+            errors.append("GROSS " + message)
+        elif item.get("categoria") in WALL_CATS:
+            wall.append(message + " [wall-mounted]")
+        else:
+            warns.append(message)
+
     print(f"scale: itens={len(ids)} errors={len(errors)} warns={len(warns)} wall={len(wall)}")
-    for e in errors:
-        print("ERROR:", e)
-    for w in warns[:30]:
-        print("WARN:", w)
+    for message in errors:
+        print("ERROR:", message)
+    for message in warns[:30]:
+        print("WARN:", message)
     if len(warns) > 30:
         print(f"WARN: ... e mais {len(warns) - 30}")
-    for w in wall[:10]:
-        print("WALL:", w)
-    if errors:
-        print(f"scale: {len(errors)} anomalia(s) grosseira(s) — investigar")
-        return 1
-    return 0
+    for message in wall[:10]:
+        print("WALL:", message)
+    return 1 if errors else 0
 
 
 if __name__ == "__main__":

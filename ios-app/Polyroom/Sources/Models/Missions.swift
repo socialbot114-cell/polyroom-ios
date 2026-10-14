@@ -1,4 +1,7 @@
 import Foundation
+#if canImport(Combine)
+import Combine
+#endif
 
 /// 12 missões cozy locais (spec em `docs/MISSOES.md`), sem servidor.
 ///
@@ -14,7 +17,18 @@ public struct Mission: Identifiable {
     public var goalDescription: String
 }
 
+#if canImport(Combine)
+public final class MissionStore: ObservableObject {
+    @Published public private(set) var claimed: Set<String>
+    @Published public private(set) var photosTaken: Int
+    @Published public private(set) var tintsDone: Int
+#else
 public final class MissionStore {
+    public private(set) var claimed: Set<String>
+    public private(set) var photosTaken: Int
+    public private(set) var tintsDone: Int
+#endif
+
     public static let claimedKey = "claimedMissions"
     public static let photosKey = "missionPhotos"
     public static let tintsKey = "missionTints"
@@ -33,10 +47,6 @@ public final class MissionStore {
         Mission(id: "m11", title: "Tech", reward: 15, goalDescription: "2 eletrônicos"),
         Mission(id: "m12", title: "Pet friendly", reward: 20, goalDescription: "2 pets + 1 planta"),
     ]
-
-    public private(set) var claimed: Set<String>
-    public private(set) var photosTaken: Int
-    public private(set) var tintsDone: Int
 
     public init() {
         claimed = Set(UserDefaults.standard.stringArray(forKey: Self.claimedKey) ?? [])

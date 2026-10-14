@@ -416,6 +416,28 @@ def verify_outputs(ids):
     return bad
 
 
+def optimize_outputs(ids):
+    """Indexa PNG em paleta 8-bit sem dithering para reduzir o pack.
+
+    Render EEVEE é 24-bit RGB; as imagens finais usam até 256 cores (quase
+    sem perda visual em thumbnails low-poly), geralmente reduzindo o arquivo
+    ~45%. O canal alpha não é necessário: os renders são opacos.
+    """
+    from PIL import Image
+
+    dither_none = Image.Dither.NONE if hasattr(Image, "Dither") else Image.NONE
+    optimized = 0
+    for item_id in ids:
+        path = os.path.join(THUMBS, item_id + ".png")
+        with Image.open(path) as source:
+            indexed = source.convert("RGB").quantize(
+                colors=256, method=Image.MEDIANCUT, dither=dither_none
+            )
+            indexed.save(path, format="PNG", optimize=True)
+            optimized += 1
+    print(f"png optimize: {optimized} indexed (256-color, no dither)")
+
+
 def main(argv=None):
     ap = argparse.ArgumentParser(description=__doc__)
     g = ap.add_mutually_exclusive_group()
@@ -480,6 +502,8 @@ def main(argv=None):
             if rc != 0:
                 failures.append(futs[fut])
 
+    if not failures:
+        optimize_outputs(ids)
     bad = verify_outputs(ids)
     print(f"done: itens={len(ids)} shards_falha={len(failures)} thumbs_ruins={len(bad)}")
     for b in bad[:20]:

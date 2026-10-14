@@ -40,7 +40,8 @@ public final class RoomSceneBuilder {
 
     /// Cor da paleta por índice (wrap-around com módulo 6).
     public static func paletteColor(index: Int) -> RoomPaletteColor {
-        let c = paletteRGB[abs(index) % paletteRGB.count]
+        let safeIndex = ((index % paletteRGB.count) + paletteRGB.count) % paletteRGB.count
+        let c = paletteRGB[safeIndex]
         #if canImport(UIKit)
         return RoomPaletteColor(red: c.r, green: c.g, blue: c.b, alpha: 1)
         #else
@@ -233,9 +234,9 @@ public final class RoomSceneBuilder {
     private static func applyTint(_ node: SCNNode, index: Int) {
         let color = paletteColor(index: index)
         node.enumerateChildNodes { child, _ in
-            child.geometry?.materials.forEach { $0.diffuse.contents = color }
+            child.geometry?.materials.forEach { $0.multiply.contents = color }
         }
-        node.geometry?.materials.forEach { $0.diffuse.contents = color }
+        node.geometry?.materials.forEach { $0.multiply.contents = color }
     }
 }
 #else

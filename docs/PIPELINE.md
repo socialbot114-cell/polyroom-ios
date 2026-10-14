@@ -25,15 +25,20 @@ xcrun usdz_converter art-ios/tmp.usdc art-ios/<id>.usdz
 ```
 Padrão MVP: exportar `.glb` + `.usdz` se possível, S2 escolhe o que liga no `scnassets`.
 
-## 4. Thumb
+## 4. Thumbnail (geometria real)
 ```bash
-blender -b art-source/BED_shell_v01.blend -o thumbnails/bed_shell_ --python tools/render_thumb.py -f 1
-# 256x256, transparente, orbit 3/4
+python3 tools/render_catalog_thumbnails.py --sample
+python3 tools/render_catalog_thumbnails.py --ids bed_moveis_cama_casal,liv_moveis_sofa
+python3 tools/render_catalog_thumbnails.py --all --workers 2 --samples 64
+python3 tools/render_catalog_thumbnails.py --verify
 ```
+Gera 256×256 opaco, enquadramento automático por bounding box, fundo cozy,
+estúdio 3-point e override por categoria apenas para materiais planos.
+Detalhes e exemplo de amostra: `docs/THUMBNAILS.md`.
 
 ## 5. Validação CI
 `tools/check_blend.py` roda `--background`: abre cada `.blend`, conta tris, checa nomes, UVs, tamanho. Falha se > budget em CONTRATOS.
-`tools/check_catalog.py` valida `catalog.json` contra schema + existência de `art-ios/<id>.usdz` e `thumbnails/<id>.png`.
+`tools/check_catalog.py` valida schema, espelho Resources, USDZ (WARN enquanto a conversão Mac estiver pendente) e thumbnails. Rodar também `tools/check_pack.py`, `tools/check_scale.py` e `tools/check_kill_restore.py`.
 
 ## 6. Integração no Xcode (S2)
 Arrastar `art-ios/*.usdz` para `ios-app/Polyroom/Resources/`, `Copy Bundle Resources`, carregar via `SCNScene(named:)`, cache em `AssetLoader`.

@@ -43,16 +43,22 @@ extension Room {
 public struct ContentView: View {
     @ObservedObject public var store: RoomStore
     @ObservedObject public var coins: CoinsStore
+    @StateObject private var missions: MissionStore
 
     @State private var inspectorOpen = true
     @State private var showAbout = false
+    @State private var showMissions = false
     @State private var noticeText = ""
     @State private var showNotice = false
     @State private var lastItemCount = 0
+    @State private var lastColors: [UUID: Int] = [:]
 
     public init(store: RoomStore, coins: CoinsStore) {
         self.store = store
         self.coins = coins
+        _missions = StateObject(wrappedValue: MissionStore())
+        _lastItemCount = State(initialValue: Self.totalItems(store.save))
+        _lastColors = State(initialValue: Self.colorIndices(store.save))
     }
 
     public var body: some View {
@@ -70,9 +76,7 @@ public struct ContentView: View {
             CatalogView2(store: store)
                 .frame(height: 300)
         }
-        .onAppear {
-            lastItemCount = Self.totalItems(store.save)
-        }
+        .onAppear { awardCompletedMissions(in: store.save) }
         .onReceive(store.$save) { newSave in
             let n = Self.totalItems(newSave)
             // Qualquer caminho que adicione item (botão "Colocar",
@@ -80,12 +84,28 @@ public struct ContentView: View {
             if n > lastItemCount {
                 for _ in 0..<(n - lastItemCount) {
                     coins.earnPlace()
+                    Sounds.shared.play(.place)
                 }
+            } else if n < lastItemCount {
+                Sounds.shared.play(.delete)
             }
             lastItemCount = n
+
+            let colors = Self.colorIndices(newSave)
+            let changedTints = colors.reduce(into: 0) { count, entry in
+                if let previous = lastColors[entry.key], previous != entry.value {
+                    count += 1
+                }
+            }
+            for _ in 0..<changedTints { missions.noteTint() }
+            lastColors = colors
+            awardCompletedMissions(in: newSave)
         }
         .sheet(isPresented: $showAbout) {
             AboutView()
+        }
+        .sheet(isPresented: $showMissions) {
+            MissionsView(store: store, missions: missions)
         }
         .alert(isPresented: $showNotice) {
             Alert(title: Text("Polyroom"), message: Text(noticeText))
@@ -100,6 +120,14 @@ public struct ContentView: View {
                 Text("Polyroom")
                     .font(.headline)
                 Spacer()
+                Button {
+                    showMissions = true
+                } label: {
+                    Label("Missões", systemImage: "sparkles")
+                }
+                .buttonStyle(.bordered)
+                .controlSize(.small)
+                .accessibilityHint("Mostra objetivos cozy e seu progresso")
                 Text("🪙 \(coins.coins)")
                     .font(.subheadline)
                     .accessibilityLabel("cozyCoins: \(coins.coins)")
@@ -139,11 +167,13 @@ public struct ContentView: View {
         let selected = store.currentRoom == room
         let unlocked = coins.isUnlocked(room)
         return Button {
-            if unlocked {
-                store.switchRoom(room)
-            } else if coins.unlock(room) {
-                store.switchRoom(room)
-                showNotice("\(room.titulo) desbloqueada por \(coins.cost(for: room)) 🪙!")
+                if unlocked {
+                    store.switchRoom(room)
+                    Sounds.shared.play(.tap)
+                } else if coins.unlock(room) {
+                    store.switchRoom(room)
+                    Sounds.shared.play(.unlock)
+                    showNotice("\(room.titulo) desbloqueada por \(coins.cost(for: room)) 🪙!")
             } else {
                 let falta = coins.cost(for: room) - coins.coins
                 showNotice(
@@ -177,6 +207,20 @@ public struct ContentView: View {
         save.rooms.values.reduce(0) { $0 + $1.count }
     }
 
+    private static func colorIndices(_ save: RoomSave) -> [UUID: Int] {
+        Dictionary(uniqueKeysWithValues: save.rooms.values.flatMap { $0 }.map { ($0.id, $0.colorIndex) })
+    }
+
+    private func awardCompletedMissions(in save: RoomSave) {
+        let newlyCompleted = missions.evaluate(in: save) { catalogId in
+            store.catalog.items.first(where: { $0.id == catalogId })?.categoria
+        }
+        for mission in newlyCompleted {
+            coins.earnMission(mission.reward)
+            Sounds.shared.play(.coin)
+        }
+    }
+
     private func takeSnapshot() {
         #if canImport(SceneKit) && canImport(UIKit)
         guard let image = renderPhoto() else {
@@ -186,11 +230,17 @@ public struct ContentView: View {
         var extras: [String] = []
         if let url = savePNGToDocuments(image: image) {
             extras.append("Arquivo: \(url.lastPathComponent).")
+        } else {
+            showNotice("A foto foi renderizada, mas não foi possível salvá-la no aparelho.")
+            return
         }
         // Álbum de fotos (pede permissão na 1ª vez; exige
         // NSPhotoLibraryAddUsageDescription no Info.plist do app).
         UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
         coins.earnPhoto()
+        missions.notePhoto()
+        awardCompletedMissions(in: store.save)
+        Sounds.shared.play(.photo)
         showNotice("Foto salva! +\(CoinsStore.photoReward) 🪙 " + extras.joined(separator: " "))
         #elseif canImport(SceneKit) && canImport(AppKit)
         guard let image = renderPhoto() else {
@@ -200,8 +250,14 @@ public struct ContentView: View {
         var extras: [String] = []
         if let url = savePNGToDocuments(image: image) {
             extras.append("Arquivo: \(url.lastPathComponent).")
+        } else {
+            showNotice("A foto foi renderizada, mas não foi possível salvá-la no aparelho.")
+            return
         }
         coins.earnPhoto()
+        missions.notePhoto()
+        awardCompletedMissions(in: store.save)
+        Sounds.shared.play(.photo)
         showNotice("Foto salva! +\(CoinsStore.photoReward) 🪙 " + extras.joined(separator: " "))
         #else
         showNotice("Foto indisponível: SceneKit não encontrado.")
@@ -300,6 +356,7 @@ public struct ContentView: View {
 /// Folha "Sobre" com o crédito obrigatório do asset base.
 private struct AboutView: View {
     @Environment(\.presentationMode) private var presentationMode
+    @AppStorage(Sounds.enabledKey) private var soundsEnabled = true
 
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
@@ -323,6 +380,8 @@ private struct AboutView: View {
             Text("Paleta cozy de 6 cores • sala 6×6 m • snap 0,25 m.")
                 .font(.caption)
                 .foregroundColor(.secondary)
+            Toggle("Sons cozy", isOn: $soundsEnabled)
+                .accessibilityHint("Ativa ou desativa os efeitos sonoros offline")
             Spacer()
         }
         .padding()

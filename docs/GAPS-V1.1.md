@@ -1,11 +1,9 @@
 # GAPS v1.1 — cobertura, USDZ, xcodeproj
 
-> Estado 2026-10-06: 480 itens — matriz 45 abaixo está OBSOLETA (mantida só p/ histórico). Recount completo delegado ao agente catalog (não feito aqui).
-> Contagens novas via leitura `catalog.json` (2026-10-06): total 480; por categoria: `moveis` 70, `kids` 69, `plantas` 66, `eletrodomesticos` 64, `iluminacao` 63, `sub_itens` 18, `acessorios` 17, `pets` 17, `office` 17, `parede` 16, `texteis` 15, `arte` 12, `eletronicos` 12, `piso` 12, `cama_mesa` 12. Slots por room (com overlap): quarto 217, sala 174, cozinha 151. Assets: `.glb` 480/480, `.usdz` 0/480, `.blend` 481.
-> Meta "≥4/categoria/combo" precisa ser recalculada p/ 15 categorias atuais (agente catalog).
+> Estado atual 2026-10-13: **495 itens**, 15 categorias, 495 GLBs + 495 thumbs reais, 0 USDZ (pendência Mac), 0 células de cobertura abaixo de 4. A matriz antiga de 45 e a lista/backlog de 480 itens abaixo são histórico.
 
-Fonte verdade: `catalog.json` v1 (45 únicos) + `art-ios/*.glb` (45) + `demo_save_v1.json`.
-Data: 2026-10-05. Polish final — não quebra nada existente (sem editar blends nem `Sources/*.swift`).
+Fonte atual: `catalog.json` (495) + `art-ios/*.glb` (495) + `demo_save_v1.json`.
+Os trechos de 45/480 itens abaixo são histórico; ver §5b para o estado vigente.
 
 ## 1. Cobertura atual por categoria/combo
 
@@ -28,7 +26,7 @@ Detalhe sala (20): moveis 8 (sofa, rack, tv, estante, mesa_centro + cadeira/lumi
 
 Compartilhados (9, economizam modelagem mas mascaram gap): `bed_moveis_cadeira`, `bed_aces_livros`, `bed_aces_quadro`, `bed_sub_almofada`, `bed_moveis_luminaria_pe`, `bed_textil_cortina`, `liv_moveis_estante` (quarto↔sala), `bed_aces_relogio` (quarto↔cozinha), `bed_planta_vaso` (3 rooms).
 
-## 2. Meta v1.1: 72 itens para >=4/categoria/combo
+## 2. Meta v1.1: 72 itens para >=4/categoria/combo (histórico; concluída)
 
 Regra: cada combo room×categoria precisa de >=4 opções para filtro/catálogo não parecer vazio e combos decor funcionarem.
 72 = 3 rooms × 6 categorias × 4.
@@ -53,18 +51,18 @@ Backlog sugerido (27 únicos, prioridade onde gap é 3):
 - acessorios +1 (quarto: espelho parete — tira quarto de 3→4)
 - moveis 0 (já >=4 em todos; só v1.2: beliche, ilha cozinha, poltrona sala)
 
-## 3. .usdz 0/45 — pendente Mac
+## 3. .usdz 0/495 — pendente Mac
 
-- `art-ios/*.glb`: 45/45 existem (fallback Linux OK).
-- `art-ios/*.usdz`: **0/45** (nenhum no repo; `catalog.json` aponta para `art-ios/<id>.usdz`, `tools/check_catalog.py` dá WARN com `ALLOW_MISSING=1`).
-- Script pronto: `tools/convert_glb_usdz_mac.sh` (loop 45 ids do `catalog.json`, pula se já existe, loga `du -h`, `--force` para reconverter).
+- `art-ios/*.glb`: 495/495 existem.
+- `art-ios/*.usdz`: **0/495** (nenhum no repo; `catalog.json` aponta para `art-ios/<id>.usdz`, `tools/check_catalog.py` dá WARN com `ALLOW_MISSING=1`).
+- Script pronto: `tools/convert_glb_usdz_mac.sh` (lê ids do `catalog.json`, pula se já existe, `--force` para reconverter).
 - Rodar no Mac:
   ```bash
   bash tools/convert_glb_usdz_mac.sh
   python3 tools/check_catalog.py  # WARNs .usdz devem zerar
   ```
 - Fallback sem `xcrun`: Reality Converter (arrastar .glb → export .usdz), ver cabeçalho do script + `docs/PIPELINE.md` §3.
-- Thumbs: 45/45 placeholders PIL 256px existem; trocar por render Blender 256px transparente na v1.1 (não bloqueia).
+- Thumbs: 495/495 renders Blender reais 256×256, documentados em `docs/THUMBNAILS.md`.
 
 ## 4. xcodeproj — pendente Mac
 
@@ -77,36 +75,35 @@ Backlog sugerido (27 únicos, prioridade onde gap é 3):
   4. CI `ios-build.yml` (macos-15, `xcodebuild ... iPhone 16`) valida lá.
 - Não gerar xcodeproj no Linux (formato Xcode-only, quebraria diff).
 
-## 5. Próximos passos (ordem)
+## 5. Próximos passos Mac
 
-1. Mac: `bash tools/convert_glb_usdz_mac.sh` → commit 45 `.usdz` → `ALLOW_MISSING=0 python3 tools/check_catalog.py` verde.
+1. Mac: `bash tools/convert_glb_usdz_mac.sh` → gerar 495 `.usdz` → `ALLOW_MISSING=0 python3 tools/check_catalog.py` verde.
 2. Mac: criar xcodeproj + Archive Validate (checa Info.plist + AppIcon 1024 sem alfa).
-3. Modelar backlog §2 (ilum/plantas/sub primeiro), export `.glb`, thumb Blender, atualizar `catalog.json` (manter espelho em `Resources/catalog.json`).
-4. Recalcular este doc: meta é zerar tabela de déficit (todas as 18 células >=4).
+3. Incluir catalog, sons, thumbs e USDZ nos recursos Xcode; validar asset, escala, save/load e FPS no device.
+4. Conteúdo v1.1 concluído; próximas adições entram no escopo v1.2 depois dos gates de device.
 
-## 5b. Cobertura room×categoria recalculada (15 categorias, 2026-10-10)
+## 5b. Cobertura room×categoria atual (15 categorias, 2026-10-13)
 
-Fonte: leitura direta de `catalog.json` (480 itens). Regra: cada combo
-room×categoria com ≥4 opções.
+Fonte: leitura direta de `catalog.json` (495 itens). Todas as 45 combinações
+room×categoria satisfazem a meta de ≥4 itens.
 
 | room | acessorios | arte | cama_mesa | eletrodomesticos | eletronicos | iluminacao | kids | moveis | office | parede | pets | piso | plantas | sub_itens | texteis |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | quarto | 7 | 8 | 6 | 16 | 8 | 22 | 59 | 28 | 17 | 4 | 5 | 4 | 21 | 7 | 5 |
-| cozinha | 6 | 2 | 5 | 41 | 3 | 21 | 7 | 20 | 0 | 7 | 4 | 3 | 20 | 7 | 5 |
-| sala | 7 | 10 | 1 | 14 | 9 | 26 | 15 | 29 | 0 | 6 | 9 | 5 | 29 | 8 | 6 |
+| cozinha | 6 | 4 | 5 | 41 | 4 | 21 | 7 | 20 | 4 | 7 | 4 | 4 | 20 | 7 | 5 |
+| sala | 7 | 10 | 4 | 14 | 9 | 26 | 15 | 29 | 4 | 6 | 9 | 5 | 29 | 8 | 6 |
 
-6 células abaixo de 4 (backlog de variedade, ordem de impacto):
-cozinha×office (0), sala×office (0), sala×cama_mesa (1), cozinha×arte (2),
-cozinha×eletronicos (3), cozinha×piso (3). Limítrofes em 4 (monitorar):
-quarto×parede (4), quarto×piso (4), cozinha×pets (4).
+**Déficit: zero células.** O brief `CONTENT-V12.md` foi fechado nos 15 itens
+previstos (495 total). Oito combinações estão no mínimo exato de 4: quarto ×
+parede/piso; cozinha × arte/eletrônicos/office/piso; sala × cama_mesa/office.
 
-## R2b (thumbs reais) — CONCLUÍDO 2026-10-10
-480/480 `thumbnails/<id>.png` 256×256 renderizados da geometria real via
+## R2b (thumbs reais) — CONCLUÍDO 2026-10-10; atualizado 2026-10-13
+495/495 `thumbnails/<id>.png` 256×256 renderizados da geometria real via
 `tools/render_catalog_thumbnails.py` (Blender 4.2.1 headless, EEVEE 64
 samples, fundo cozy `#F3EDE4`, 3-point, override por categoria quando a cor
 de vértice é plana; detalhe em `docs/THUMBNAILS.md`). Contact-sheet +
 15 sheets por categoria regenerados (`previews/`, `thumbs_problema=0`).
 Tentativa antiga 14:29 com ortho+sun (thumbs escuras) superada: o pipeline
 final usa mundo claro + key/fill/rim + base por categoria (ex. `#C9A87A`-like
-p/ moveis) e fundo opaco 256px.
-Tentativa 14:29 com ortho+sun gerou thumbs escuras (materiais cinza, falta 3-point + HDRI) — revertido para placeholders PIL. Refazer com: world HDRI cozy, key/fill/rim, material base #C9A87A e fundo #F1E3D3 opaco 256px.
+p/ moveis) e fundo opaco 256px. O pipeline foi reexecutado para cada item
+novo após os batches v1.1; preview geral + 15 sheets gerados de novo.

@@ -28,7 +28,7 @@ public struct OnboardingView: View {
         (
             "🏠",
             "Escolha o quarto",
-            "Quarto, cozinha ou sala — cada um com seu catálogo, moedas e save próprio."
+            "Quarto, cozinha ou sala — cada ambiente tem seu espaço e seus itens."
         ),
         (
             "🛋️",

@@ -1,9 +1,12 @@
 # Thumbnails do catálogo (renders reais)
 
-As 480 thumbnails em `thumbnails/<id>.png` são renders da **geometria real**
+As 495 thumbnails atuais em `thumbnails/<id>.png` são renders da **geometria real**
 de `art-ios/<id>.glb` (1 PNG 256×256 por id de `catalog.json`). Elas
 **substituem os placeholders PIL** anteriores (fundo chapado + letra da
 categoria + barras pretas com o id).
+Após o render, o pipeline aplica paleta PNG de 256 cores sem dithering:
+imagens continuam 256×256 e opacas, com ~46% de redução de tamanho total
+(27.29 MB → 14.77 MB no pack atual).
 
 ## Pipeline determinístico (Blender 4.2 headless)
 
@@ -14,7 +17,7 @@ driver fora do Blender, job de render dentro do Blender).
 # amostra canônica de 5 ids (móvel, planta, parede, luz, eletrônico pequeno)
 python3 tools/render_catalog_thumbnails.py --sample
 
-# lote inteiro (480 itens, 2 shards paralelos)
+# lote inteiro (todos os itens atuais do catálogo, 2 shards paralelos)
 python3 tools/render_catalog_thumbnails.py --all --workers 2 --samples 64
 
 # só verifica os PNGs existentes (tamanho + fundo claro + sem barra preta)
@@ -27,6 +30,8 @@ Pré-requisitos verificados pelo driver **antes de usar**:
   (`--blender` ou `$BLENDER_BIN` sobrescrevem; `blender --version` precisa
   conter `Blender 4.2`);
 - `catalog.json` íntegro e `art-ios/<id>.glb` presente para cada id.
+- Python Pillow instalado (`python3 -m pip install Pillow`) para otimização
+  indexada e verificação do PNG final.
 
 ## Cena padrão por modelo (idêntica para todos — determinística)
 
@@ -67,7 +72,7 @@ Pré-requisitos verificados pelo driver **antes de usar**:
 
 ## Verificação
 
-- `python3 tools/render_catalog_thumbnails.py --verify` — 480/480 PNG
+- `python3 tools/render_catalog_thumbnails.py --verify` — 495/495 PNG
   256×256, fundo claro (canto > 150), < 0.5% pixels pretos (sem barras).
 - `python3 tools/check_catalog.py` e `python3 tools/check_pack.py` passam.
 - Regeneração completa leva ~25 min (2 workers EEVEE 64 samples).

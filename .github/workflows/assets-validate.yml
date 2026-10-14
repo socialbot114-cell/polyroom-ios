@@ -20,8 +20,12 @@ jobs:
         run: /tmp/blender-4.2.1-linux-x64/blender -b --python tools/check_blend.py
       - name: Check catalog
         run: python3 tools/check_catalog.py
+      - name: Check model scale footprints
+        run: python3 tools/check_scale.py
       - name: Check demo save
         run: python3 tools/demo_load.py
+      - name: Check save corruption recovery fixtures
+        run: python3 tools/check_kill_restore.py
       - name: Check MVP-1 frozen subset (45)
         run: |
           python3 -c "import json; d=json.load(open('catalog-mvp1.json')); assert len(d['items'])==45, d; print('mvp1_items=45 OK')"

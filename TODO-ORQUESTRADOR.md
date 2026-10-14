@@ -29,12 +29,14 @@
 - [ ] A5 arte: inventário (481 blends × 480 glb × 0 usdz, thumbs, `bed_moveis_cadeira` + pipeline usdz Mac)
 - [ ] A6 QA-CI: bug-bash device (BB-13 snapshot + BB-14 onboarding/sobre) + `ios-build`/`assets-validate` verdes
 
-## Gates D3 (2026-10-06 — lote 1 verificado nesta sessão)- [x] D3-1: catalog auditado (480 itens 0 erros, MVP-1 45/45 intactos, `catalog-mvp1.json` + tag `mvp1-frozen`)
+## Gates D3-D14 (estado atualizado 2026-10-13)
+- [x] D3-1: catalog auditado (495 itens 0 erros; MVP-1 45/45 congelados em `catalog-mvp1.json` + tag `mvp1-frozen`)
 - [x] D3-2: RoomStore hardening OK (setColor 0..5, duplicate preserva wall, rotate -45, 5 testes novos; `swift` indisponível p/ rodar, revisão manual)
 - [x] D3-3: scene perf parcial (paredes 3m/0.2, grid 1m+0.25m, shadow 1024 + lowPower flag, AssetLoader log; FPS device pendente Mac)
-- [x] D3-4: tools strict verdes (check 480/0, STRICT 480/0, demo 9/0, blend 481, YAML OK, gate mvp1-45 no CI)
-- [ ] D3-5: arte inventário fechado (480 glb / 0 usdz plano Mac; pendente: 3 ids com acento + thumbs Blender reais + conversão usdz no Mac)
-  - 2026-10-10: thumbs Blender reais ✅ 480/480 (`tools/render_catalog_thumbnails.py` + `docs/THUMBNAILS.md`); previews + 15 sheets regenerados; gate local verde (catalog 480/0, STRICT 480/0, pack 480/0/0, demo 9/0, blend 481/0). Resta D3-5: conversão usdz no Mac.
+- [x] D3-4: tools strict verdes (check 495/0, STRICT 495/0, demo 9/0, blend 496/0, YAML OK, gate mvp1-45 no CI)
+- [ ] D3-5: arte inventário (495 GLB + 495 thumbs reais; 0 USDZ, conversão pendente no Mac)
+- [ ] D3 app: um GLB/USDZ real carrega no simulador/device em escala correta (Mac)
+- [x] D14 conteúdo v1.1: 15 itens novos, catalog 495; cobertura 45/45 room×categoria ≥4
 
 ## Riscos
 - Sem Mac local: build só no Actions macos-15. S2 precisa de Mac ou usa `swiftpm` mock até CI validar.
@@ -44,5 +46,5 @@
 ## Log
 - 2026-10-05 02:28: D1 executado pelo ORQ (desbloqueio): inventario + cadeira 72tris + skeleton SwiftPM + release checklist. Validações locais verdes. Commit pendente. S1/S2/S3 podem assumir D2 dos prompts/.
 - 2026-10-06 01:55: push inicial p/ github.com/socialbot114-cell/polyroom-ios (privado) + 3 Actions verdes no commit 36b2325: assets-validate (Blender 4.2.1, checked=481 errors=0, catalog 480/0, demo 9/0, mvp1-45 OK), previews (contact-sheet-480 + 15 sheets, artifact polyroom-prints 790KB), ios-build (Xcode 16.2, placeholder sem xcodeproj — gap Mac). Fix: 3 ids acento→ASCII, script 480.
-- 2026-10-10: D3→D11 (sem Mac): shells quarto/cozinha/sala exportados dos blends (36 tris, footprint M→L, thumbs refeitas); `tools/check_scale.py` sentinela (480: 0 errors, 151 warns + 27 wall p/ triagem — semântica S/M/L ambígua p/ parede/altos); `tools/check_kill_restore.py` OK (round-trip + truncado + corrupto sem crash); S2 model pronto (place/move/rotate/remove/duplicate/setColor+snap), falta UI/device no Mac. CI remoto verde após repo público.
-- 2026-10-10 (semana 7, sem Mac): `Missions.swift` (12 missões) + `MissionsTests` (lógica validada em espelho Python; compilar no Mac); pack de sons cozy offline (6 wav sintetizados + `Sounds.swift`); `docs/CONTENT-V12.md` (15 itens p/ zerar 6 gaps); perf: demo_save real 7.9k tris, I1 pior caso 30k < 50k ✅ (catalog superestima ~3x).
+- 2026-10-10: D3→D11 (sem Mac): shells quarto/cozinha/sala exportados dos blends (36 tris, footprint M→L, thumbs refeitas); `tools/check_scale.py` sentinela (495: 0 errors, 151 warns + 28 wall p/ triagem — semântica S/M/L ambígua p/ parede/altos); `tools/check_kill_restore.py` OK (round-trip + truncado + corrupto sem crash); S2 model e drag no SCNView; CI remoto verde após repo público.
+- 2026-10-13 (polish): missões integradas a UI/moedas/progresso, efeitos sonoros offline com toggle e recursos SwiftPM, busca/tap/drag incremental + testes Swift; 15 itens v1.1 completos e cobertura zerada; tint aplica multiply sem apagar cores originais. CI executará `swift test` para validar compilação. Pendências de device: USDZ, projeto Xcode e FPS físico.

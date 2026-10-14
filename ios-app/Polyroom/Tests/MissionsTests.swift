@@ -41,6 +41,38 @@ final class MissionsTests: XCTestCase {
         XCTAssertTrue(store.isComplete("m04", in: save, categoryOf: cat))
     }
 
+    func testMissionCatalogHasTwelveStableUniqueIDs() {
+        XCTAssertEqual(MissionStore.all.count, 12)
+        XCTAssertEqual(Set(MissionStore.all.map(\.id)).count, 12)
+        XCTAssertEqual(MissionStore.all.first?.id, "m01")
+        XCTAssertEqual(MissionStore.all.last?.id, "m12")
+    }
+
+    func testCategoryMissionsAndFifteenItemGoal() {
+        let store = MissionStore()
+        var save = makeSave()
+        save.rooms[.quarto] = [
+            placed("pla_1"), placed("pla_2"), placed("pla_3"),
+            placed("ilu_1"), placed("ilu_2"),
+        ]
+        XCTAssertTrue(store.isComplete("m02", in: save, categoryOf: cat))
+        XCTAssertTrue(store.isComplete("m03", in: save, categoryOf: cat))
+
+        save.rooms[.quarto] = (0..<15).map { _ in placed("mov_\($0)") }
+        XCTAssertTrue(store.isComplete("m10", in: save, categoryOf: cat))
+    }
+
+    func testRoomSpecificGoalsAndElectronics() {
+        let store = MissionStore()
+        var save = makeSave()
+        save.rooms[.quarto] = (0..<5).map { _ in placed("mov_\($0)") }
+        save.rooms[.sala] = (0..<6).map { _ in placed("mov_s\($0)", room: .sala) }
+        save.rooms[.cozinha] = [placed("eletron_a", room: .cozinha), placed("eletron_b", room: .cozinha)]
+        XCTAssertTrue(store.isComplete("m05", in: save, categoryOf: cat))
+        XCTAssertTrue(store.isComplete("m06", in: save, categoryOf: cat))
+        XCTAssertTrue(store.isComplete("m11", in: save, categoryOf: cat))
+    }
+
     func testM07WallItems() {
         let store = MissionStore()
         var save = makeSave()
@@ -85,6 +117,7 @@ final class MissionsTests: XCTestCase {
         XCTAssertEqual(first.map(\.reward), [10])
         let second = store.evaluate(in: save, categoryOf: cat)
         XCTAssertTrue(second.isEmpty) // recompensa 1x
+        XCTAssertTrue(MissionStore().claimed.contains("m01"))
     }
 
     func testProgressValues() {

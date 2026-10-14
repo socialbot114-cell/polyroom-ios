@@ -20,8 +20,8 @@
 
 ## 4. Export
 - Fonte: `art-source/*.blend` (Blender 4.2.1 LTS)
-- iOS: `art-ios/<id>.usdz` (Y-up, +Z forward), `thumbnails/<id>.png` 256x256 fundo transparente
-- Thumb via: `blender -b file.blend -o thumb_#### -f 1 -- --thumbnail`
+- iOS: `art-ios/<id>.usdz` (Y-up, +Z forward), `thumbnails/<id>.png` 256×256 opaco, fundo cozy claro
+- Thumb via: `python3 tools/render_catalog_thumbnails.py --ids <id>` (Blender 4.2 headless, bounding-box framing + studio light)
 - USDZ < 3MB por item, shell < 8MB
 
 ## 5. Catalog.json
