@@ -1,6 +1,6 @@
 # RELEASE-CHECKLIST v1.0-mvp1
 
-- [ ] Actions `ios-build` verde (macos-15, iPhone 16 sim, `CODE_SIGNING_ALLOWED=NO`)
+- [x] Actions `ios-build` verde (Swift Package: 46 testes, 0 falhas; app target aguarda `.xcodeproj`)
 - [x] Actions `assets-validate` verde (0 ERROR blend + catalog 495 itens)
 - [ ] 3 shells trocáveis sem reload (BED/KIT/LIV)
 - [ ] 495 itens no catálogo/pack; USDZ convertido e carregado no app; 15 categorias com ≥4 opções por sala
