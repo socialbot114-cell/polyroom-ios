@@ -58,15 +58,15 @@ final class MissionsTests: XCTestCase {
         XCTAssertTrue(store.isComplete("m02", in: save, categoryOf: cat))
         XCTAssertTrue(store.isComplete("m03", in: save, categoryOf: cat))
 
-        save.rooms[.quarto] = (0..<15).map { _ in placed("mov_\($0)") }
+        save.rooms[.quarto] = (0..<15).map { index in placed("mov_\(index)") }
         XCTAssertTrue(store.isComplete("m10", in: save, categoryOf: cat))
     }
 
     func testRoomSpecificGoalsAndElectronics() {
         let store = MissionStore()
         var save = makeSave()
-        save.rooms[.quarto] = (0..<5).map { _ in placed("mov_\($0)") }
-        save.rooms[.sala] = (0..<6).map { _ in placed("mov_s\($0)", room: .sala) }
+        save.rooms[.quarto] = (0..<5).map { index in placed("mov_\(index)") }
+        save.rooms[.sala] = (0..<6).map { index in placed("mov_s\(index)", room: .sala) }
         save.rooms[.cozinha] = [placed("eletron_a", room: .cozinha), placed("eletron_b", room: .cozinha)]
         XCTAssertTrue(store.isComplete("m05", in: save, categoryOf: cat))
         XCTAssertTrue(store.isComplete("m06", in: save, categoryOf: cat))
@@ -87,7 +87,7 @@ final class MissionsTests: XCTestCase {
 
     func testM08PhotosAndM09Tints() {
         let store = MissionStore()
-        var save = makeSave()
+        let save = makeSave()
         XCTAssertFalse(store.isComplete("m08", in: save, categoryOf: cat))
         store.notePhoto(); store.notePhoto()
         XCTAssertTrue(store.isComplete("m08", in: save, categoryOf: cat))

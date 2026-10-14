@@ -8,6 +8,13 @@ let package = Package(
         .target(
             name: "Polyroom",
             path: ".",
+            exclude: [
+                "Info.plist",
+                "Resources/catalog.json",
+                "Resources/AppIcon-1024.png",
+                "Resources/README-ASSETS.md",
+                "Tests",
+            ],
             sources: ["Sources"],
             resources: [.process("Resources/Sounds")]
         ),
