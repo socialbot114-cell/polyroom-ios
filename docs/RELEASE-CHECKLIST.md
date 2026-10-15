@@ -1,6 +1,6 @@
 # RELEASE-CHECKLIST v1.0-mvp1
 
-- [x] Actions `ios-build` verde (46 testes Swift + app buildado contra iOS Simulator SDK; runner sem runtime instalado)
+- [x] Actions `ios-build` verde (Swift tests + build/test iPhone 16 Simulator; iOS 18.2 runtime instalado no CI)
 - [x] Actions `assets-validate` verde (0 ERROR blend + catalog 495 itens)
 - [ ] 3 shells trocáveis sem reload (BED/KIT/LIV)
 - [ ] 495 itens no catálogo/pack; USDZ convertido e carregado no app; 15 categorias com ≥4 opções por sala

@@ -10,4 +10,4 @@
   demo_save real = 7.9k) — margem extra folgada.
 - CI rápida: `python3 tools/check_pack.py` (<5s, sem Blender). Full: `blender -b --python tools/check_blend.py` (~minutos, blends de origem).
 - Sons: `Resources/Sounds/*.wav` (6 arquivos, ~118KB), processados pelo Swift Package; no Xcode, incluir essa pasta como folder/resource no target do app.
-- iOS CI: `swift test --package-path ios-app/Polyroom` + XcodeGen project + app build contra o iOS Simulator SDK em todo push. O runner não tem runtime de simulator; Archive/TestFlight e FPS físico continuam gates de device.
+- iOS CI: `swift test --package-path ios-app/Polyroom` + XcodeGen project + iOS 18.2 runtime + build/test iPhone 16 Simulator em todo push. Archive/TestFlight e FPS físico continuam gates de device.
