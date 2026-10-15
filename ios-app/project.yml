@@ -28,6 +28,7 @@ targets:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.polyroom.app
         PRODUCT_NAME: Polyroom
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
         INFOPLIST_FILE: Polyroom/Info.plist
         GENERATE_INFOPLIST_FILE: NO
         SWIFT_ACTIVE_COMPILATION_CONDITIONS: "$(inherited) POLYROOM_APP_ENTRY"
