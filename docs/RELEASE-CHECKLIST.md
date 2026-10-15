@@ -1,6 +1,6 @@
 # RELEASE-CHECKLIST v1.0-mvp1
 
-- [x] Actions `ios-build` verde (47 Swift tests incluindo import USDZ + app build para iOS Simulator SDK; runner sem CoreSimulator)
+- [x] Actions `ios-build` verde (47 Swift tests, inclui import USDZ SceneKit + app build para iOS Simulator SDK; runner sem CoreSimulator)
 - [x] Actions `assets-validate` verde (0 ERROR blend + catalog 495 itens)
 - [ ] 3 shells trocáveis sem reload (BED/KIT/LIV)
 - [ ] 495 itens no catálogo/pack; USDZ convertido e carregado no app; 15 categorias com ≥4 opções por sala

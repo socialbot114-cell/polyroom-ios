@@ -61,13 +61,13 @@ Backlog sugerido (27 únicos, prioridade onde gap é 3):
 ## 4. Xcode project e device
 
 - Projeto declarativo: `ios-app/project.yml` (XcodeGen) liga Sources, tests, launch color asset, catalog, sons e thumbs; `Info.plist` configura portrait e permissão de Fotos.
-- A CI macOS gera `ios-app/Polyroom.xcodeproj` com XcodeGen, compila o app para iOS Simulator SDK e executa 46 testes SwiftPM. O runner não conecta ao CoreSimulator; teste de runtime fica pendente em Mac com simulator disponível.
+- A CI macOS gera `ios-app/Polyroom.xcodeproj` com XcodeGen, compila o app para iOS Simulator SDK e executa 47 testes SwiftPM; `SceneAssetTests` abre um USDZ real via SceneKit no host Mac. O runner não conecta ao CoreSimulator; teste interativo de runtime segue pendente.
 - No Mac local: `brew install xcodegen && xcodegen generate --spec ios-app/project.yml --project ios-app` para abrir no Xcode.
-- Pendências de release: ícone de produção (PNG atual é placeholder), converter/bundlar 495 USDZ, executar app em simulador/device, Archive Validate e medir FPS em iPhone real.
+- Pendências de release: ícone de produção (PNG atual é placeholder), executar app em simulador/device, Archive Validate e medir FPS em iPhone real.
 
 ## 5. Próximos passos Mac
 
-1. Device: validar USDZ carregado no app e escala real (XcodeGen CI já compila o target).
+1. Device: validar USDZ carregado no app e escala real (CI compila o target e abre USDZ de prova com SceneKit).
 2. Produzir ícone final, Archive Validate, teste de save/load e FPS em iPhone real.
 3. Conteúdo v1.1 concluído; próximas adições entram no escopo v1.2 depois dos gates de device.
 
