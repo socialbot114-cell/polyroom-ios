@@ -64,23 +64,18 @@ Backlog sugerido (27 únicos, prioridade onde gap é 3):
 - Fallback sem `xcrun`: Reality Converter (arrastar .glb → export .usdz), ver cabeçalho do script + `docs/PIPELINE.md` §3.
 - Thumbs: 495/495 renders Blender reais 256×256, documentados em `docs/THUMBNAILS.md`.
 
-## 4. xcodeproj — pendente Mac
+## 4. Xcode project e device
 
-- Existe: `ios-app/Polyroom/Package.swift` (iOS 17), `Sources/` (Models/Persistence/Scene/Views), `Tests/`, `Resources/catalog.json`, `README-ASSETS.md`.
-- Criados neste polish: `ios-app/Polyroom/Info.plist` (mínimo iOS17 portrait: `CFBundleName` Polyroom, `UILaunchStoryboardName`, `UISupportedInterfaceOrientations` portrait, `NSPhotoLibraryAddUsageDescription` "Salvar fotos do seu quarto"), `ios-app/AppIcon-1024-spec.md` + `ios-app/Polyroom/Resources/AppIcon-1024.png` (1024 RGB placeholder `#F1E3D3` + cubo + "P").
-- Falta (só no Mac, Xcode 16.2): `ios-app/Polyroom.xcodeproj` / `.xcworkspace`:
-  1. `File > New > Project > iOS App`, nome Polyroom, SwiftUI, iOS 17+, portrait, bundle `com.polyroom.app`.
-  2. Adicionar `Sources/` ao target + `Resources/catalog.json` e `art-ios/*.usdz` em `Copy Bundle Resources`.
-  3. Arrastar `AppIcon-1024.png` para `Assets.xcassets/AppIcon` (slot 1024).
-  4. CI `ios-build.yml` (macos-15, `xcodebuild ... iPhone 16`) valida lá.
-- Não gerar xcodeproj no Linux (formato Xcode-only, quebraria diff).
+- Projeto declarativo: `ios-app/project.yml` (XcodeGen) liga Sources, tests, launch screen, catalog, sons e thumbs; `Info.plist` configura portrait e permissão de Fotos.
+- A CI macOS gera `ios-app/Polyroom.xcodeproj` com XcodeGen e executa build + XCTest no iPhone 16 Simulator; `swift test` também valida 46 testes.
+- No Mac local: `brew install xcodegen && xcodegen generate --spec ios-app/project.yml --project ios-app` para abrir no Xcode.
+- Pendências de release: ícone de produção (PNG atual é placeholder), converter/bundlar 495 USDZ, testar app/escala no device, Archive Validate e medir FPS em iPhone real.
 
 ## 5. Próximos passos Mac
 
-1. Mac: `bash tools/convert_glb_usdz_mac.sh` → gerar 495 `.usdz` → `ALLOW_MISSING=0 python3 tools/check_catalog.py` verde.
-2. Mac: criar xcodeproj + Archive Validate (checa Info.plist + AppIcon 1024 sem alfa).
-3. Incluir catalog, sons, thumbs e USDZ nos recursos Xcode; validar asset, escala, save/load e FPS no device.
-4. Conteúdo v1.1 concluído; próximas adições entram no escopo v1.2 depois dos gates de device.
+1. Mac/device: converter USDZ e validar escala/carregamento no app.
+2. Produzir ícone final, Archive Validate, teste de save/load e FPS em iPhone real.
+3. Conteúdo v1.1 concluído; próximas adições entram no escopo v1.2 depois dos gates de device.
 
 ## 5b. Cobertura room×categoria atual (15 categorias, 2026-10-13)
 

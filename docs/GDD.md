@@ -28,4 +28,4 @@ Todos os itens do catálogo têm GLB + thumbnail real 256px e footprint (S/M/L),
 
 ## Aceite de release
 - 3 shells trocáveis sem reload, 495 itens no catálogo, save/load após kill, 60fps iPhone 12 / 30fps SE2, Swift Package tests + Actions verde, validação de assets verde.
-- Bloqueios antes do ship: USDZ no bundle, xcodeproj/Archive, teste de device/FPS e TestFlight.
+- Bloqueios antes do ship: USDZ no bundle, ícone final/Archive, teste de device/FPS e TestFlight.
