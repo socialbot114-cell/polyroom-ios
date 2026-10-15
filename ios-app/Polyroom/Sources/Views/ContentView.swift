@@ -105,19 +105,6 @@ public struct ContentView: View {
             lastColors = colors
             awardCompletedMissions(in: newSave)
         }
-        .sheet(isPresented: $showAbout) {
-            AboutView()
-        }
-        .sheet(isPresented: $showMissions) {
-            MissionsView(store: store, missions: missions)
-        }
-#if canImport(UIKit)
-        .sheet(isPresented: $showShareSheet, onDismiss: { shareImage = nil }) {
-            if let shareImage {
-                ShareSheet(activityItems: [shareImage])
-            }
-        }
-#endif
         .alert(isPresented: $showNotice) {
             Alert(title: Text("Polyroom"), message: Text(noticeText))
         }
@@ -139,6 +126,9 @@ public struct ContentView: View {
                 .buttonStyle(.bordered)
                 .controlSize(.small)
                 .accessibilityHint("Mostra objetivos cozy e seu progresso")
+                .sheet(isPresented: $showMissions) {
+                    MissionsView(store: store, missions: missions)
+                }
                 Text("🪙 \(coins.coins)")
                     .font(.subheadline)
                     .accessibilityLabel("cozyCoins: \(coins.coins)")
@@ -150,6 +140,13 @@ public struct ContentView: View {
                 .buttonStyle(.borderedProminent)
                 .controlSize(.small)
                 .accessibilityHint("Salva o snapshot local e abre opções para compartilhar")
+#if canImport(UIKit)
+                .sheet(isPresented: $showShareSheet, onDismiss: { shareImage = nil }) {
+                    if let shareImage {
+                        ShareSheet(activityItems: [shareImage])
+                    }
+                }
+#endif
                 Button {
                     showAbout = true
                 } label: {
@@ -158,6 +155,9 @@ public struct ContentView: View {
                 .buttonStyle(.bordered)
                 .controlSize(.small)
                 .accessibilityLabel("Sobre")
+                .sheet(isPresented: $showAbout) {
+                    AboutView()
+                }
             }
             .padding(.horizontal)
 
