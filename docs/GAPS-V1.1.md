@@ -1,6 +1,6 @@
 # GAPS v1.1 — cobertura, USDZ, xcodeproj
 
-> Estado atual 2026-10-13: **495 itens**, 15 categorias, 495 GLBs + 495 thumbs reais, 0 USDZ (pendência Mac), 0 células de cobertura abaixo de 4. A matriz antiga de 45 e a lista/backlog de 480 itens abaixo são histórico.
+> Estado atual 2026-10-15: **495 itens**, 15 categorias, 495 GLBs + 495 USDZ + 495 thumbs reais, 0 células de cobertura abaixo de 4. A matriz antiga de 45 e a lista/backlog de 480 itens abaixo são histórico.
 
 Fonte atual: `catalog.json` (495) + `art-ios/*.glb` (495) + `demo_save_v1.json`.
 Os trechos de 45/480 itens abaixo são histórico; ver §5b para o estado vigente.
@@ -51,17 +51,11 @@ Backlog sugerido (27 únicos, prioridade onde gap é 3):
 - acessorios +1 (quarto: espelho parete — tira quarto de 3→4)
 - moveis 0 (já >=4 em todos; só v1.2: beliche, ilha cozinha, poltrona sala)
 
-## 3. .usdz 0/495 — pendente Mac
+## 3. USDZ — concluído 495/495
 
 - `art-ios/*.glb`: 495/495 existem.
-- `art-ios/*.usdz`: **0/495** (nenhum no repo; `catalog.json` aponta para `art-ios/<id>.usdz`, `tools/check_catalog.py` dá WARN com `ALLOW_MISSING=1`).
-- Script pronto: `tools/convert_glb_usdz_mac.sh` (lê ids do `catalog.json`, pula se já existe, `--force` para reconverter).
-- Rodar no Mac:
-  ```bash
-  bash tools/convert_glb_usdz_mac.sh
-  python3 tools/check_catalog.py  # WARNs .usdz devem zerar
-  ```
-- Fallback sem `xcrun`: Reality Converter (arrastar .glb → export .usdz), ver cabeçalho do script + `docs/PIPELINE.md` §3.
+- `art-ios/*.usdz`: **495/495** convertidos com OpenUSD 26.8; geometria, vertex colors e hierarquia preservados; cada pacote reabre como USD stage e CRC ZIP valida.
+- Regenerar via `python3 -m pip install --user -r tools/requirements-usdz.txt && python3 tools/convert_glb_usdz.py --all` (`--force` reconverte todos).
 - Thumbs: 495/495 renders Blender reais 256×256, documentados em `docs/THUMBNAILS.md`.
 
 ## 4. Xcode project e device
@@ -73,7 +67,7 @@ Backlog sugerido (27 únicos, prioridade onde gap é 3):
 
 ## 5. Próximos passos Mac
 
-1. Mac/device: converter USDZ e validar escala/carregamento no app.
+1. Device: validar USDZ carregado no app e escala real (XcodeGen CI já compila o target).
 2. Produzir ícone final, Archive Validate, teste de save/load e FPS em iPhone real.
 3. Conteúdo v1.1 concluído; próximas adições entram no escopo v1.2 depois dos gates de device.
 

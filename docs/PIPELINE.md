@@ -17,13 +17,17 @@ Abrir em 4.2, `File > Append` por coleção se o arquivo 2.7 quebrar. Salvar com
 5. Salvar `art-source/BED_shell_v01.blend`, etc.
 
 ## 3. Export USDZ
-No Blender: `File > Export > USD (.usd/.usdc)` com `Y-up`, depois converter:
+O GLB do catálogo pode ser convertido com OpenUSD em Linux/macOS (sem Xcode):
 ```bash
-# no Mac com Xcode:
-xcrun usdz_converter art-ios/tmp.usdc art-ios/<id>.usdz
-# fallback Linux: export .glb e S2 importa no Xcode que converte p/ .scn
+python3 -m pip install --user -r tools/requirements-usdz.txt
+python3 tools/convert_glb_usdz.py --ids <id>
+python3 tools/convert_glb_usdz.py --all
+# Wrapper compatível com comandos antigos:
+bash tools/convert_glb_usdz_mac.sh --force
 ```
-Padrão MVP: exportar `.glb` + `.usdz` se possível, S2 escolhe o que liga no `scnassets`.
+O conversor mantém Y-up, 1 unidade = 1 metro, hierarquia, triangulação,
+normais e vertex colors em `displayColor`; valida cada pacote reabrindo-o com
+OpenUSD antes de gravar `art-ios/<id>.usdz`.
 
 ## 4. Thumbnail (geometria real)
 ```bash
@@ -38,7 +42,7 @@ Detalhes e exemplo de amostra: `docs/THUMBNAILS.md`.
 
 ## 5. Validação CI
 `tools/check_blend.py` roda `--background`: abre cada `.blend`, conta tris, checa nomes, UVs, tamanho. Falha se > budget em CONTRATOS.
-`tools/check_catalog.py` valida schema, espelho Resources, USDZ (WARN enquanto a conversão Mac estiver pendente) e thumbnails. Rodar também `tools/check_pack.py`, `tools/check_scale.py` e `tools/check_kill_restore.py`.
+`tools/check_catalog.py` valida schema, espelho Resources, integridade ZIP/USDZ e thumbnails. Rodar também `tools/check_pack.py`, `tools/check_scale.py` e `tools/check_kill_restore.py`.
 
 ## 6. Integração no Xcode (S2)
 Arrastar `art-ios/*.usdz` para `ios-app/Polyroom/Resources/`, `Copy Bundle Resources`, carregar via `SCNScene(named:)`, cache em `AssetLoader`.

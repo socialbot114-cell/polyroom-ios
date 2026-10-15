@@ -11,7 +11,7 @@ public struct AssetLoader {
         defer { lock.unlock() }
 
         if templates[catalogId] == nil,
-           let scene = SCNScene(named: catalogId + ".usdz") {
+           let scene = loadScene(catalogId: catalogId) {
             let template = SCNNode()
             template.name = "asset_template_\(catalogId)"
             for child in scene.rootNode.childNodes {
@@ -33,6 +33,18 @@ public struct AssetLoader {
         box.firstMaterial?.diffuse.contents = NSColor.systemTeal
         #endif
         return SCNNode(geometry: box)
+    }
+
+    private static func loadScene(catalogId: String) -> SCNScene? {
+        if let scene = SCNScene(named: catalogId + ".usdz") {
+            return scene
+        }
+        guard let url = Bundle.main.url(forResource: catalogId,
+                                        withExtension: "usdz",
+                                        subdirectory: "art-ios") else {
+            return nil
+        }
+        return try? SCNScene(url: url, options: nil)
     }
 
     /// Deep-copies the node hierarchy and its materials. Geometry vertices are

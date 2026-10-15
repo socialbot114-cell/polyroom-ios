@@ -14,7 +14,7 @@ Baseline MVP-1 congelado: 45 SKUs em 3 quartos × 6 categorias. Catálogo atual 
 - quarto: cama, criado, guarda-roupa, tapete, quadro, abajur, livros, almofada, vaso, planta
 - cozinha: bancada, armário, geladeira, fogão, mesa, 2 cadeiras, panela, pratos, frutas, pendente
 - sala: sofá, rack, TV, estante, mesa centro, tapete redondo, quadro, luminária chão, almofada, planta grande
-Todos os itens do catálogo têm GLB + thumbnail real 256px e footprint (S/M/L), tintable bool, tags e snap grid 0.25m. O carregamento final de modelos no app aguarda a conversão USDZ no Mac.
+Todos os itens do catálogo têm GLB + USDZ + thumbnail real 256px e footprint (S/M/L), tintable bool, tags e snap grid 0.25m. O carregamento e a escala no app ainda precisam de verificação em runtime.
 
 ## Progressão cozy (sem servidor)
 - Moedas locais `cozyCoins` ganhas ao colocar itens, salvar fotos e completar 12 missões (`docs/MISSOES.md`). Claims de missão são 1x; progresso e recompensas ficam em `UserDefaults`, offline.
@@ -28,4 +28,4 @@ Todos os itens do catálogo têm GLB + thumbnail real 256px e footprint (S/M/L),
 
 ## Aceite de release
 - 3 shells trocáveis sem reload, 495 itens no catálogo, save/load após kill, 60fps iPhone 12 / 30fps SE2, Swift Package tests + Actions verde, validação de assets verde.
-- Bloqueios antes do ship: USDZ no bundle, ícone final/Archive, teste de device/FPS e TestFlight.
+- Bloqueios antes do ship: verificar modelos USDZ em runtime, ícone final/Archive, teste de device/FPS e TestFlight.

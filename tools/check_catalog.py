@@ -1,5 +1,5 @@
 """Valida catalog.json contra schema + arquivos."""
-import json, os, sys
+import json, os, sys, zipfile
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CAT = os.path.join(ROOT, "catalog.json")
@@ -63,6 +63,16 @@ for it in data["items"]:
                     )
             except OSError as e:
                 errors.append(f"{it['id']} {key} stat falhou: {e}")
+        if key == "usdz" and os.path.isfile(p):
+            try:
+                with zipfile.ZipFile(p) as archive:
+                    members = [name for name in archive.namelist() if not name.endswith("/")]
+                    if not members or not members[0].lower().endswith((".usd", ".usda", ".usdc")):
+                        errors.append(f"{it['id']} usdz sem layer USD principal válido")
+                    elif archive.testzip() is not None:
+                        errors.append(f"{it['id']} usdz CRC inválido")
+            except (OSError, zipfile.BadZipFile) as e:
+                errors.append(f"{it['id']} usdz inválido: {e}")
     if STRICT:
         # footprint só S/M/L
         fp = it.get("footprint")

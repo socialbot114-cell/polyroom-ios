@@ -20,6 +20,8 @@ targets:
       - path: Polyroom/Resources/Assets.xcassets
       - path: Polyroom/Resources/Sounds
         type: folder
+      - path: ../art-ios
+        type: folder
       - path: ../thumbnails
         type: folder
     settings:

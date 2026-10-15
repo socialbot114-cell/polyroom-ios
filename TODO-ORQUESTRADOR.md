@@ -34,8 +34,8 @@
 - [x] D3-2: RoomStore hardening OK (setColor 0..5, duplicate preserva wall, rotate -45, 5 testes novos; `swift` indisponível p/ rodar, revisão manual)
 - [x] D3-3: scene perf parcial (paredes 3m/0.2, grid 1m+0.25m, shadow 1024 + lowPower flag, AssetLoader log; FPS device pendente Mac)
 - [x] D3-4: tools strict verdes (check 495/0, STRICT 495/0, demo 9/0, blend 496/0, YAML OK, gate mvp1-45 no CI)
-- [ ] D3-5: arte inventário (495 GLB + 495 thumbs reais; 0 USDZ, conversão pendente no Mac)
-- [ ] D3 app: um GLB/USDZ real carrega no simulador/device em escala correta (Mac)
+- [x] D3-5: arte inventário (495 GLB + 495 USDZ + 495 thumbs reais, gates strict verdes)
+- [ ] D3 app: um USDZ real carrega no app em escala correta (teste de runtime/device)
 - [x] D14 conteúdo v1.1: 15 itens novos, catalog 495; cobertura 45/45 room×categoria ≥4
 
 ## Riscos
@@ -47,4 +47,4 @@
 - 2026-10-05 02:28: D1 executado pelo ORQ (desbloqueio): inventario + cadeira 72tris + skeleton SwiftPM + release checklist. Validações locais verdes. Commit pendente. S1/S2/S3 podem assumir D2 dos prompts/.
 - 2026-10-06 01:55: push inicial p/ github.com/socialbot114-cell/polyroom-ios (privado) + 3 Actions verdes no commit 36b2325: assets-validate (Blender 4.2.1, checked=481 errors=0, catalog 480/0, demo 9/0, mvp1-45 OK), previews (contact-sheet-480 + 15 sheets, artifact polyroom-prints 790KB), ios-build (Xcode 16.2, placeholder sem xcodeproj — gap Mac). Fix: 3 ids acento→ASCII, script 480.
 - 2026-10-10: D3→D11 (sem Mac): shells quarto/cozinha/sala exportados dos blends (36 tris, footprint M→L, thumbs refeitas); `tools/check_scale.py` sentinela (495: 0 errors, 151 warns + 28 wall p/ triagem — semântica S/M/L ambígua p/ parede/altos); `tools/check_kill_restore.py` OK (round-trip + truncado + corrupto sem crash); S2 model e drag no SCNView; CI remoto verde após repo público.
-- 2026-10-15 (polish): missões integradas a UI/moedas/progresso, efeitos sonoros offline com toggle e recursos SwiftPM, busca/tap/drag incremental + testes Swift; 15 itens v1.1 completos e cobertura zerada; tint aplica multiply sem apagar cores originais. XcodeGen project e launch color asset declarados; CI roda 46 testes + app build para iOS Simulator SDK. Pendências: runtime Simulator em Mac, USDZ, ícone/Archive, TestFlight e FPS físico.
+- 2026-10-15 (polish): missões integradas a UI/moedas/progresso, efeitos sonoros offline com toggle e recursos SwiftPM, busca/tap/drag incremental + testes Swift; 15 itens v1.1 completos e cobertura zerada; tint aplica multiply sem apagar cores originais. XcodeGen project, launch color asset e 495 USDZ convertidos com OpenUSD; CI testa 47 Swift cases (inclui SceneKit USDZ import) e builda app para Simulator SDK. Pendências: validar runtime/device, ícone/Archive, TestFlight e FPS físico.
