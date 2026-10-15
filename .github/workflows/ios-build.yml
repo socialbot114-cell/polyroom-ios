@@ -19,8 +19,7 @@ jobs:
         run: |
           if ! command -v xcodegen >/dev/null 2>&1; then brew install xcodegen; fi
           xcodegen generate --spec ios-app/project.yml --project ios-app
-      - name: Build + Test (Simulator iPhone 16)
-        run: |
-          xcodebuild -project ios-app/Polyroom.xcodeproj -scheme Polyroom -destination 'platform=iOS Simulator,name=iPhone 16' -derivedDataPath build/DerivedData build test CODE_SIGNING_ALLOWED=NO
+      - name: Build app for iOS Simulator SDK
+        run: xcodebuild -project ios-app/Polyroom.xcodeproj -scheme Polyroom -destination 'generic/platform=iOS Simulator' -derivedDataPath build/DerivedData build CODE_SIGNING_ALLOWED=NO
       - name: Validate catalog
         run: python3 tools/check_catalog.py

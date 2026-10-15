@@ -67,9 +67,9 @@ Backlog sugerido (27 únicos, prioridade onde gap é 3):
 ## 4. Xcode project e device
 
 - Projeto declarativo: `ios-app/project.yml` (XcodeGen) liga Sources, tests, launch screen, catalog, sons e thumbs; `Info.plist` configura portrait e permissão de Fotos.
-- A CI macOS gera `ios-app/Polyroom.xcodeproj` com XcodeGen e executa build + XCTest no iPhone 16 Simulator; `swift test` também valida 46 testes.
+- A CI macOS gera `ios-app/Polyroom.xcodeproj` com XcodeGen, compila o app contra o iOS Simulator SDK e executa 46 testes SwiftPM. O runner atual não oferece runtime de iPhone Simulator disponível.
 - No Mac local: `brew install xcodegen && xcodegen generate --spec ios-app/project.yml --project ios-app` para abrir no Xcode.
-- Pendências de release: ícone de produção (PNG atual é placeholder), converter/bundlar 495 USDZ, testar app/escala no device, Archive Validate e medir FPS em iPhone real.
+- Pendências de release: ícone de produção (PNG atual é placeholder), converter/bundlar 495 USDZ, executar app em simulador/device, Archive Validate e medir FPS em iPhone real.
 
 ## 5. Próximos passos Mac
 
