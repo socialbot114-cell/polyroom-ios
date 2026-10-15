@@ -15,9 +15,9 @@ targets:
     platform: iOS
     sources:
       - path: Polyroom/Sources
-      - path: Polyroom/LaunchScreen.storyboard
     resources:
       - path: Polyroom/Resources/catalog.json
+      - path: Polyroom/Resources/Assets.xcassets
       - path: Polyroom/Resources/Sounds
         type: folder
       - path: ../thumbnails
