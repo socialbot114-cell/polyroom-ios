@@ -148,7 +148,7 @@ public struct RoomSceneView2: UIViewRepresentable {
             store.select(id: RoomSceneTap.resolve(hits: chains, known: known))
         }
 
-        func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
+        public func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
             guard let pan = gestureRecognizer as? UIPanGestureRecognizer,
                   let view = pan.view as? SCNView,
                   let store else { return true }
