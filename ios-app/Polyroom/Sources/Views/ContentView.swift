@@ -52,6 +52,10 @@ public struct ContentView: View {
     @State private var showNotice = false
     @State private var lastItemCount = 0
     @State private var lastColors: [UUID: Int] = [:]
+#if canImport(UIKit)
+    @State private var shareImage: UIImage? = nil
+    @State private var showShareSheet = false
+#endif
 
     public init(store: RoomStore, coins: CoinsStore) {
         self.store = store
@@ -107,6 +111,13 @@ public struct ContentView: View {
         .sheet(isPresented: $showMissions) {
             MissionsView(store: store, missions: missions)
         }
+#if canImport(UIKit)
+        .sheet(isPresented: $showShareSheet, onDismiss: { shareImage = nil }) {
+            if let shareImage {
+                ShareSheet(activityItems: [shareImage])
+            }
+        }
+#endif
         .alert(isPresented: $showNotice) {
             Alert(title: Text("Polyroom"), message: Text(noticeText))
         }
@@ -138,6 +149,7 @@ public struct ContentView: View {
                 }
                 .buttonStyle(.borderedProminent)
                 .controlSize(.small)
+                .accessibilityHint("Salva o snapshot local e abre opções para compartilhar")
                 Button {
                     showAbout = true
                 } label: {
@@ -227,10 +239,7 @@ public struct ContentView: View {
             showNotice("Não foi possível renderizar a foto.")
             return
         }
-        var extras: [String] = []
-        if let url = savePNGToDocuments(image: image) {
-            extras.append("Arquivo: \(url.lastPathComponent).")
-        } else {
+        guard savePNGToDocuments(image: image) != nil else {
             showNotice("A foto foi renderizada, mas não foi possível salvá-la no aparelho.")
             return
         }
@@ -241,7 +250,8 @@ public struct ContentView: View {
         missions.notePhoto()
         awardCompletedMissions(in: store.save)
         Sounds.shared.play(.photo)
-        showNotice("Foto salva! +\(CoinsStore.photoReward) 🪙 " + extras.joined(separator: " "))
+        shareImage = image
+        showShareSheet = true
         #elseif canImport(SceneKit) && canImport(AppKit)
         guard let image = renderPhoto() else {
             showNotice("Não foi possível renderizar a foto.")

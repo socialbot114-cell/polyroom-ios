@@ -8,7 +8,7 @@
 - [ ] Save/load após kill (`polyroom_save_v1.json`, <100ms)
 - [ ] Modo avião 100% funcional, sem `URLSession`
 - [ ] FPS: 60 iPhone 12 / 30 SE2, cena <50k tris
-- [ ] Snapshot PNG + share local
+- [x] Snapshot PNG salvo em Documents/Fotos + share sheet nativo iOS
 - [ ] Onboarding 3 passos + Sobre com "Baseado em Low-poly rooms por javiloz1604 (BlendSwap 24957), CC-BY"
 - [x] Ícone 1024 RGB final, launch color asset, portrait, iOS 17+
 - [ ] Ajustar versão/build para 1.0(1) antes de Archive
