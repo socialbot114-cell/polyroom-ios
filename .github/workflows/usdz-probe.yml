@@ -1,0 +1,22 @@
+name: usdz-probe
+on:
+  workflow_dispatch:
+jobs:
+  convert-one:
+    runs-on: macos-15
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Select Xcode 16
+        run: sudo xcode-select -s /Applications/Xcode_16.2.app
+      - name: Locate Apple's USDZ converter
+        run: xcrun --find usdz_converter
+      - name: Convert one real GLB
+        run: xcrun usdz_converter art-ios/liv_moveis_sofa.glb /tmp/liv_moveis_sofa.usdz
+      - name: Validate generated USDZ archive
+        run: unzip -t /tmp/liv_moveis_sofa.usdz
+      - uses: actions/upload-artifact@v4
+        with:
+          name: usdz-probe
+          path: /tmp/liv_moveis_sofa.usdz
+          if-no-files-found: error
